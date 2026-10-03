@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.prefabdeploy.server.AtomicFileTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-03T23:05:34.618Z" hostname="EPYC" time="1.176">
+  <properties/>
+  <testcase name="tornAndCorruptRecordsFailClosed()" classname="io.github.prefabdeploy.server.AtomicFileTest" time="0.03"/>
+  <testcase name="concurrentReadersNeverSeePartialPayload()" classname="io.github.prefabdeploy.server.AtomicFileTest" time="1.131"/>
+  <testcase name="replacementKeepsExactlyOneValidRecord()" classname="io.github.prefabdeploy.server.AtomicFileTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

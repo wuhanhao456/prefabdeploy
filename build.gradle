@@ -1,0 +1,138 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+    id 'idea'
+}
+version = mod_version
+group = mod_group_id
+base { archivesName = mod_id }
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    withSourcesJar()
+}
+if (providers.gradleProperty('prefabBuildDir').isPresent()) {
+    layout.buildDirectory = file(providers.gradleProperty('prefabBuildDir').get())
+}
+tasks.named('wrapper', Wrapper) { distributionType = Wrapper.DistributionType.BIN }
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.latvian.dev/releases' }
+    maven { url = 'https://maven.ftb.dev/releases' }
+    maven { url = 'https://maven.architectury.dev' }
+    maven { url = 'https://maven.firstdark.dev/snapshots' }
+}
+neoForge {
+    version = neo_version
+    parchment {
+        mappingsVersion = parchment_mappings_version
+        minecraftVersion = parchment_minecraft_version
+    }
+    runs {
+        client {
+            client()
+            if (providers.gradleProperty('clientSmoke').isPresent()) {
+                systemProperty 'prefabdeploy.clientSmoke', 'true'
+                if (providers.gradleProperty('modelReloadSmoke').isPresent()) systemProperty 'prefabdeploy.modelReloadSmoke', 'true'
+                if (providers.gradleProperty('shaderSmoke').isPresent()) systemProperty 'prefabdeploy.shaderSmoke', providers.gradleProperty('shaderSmoke').get()
+                systemProperty 'prefabdeploy.reportDir', file(providers.gradleProperty('prefabReportDir').orElse('docs/test-results').get()).absolutePath
+                gameDirectory = providers.gradleProperty('prefabTestRun').isPresent()
+                    ? file(providers.gradleProperty('prefabTestRun').get())
+                    : layout.buildDirectory.dir('client-run').get().asFile
+                programArguments.addAll '--quickPlaySingleplayer', 'prefab-smoke', '--width', '1280', '--height', '800'
+            }
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
+            if (providers.gradleProperty('reloadSmoke').isPresent()) systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabreload'
+            systemProperty 'prefabdeploy.reportDir', file(providers.gradleProperty('prefabReportDir').orElse('docs/test-results').get()).absolutePath
+            gameDirectory = layout.buildDirectory.dir('gametest-run').get().asFile
+            if (providers.gradleProperty('prefabTestRun').isPresent()) gameDirectory = file(providers.gradleProperty('prefabTestRun').get())
+            if (providers.gradleProperty('compatFixtures').isPresent()) systemProperty 'prefabdeploy.compatFixtures', 'true'
+            if (providers.gradleProperty('crashMode').isPresent()) {
+                systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabcrash'
+                systemProperty 'prefabdeploy.crashMode', providers.gradleProperty('crashMode').get()
+                systemProperty 'prefabdeploy.crashStage', providers.gradleProperty('crashStage').orElse('TICKS').get()
+            }
+        }
+        configureEach { logLevel = org.slf4j.event.Level.INFO }
+    }
+    mods { prefabdeploy { sourceSet(sourceSets.main) } }
+}
+configurations { runtimeClasspath.extendsFrom localRuntime }
+dependencies {
+    compileOnly 'dev.latvian.mods:kubejs-neoforge:2101.7.2-build.368'
+    compileOnly 'dev.latvian.mods:rhino:2101.2.7-build.81'
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    if (providers.gradleProperty('compatTest').isPresent()) {
+        localRuntime('dev.latvian.mods:kubejs-neoforge:2101.7.2-build.368') { transitive = false }
+        localRuntime 'dev.latvian.mods:rhino:2101.2.7-build.81'
+        localRuntime 'dev.architectury:architectury-neoforge:13.0.8'
+        localRuntime 'dev.ftb.mods:ftb-library-neoforge:2101.1.36'
+        localRuntime 'dev.ftb.mods:ftb-teams-neoforge:2101.1.11'
+        localRuntime 'dev.ftb.mods:ftb-chunks-neoforge:2101.1.22'
+        localRuntime 'dev.ftb.mods:ftb-quests-neoforge:2101.1.36'
+    }
+    if (providers.gradleProperty('vssJar').isPresent()) {
+        localRuntime files(providers.gradleProperty('vssJar').get())
+        localRuntime('com.lowdragmc.ldlib2:ldlib2-neoforge-1.21.1:2.2.41:all') { transitive = false }
+    }
+}
+test { useJUnitPlatform() }
+tasks.named('jar') {
+    from('LICENSE') { into 'META-INF' }
+    exclude 'io/github/prefabdeploy/testing/**', 'io/github/prefabdeploy/client/ClientSmoke*'
+    exclude 'data/prefabdeploy/structure/**', 'data/prefabcrash/**'
+}
+var generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {
+    var replacements = [minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
+                        neo_min_version: neo_min_version, mod_id: mod_id, mod_name: mod_name,
+                        mod_license: mod_license, mod_version: mod_version]
+    inputs.properties replacements
+    expand replacements
+    from 'src/main/templates'
+    into layout.buildDirectory.dir('generated/sources/modMetadata')
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+// Fixtures are a separate datapack. They are never part of main resources or the release JAR.
+def testRunDirectory = providers.gradleProperty('prefabTestRun')
+    .map { file(it) }.orElse(layout.buildDirectory.dir('gametest-run').map { it.asFile })
+tasks.register('preparePrefabGameTests', Copy) {
+    from 'src/testFixtures/resources'
+    into testRunDirectory.map { new File(it, 'world/datapacks/prefabdeploy-test-fixtures') }
+}
+tasks.matching { it.name == 'runGameTestServer' }.configureEach {
+    dependsOn 'preparePrefabGameTests'
+}
+if (providers.gradleProperty('clientSmoke').isPresent()) {
+    tasks.register('preparePrefabClientSmoke', Copy) {
+        from 'src/testFixtures/resources'
+        into providers.gradleProperty('prefabTestRun').map { file(it) }
+            .orElse(layout.buildDirectory.dir('client-run').map { it.asFile })
+            .map { new File(it, 'saves/prefab-smoke/datapacks/prefabdeploy-test-fixtures') }
+    }
+    tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'preparePrefabClientSmoke' }
+}
+// Keep nested mod JAR discovery identical to an installed instance.
+if (providers.gradleProperty('shaderModsDir').isPresent()) {
+    tasks.register('preparePrefabShaderMods', Copy) {
+        from(providers.gradleProperty('shaderModsDir').get()) { include '*.jar' }
+        into providers.gradleProperty('prefabTestRun').map { file(it) }
+            .orElse(layout.buildDirectory.dir('client-run').map { it.asFile })
+            .map { new File(it, 'mods') }
+    }
+    tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'preparePrefabShaderMods' }
+}
+idea { module { downloadSources = true } }

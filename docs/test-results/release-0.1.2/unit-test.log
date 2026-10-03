@@ -1,0 +1,24 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-012/tmp
+Starting a Gradle Daemon, 2 busy and 2 incompatible and 4 stopped Daemons could not be reused, use --status for details
+Calculating task graph as configuration cache cannot be reused because file 'build.gradle' has changed.
+> Task :processTestResources NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+
+> Task :compileJava
+注: \\lin\main_save_area\ai_area\codex\预制建筑\src\main\java\io\github\prefabdeploy\server\Sessions.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-012/tmp
+> Task :test
+
+[Incubating] Problems report is available at: file:///C:/Users/Administrator/.cache/prefabdeploy-012/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 22s
+6 actionable tasks: 2 executed, 4 up-to-date
+Configuration cache entry stored.

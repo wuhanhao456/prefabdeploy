@@ -1,0 +1,14 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.codex/cache/prefabdeploy-nf248/tmp
+Calculating task graph as configuration cache cannot be reused because file 'build.gradle' has changed.
+> Task :jarJar NO-SOURCE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :jar UP-TO-DATE
+> Task :sourcesJar
+
+BUILD SUCCESSFUL in 2s
+6 actionable tasks: 1 executed, 5 up-to-date
+Configuration cache entry stored.

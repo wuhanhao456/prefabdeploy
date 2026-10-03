@@ -1,0 +1,6572 @@
+{
+  "textures": {
+    "atlas": "beaconvisual:block/beacon_atlas",
+    "amethyst": "minecraft:block/amethyst_block",
+    "particle": "minecraft:block/amethyst_block"
+  },
+  "render_type": "minecraft:cutout",
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "name": "crystal_corner_0_0_0",
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        3,
+        3,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_0_0_13",
+      "from": [
+        0,
+        0,
+        13
+      ],
+      "to": [
+        3,
+        3,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_0_13_0",
+      "from": [
+        0,
+        13,
+        0
+      ],
+      "to": [
+        3,
+        16,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_0_13_13",
+      "from": [
+        0,
+        13,
+        13
+      ],
+      "to": [
+        3,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_13_0_0",
+      "from": [
+        13,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        3,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_13_0_13",
+      "from": [
+        13,
+        0,
+        13
+      ],
+      "to": [
+        16,
+        3,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            13.0,
+            3.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_13_13_0",
+      "from": [
+        13,
+        13,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        3
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "crystal_corner_13_13_13",
+      "from": [
+        13,
+        13,
+        13
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            0.0,
+            3.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.0,
+            13.0,
+            16.0,
+            16.0
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.0,
+            0.0,
+            16.0,
+            3.0
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_0_0.5_0.5",
+      "from": [
+        2.875,
+        0.5,
+        0.5
+      ],
+      "to": [
+        13.125,
+        2.5,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_0_0.5_13.5",
+      "from": [
+        2.875,
+        0.5,
+        13.5
+      ],
+      "to": [
+        13.125,
+        2.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_0_13.5_0.5",
+      "from": [
+        2.875,
+        13.5,
+        0.5
+      ],
+      "to": [
+        13.125,
+        15.5,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_0_13.5_13.5",
+      "from": [
+        2.875,
+        13.5,
+        13.5
+      ],
+      "to": [
+        13.125,
+        15.5,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_1_0.5_0.5",
+      "from": [
+        0.5,
+        2.875,
+        0.5
+      ],
+      "to": [
+        2.5,
+        13.125,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_1_0.5_13.5",
+      "from": [
+        0.5,
+        2.875,
+        13.5
+      ],
+      "to": [
+        2.5,
+        13.125,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_1_13.5_0.5",
+      "from": [
+        13.5,
+        2.875,
+        0.5
+      ],
+      "to": [
+        15.5,
+        13.125,
+        2.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_1_13.5_13.5",
+      "from": [
+        13.5,
+        2.875,
+        13.5
+      ],
+      "to": [
+        15.5,
+        13.125,
+        15.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_2_0.5_0.5",
+      "from": [
+        0.5,
+        0.5,
+        2.875
+      ],
+      "to": [
+        2.5,
+        2.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_2_0.5_13.5",
+      "from": [
+        0.5,
+        13.5,
+        2.875
+      ],
+      "to": [
+        2.5,
+        15.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            0.5,
+            2.875,
+            2.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_2_13.5_0.5",
+      "from": [
+        13.5,
+        0.5,
+        2.875
+      ],
+      "to": [
+        15.5,
+        2.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.5,
+            13.5,
+            2.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            13.5,
+            15.5,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            2.875,
+            13.5,
+            13.125,
+            15.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "amethyst_rail_2_13.5_13.5",
+      "from": [
+        13.5,
+        13.5,
+        2.875
+      ],
+      "to": [
+        15.5,
+        15.5,
+        13.125
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.5,
+            0.5,
+            2.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "east": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            0.5,
+            15.5,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "west": {
+          "uv": [
+            2.875,
+            0.5,
+            13.125,
+            2.5
+          ],
+          "texture": "#amethyst"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            2.875,
+            15.5,
+            13.125
+          ],
+          "texture": "#amethyst"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_1.5_stem",
+      "from": [
+        0.46,
+        0.95,
+        7.89
+      ],
+      "to": [
+        0.5,
+        2.05,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_1.5_left",
+      "from": [
+        0.46,
+        1.39,
+        7.325
+      ],
+      "to": [
+        0.5,
+        1.61,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_1.5_right",
+      "from": [
+        0.46,
+        1.39,
+        8.11
+      ],
+      "to": [
+        0.5,
+        1.61,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_14.5_stem",
+      "from": [
+        0.46,
+        13.95,
+        7.89
+      ],
+      "to": [
+        0.5,
+        15.05,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_14.5_left",
+      "from": [
+        0.46,
+        14.39,
+        7.325
+      ],
+      "to": [
+        0.5,
+        14.61,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_1_14.5_right",
+      "from": [
+        0.46,
+        14.39,
+        8.11
+      ],
+      "to": [
+        0.5,
+        14.61,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_1.5_stem",
+      "from": [
+        0.46,
+        7.89,
+        0.95
+      ],
+      "to": [
+        0.5,
+        8.11,
+        2.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_1.5_left",
+      "from": [
+        0.46,
+        7.325,
+        1.39
+      ],
+      "to": [
+        0.5,
+        7.89,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_1.5_right",
+      "from": [
+        0.46,
+        8.11,
+        1.39
+      ],
+      "to": [
+        0.5,
+        8.675,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_14.5_stem",
+      "from": [
+        0.46,
+        7.89,
+        13.95
+      ],
+      "to": [
+        0.5,
+        8.11,
+        15.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_14.5_left",
+      "from": [
+        0.46,
+        7.325,
+        14.39
+      ],
+      "to": [
+        0.5,
+        7.89,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_0_2_14.5_right",
+      "from": [
+        0.46,
+        8.11,
+        14.39
+      ],
+      "to": [
+        0.5,
+        8.675,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_1.5_stem",
+      "from": [
+        15.5,
+        0.95,
+        7.89
+      ],
+      "to": [
+        15.54,
+        2.05,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_1.5_left",
+      "from": [
+        15.5,
+        1.39,
+        7.325
+      ],
+      "to": [
+        15.54,
+        1.61,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_1.5_right",
+      "from": [
+        15.5,
+        1.39,
+        8.11
+      ],
+      "to": [
+        15.54,
+        1.61,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_14.5_stem",
+      "from": [
+        15.5,
+        13.95,
+        7.89
+      ],
+      "to": [
+        15.54,
+        15.05,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_14.5_left",
+      "from": [
+        15.5,
+        14.39,
+        7.325
+      ],
+      "to": [
+        15.54,
+        14.61,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_1_14.5_right",
+      "from": [
+        15.5,
+        14.39,
+        8.11
+      ],
+      "to": [
+        15.54,
+        14.61,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_1.5_stem",
+      "from": [
+        15.5,
+        7.89,
+        0.95
+      ],
+      "to": [
+        15.54,
+        8.11,
+        2.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_1.5_left",
+      "from": [
+        15.5,
+        7.325,
+        1.39
+      ],
+      "to": [
+        15.54,
+        7.89,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_1.5_right",
+      "from": [
+        15.5,
+        8.11,
+        1.39
+      ],
+      "to": [
+        15.54,
+        8.675,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_14.5_stem",
+      "from": [
+        15.5,
+        7.89,
+        13.95
+      ],
+      "to": [
+        15.54,
+        8.11,
+        15.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_14.5_left",
+      "from": [
+        15.5,
+        7.325,
+        14.39
+      ],
+      "to": [
+        15.54,
+        7.89,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_0_1_2_14.5_right",
+      "from": [
+        15.5,
+        8.11,
+        14.39
+      ],
+      "to": [
+        15.54,
+        8.675,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_1.5_stem",
+      "from": [
+        0.95,
+        0.46,
+        7.89
+      ],
+      "to": [
+        2.05,
+        0.5,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_1.5_left",
+      "from": [
+        1.39,
+        0.46,
+        7.325
+      ],
+      "to": [
+        1.61,
+        0.5,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_1.5_right",
+      "from": [
+        1.39,
+        0.46,
+        8.11
+      ],
+      "to": [
+        1.61,
+        0.5,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_14.5_stem",
+      "from": [
+        13.95,
+        0.46,
+        7.89
+      ],
+      "to": [
+        15.05,
+        0.5,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_14.5_left",
+      "from": [
+        14.39,
+        0.46,
+        7.325
+      ],
+      "to": [
+        14.61,
+        0.5,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_0_14.5_right",
+      "from": [
+        14.39,
+        0.46,
+        8.11
+      ],
+      "to": [
+        14.61,
+        0.5,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_1.5_stem",
+      "from": [
+        7.89,
+        0.46,
+        0.95
+      ],
+      "to": [
+        8.11,
+        0.5,
+        2.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_1.5_left",
+      "from": [
+        7.325,
+        0.46,
+        1.39
+      ],
+      "to": [
+        7.89,
+        0.5,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_1.5_right",
+      "from": [
+        8.11,
+        0.46,
+        1.39
+      ],
+      "to": [
+        8.675,
+        0.5,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_14.5_stem",
+      "from": [
+        7.89,
+        0.46,
+        13.95
+      ],
+      "to": [
+        8.11,
+        0.5,
+        15.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_14.5_left",
+      "from": [
+        7.325,
+        0.46,
+        14.39
+      ],
+      "to": [
+        7.89,
+        0.5,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_0_2_14.5_right",
+      "from": [
+        8.11,
+        0.46,
+        14.39
+      ],
+      "to": [
+        8.675,
+        0.5,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_1.5_stem",
+      "from": [
+        0.95,
+        15.5,
+        7.89
+      ],
+      "to": [
+        2.05,
+        15.54,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_1.5_left",
+      "from": [
+        1.39,
+        15.5,
+        7.325
+      ],
+      "to": [
+        1.61,
+        15.54,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_1.5_right",
+      "from": [
+        1.39,
+        15.5,
+        8.11
+      ],
+      "to": [
+        1.61,
+        15.54,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_14.5_stem",
+      "from": [
+        13.95,
+        15.5,
+        7.89
+      ],
+      "to": [
+        15.05,
+        15.54,
+        8.11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_14.5_left",
+      "from": [
+        14.39,
+        15.5,
+        7.325
+      ],
+      "to": [
+        14.61,
+        15.54,
+        7.89
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_0_14.5_right",
+      "from": [
+        14.39,
+        15.5,
+        8.11
+      ],
+      "to": [
+        14.61,
+        15.54,
+        8.675
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_1.5_stem",
+      "from": [
+        7.89,
+        15.5,
+        0.95
+      ],
+      "to": [
+        8.11,
+        15.54,
+        2.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_1.5_left",
+      "from": [
+        7.325,
+        15.5,
+        1.39
+      ],
+      "to": [
+        7.89,
+        15.54,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_1.5_right",
+      "from": [
+        8.11,
+        15.5,
+        1.39
+      ],
+      "to": [
+        8.675,
+        15.54,
+        1.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_14.5_stem",
+      "from": [
+        7.89,
+        15.5,
+        13.95
+      ],
+      "to": [
+        8.11,
+        15.54,
+        15.05
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_14.5_left",
+      "from": [
+        7.325,
+        15.5,
+        14.39
+      ],
+      "to": [
+        7.89,
+        15.54,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_1_1_2_14.5_right",
+      "from": [
+        8.11,
+        15.5,
+        14.39
+      ],
+      "to": [
+        8.675,
+        15.54,
+        14.61
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_1.5_stem",
+      "from": [
+        0.95,
+        7.89,
+        0.46
+      ],
+      "to": [
+        2.05,
+        8.11,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_1.5_left",
+      "from": [
+        1.39,
+        7.325,
+        0.46
+      ],
+      "to": [
+        1.61,
+        7.89,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_1.5_right",
+      "from": [
+        1.39,
+        8.11,
+        0.46
+      ],
+      "to": [
+        1.61,
+        8.675,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_14.5_stem",
+      "from": [
+        13.95,
+        7.89,
+        0.46
+      ],
+      "to": [
+        15.05,
+        8.11,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_14.5_left",
+      "from": [
+        14.39,
+        7.325,
+        0.46
+      ],
+      "to": [
+        14.61,
+        7.89,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_0_14.5_right",
+      "from": [
+        14.39,
+        8.11,
+        0.46
+      ],
+      "to": [
+        14.61,
+        8.675,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_1.5_stem",
+      "from": [
+        7.89,
+        0.95,
+        0.46
+      ],
+      "to": [
+        8.11,
+        2.05,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_1.5_left",
+      "from": [
+        7.325,
+        1.39,
+        0.46
+      ],
+      "to": [
+        7.89,
+        1.61,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_1.5_right",
+      "from": [
+        8.11,
+        1.39,
+        0.46
+      ],
+      "to": [
+        8.675,
+        1.61,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_14.5_stem",
+      "from": [
+        7.89,
+        13.95,
+        0.46
+      ],
+      "to": [
+        8.11,
+        15.05,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_14.5_left",
+      "from": [
+        7.325,
+        14.39,
+        0.46
+      ],
+      "to": [
+        7.89,
+        14.61,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_0_1_14.5_right",
+      "from": [
+        8.11,
+        14.39,
+        0.46
+      ],
+      "to": [
+        8.675,
+        14.61,
+        0.5
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_1.5_stem",
+      "from": [
+        0.95,
+        7.89,
+        15.5
+      ],
+      "to": [
+        2.05,
+        8.11,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_1.5_left",
+      "from": [
+        1.39,
+        7.325,
+        15.5
+      ],
+      "to": [
+        1.61,
+        7.89,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_1.5_right",
+      "from": [
+        1.39,
+        8.11,
+        15.5
+      ],
+      "to": [
+        1.61,
+        8.675,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_14.5_stem",
+      "from": [
+        13.95,
+        7.89,
+        15.5
+      ],
+      "to": [
+        15.05,
+        8.11,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_14.5_left",
+      "from": [
+        14.39,
+        7.325,
+        15.5
+      ],
+      "to": [
+        14.61,
+        7.89,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_0_14.5_right",
+      "from": [
+        14.39,
+        8.11,
+        15.5
+      ],
+      "to": [
+        14.61,
+        8.675,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_1.5_stem",
+      "from": [
+        7.89,
+        0.95,
+        15.5
+      ],
+      "to": [
+        8.11,
+        2.05,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_1.5_left",
+      "from": [
+        7.325,
+        1.39,
+        15.5
+      ],
+      "to": [
+        7.89,
+        1.61,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_1.5_right",
+      "from": [
+        8.11,
+        1.39,
+        15.5
+      ],
+      "to": [
+        8.675,
+        1.61,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_14.5_stem",
+      "from": [
+        7.89,
+        13.95,
+        15.5
+      ],
+      "to": [
+        8.11,
+        15.05,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_14.5_left",
+      "from": [
+        7.325,
+        14.39,
+        15.5
+      ],
+      "to": [
+        7.89,
+        14.61,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "axis_cross_2_1_1_14.5_right",
+      "from": [
+        8.11,
+        14.39,
+        15.5
+      ],
+      "to": [
+        8.675,
+        14.61,
+        15.54
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            8.0,
+            0.0,
+            12.0,
+            4.0
+          ],
+          "texture": "#atlas"
+        }
+      }
+    },
+    {
+      "name": "glowstone_core",
+      "from": [
+        6,
+        6,
+        6
+      ],
+      "to": [
+        10,
+        10,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        },
+        "east": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        },
+        "south": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        },
+        "west": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        },
+        "up": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        },
+        "down": {
+          "uv": [
+            0.0,
+            8.0,
+            4.0,
+            12.0
+          ],
+          "texture": "#atlas"
+        }
+      },
+      "shade": false,
+      "neoforge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        2.5,
+        0
+      ],
+      "scale": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}

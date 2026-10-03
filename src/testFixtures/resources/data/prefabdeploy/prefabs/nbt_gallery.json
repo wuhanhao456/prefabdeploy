@@ -1,0 +1,17 @@
+{
+  "name": "NBT Gallery / NBT 展示台",
+  "category": "examples",
+  "source": "prefabdeploy:blueprints/nbt_gallery.nbt",
+  "ground_y": 1,
+  "visible": true,
+  "unlock": true,
+  "cost": {
+    "mode": "manual",
+    "items": [
+      {
+        "id": "minecraft:emerald",
+        "count": 1
+      }
+    ]
+  }
+}

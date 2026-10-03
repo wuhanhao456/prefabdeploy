@@ -1,0 +1,722 @@
+[
+  {
+    "key": "prefabdeploy.error.unable_to_read_blueprint_data",
+    "fallback": "Unable to read blueprint data",
+    "pattern": "^Unable\\ to\\ read\\ blueprint\\ data$"
+  },
+  {
+    "key": "prefabdeploy.error.too_many_prefab_requests_try_again",
+    "fallback": "Too many prefab requests; try again",
+    "pattern": "^Too\\ many\\ prefab\\ requests;\\ try\\ again$"
+  },
+  {
+    "key": "prefabdeploy.error.construction_has_started_cancellation_is_unavailable",
+    "fallback": "Construction has started; cancellation is unavailable",
+    "pattern": "^Construction\\ has\\ started;\\ cancellation\\ is\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.checking_placement",
+    "fallback": "Checking placement…",
+    "pattern": "^Checking\\ placement…$"
+  },
+  {
+    "key": "prefabdeploy.error.deployment_already_active",
+    "fallback": "Deployment already active",
+    "pattern": "^Deployment\\ already\\ active$"
+  },
+  {
+    "key": "prefabdeploy.error.a_prefab_task_is_already_active",
+    "fallback": "A prefab task is already active",
+    "pattern": "^A\\ prefab\\ task\\ is\\ already\\ active$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_prefab",
+    "fallback": "Unknown prefab",
+    "pattern": "^Unknown\\ prefab$"
+  },
+  {
+    "key": "prefabdeploy.error.placement_session_expired",
+    "fallback": "Placement session expired",
+    "pattern": "^Placement\\ session\\ expired$"
+  },
+  {
+    "key": "prefabdeploy.error.place_all_three_positioning_beacons",
+    "fallback": "Place all three positioning beacons",
+    "pattern": "^Place\\ all\\ three\\ positioning\\ beacons$"
+  },
+  {
+    "key": "prefabdeploy.error.placement_beyond_maximum_distance",
+    "fallback": "Placement beyond maximum distance",
+    "pattern": "^Placement\\ beyond\\ maximum\\ distance$"
+  },
+  {
+    "key": "prefabdeploy.error.wait_for_successful_placement_validation",
+    "fallback": "Wait for successful placement validation",
+    "pattern": "^Wait\\ for\\ successful\\ placement\\ validation$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_request",
+    "fallback": "Unknown request",
+    "pattern": "^Unknown\\ request$"
+  },
+  {
+    "key": "prefabdeploy.error.a_library_entry_is_too_large_shorten_its_metadata_or_material_description",
+    "fallback": "A library entry is too large; shorten its metadata or material description",
+    "pattern": "^A\\ library\\ entry\\ is\\ too\\ large;\\ shorten\\ its\\ metadata\\ or\\ material\\ description$"
+  },
+  {
+    "key": "prefabdeploy.error.preview_too_large",
+    "fallback": "Preview too large",
+    "pattern": "^Preview\\ too\\ large$"
+  },
+  {
+    "key": "prefabdeploy.error.preview_generation_failed",
+    "fallback": "Preview generation failed",
+    "pattern": "^Preview\\ generation\\ failed$"
+  },
+  {
+    "key": "prefabdeploy.error.positioning_is_already_complete",
+    "fallback": "Positioning is already complete",
+    "pattern": "^Positioning\\ is\\ already\\ complete$"
+  },
+  {
+    "key": "prefabdeploy.error.placement_dimension_changed",
+    "fallback": "Placement dimension changed",
+    "pattern": "^Placement\\ dimension\\ changed$"
+  },
+  {
+    "key": "prefabdeploy.error.beacons_must_share_the_reference_height",
+    "fallback": "Beacons must share the reference height",
+    "pattern": "^Beacons\\ must\\ share\\ the\\ reference\\ height$"
+  },
+  {
+    "key": "prefabdeploy.error.b_must_be_exactly_arg_blocks_along_one_axis",
+    "fallback": "B must be exactly %s blocks along one axis",
+    "pattern": "^B\\ must\\ be\\ exactly\\ (.*?)\\ blocks\\ along\\ one\\ axis$"
+  },
+  {
+    "key": "prefabdeploy.error.c_must_mark_the_perpendicular_z_boundary_distance_arg",
+    "fallback": "C must mark the perpendicular Z boundary (distance %s)",
+    "pattern": "^C\\ must\\ mark\\ the\\ perpendicular\\ Z\\ boundary\\ \\(distance\\ (.*?)\\)$"
+  },
+  {
+    "key": "prefabdeploy.error.a_positioning_beacon_was_removed_placement_cancelled",
+    "fallback": "A positioning beacon was removed; placement cancelled",
+    "pattern": "^A\\ positioning\\ beacon\\ was\\ removed;\\ placement\\ cancelled$"
+  },
+  {
+    "key": "prefabdeploy.error.positioning_beacon_missing_placement_cancelled",
+    "fallback": "Positioning beacon missing; placement cancelled",
+    "pattern": "^Positioning\\ beacon\\ missing;\\ placement\\ cancelled$"
+  },
+  {
+    "key": "prefabdeploy.error.a_positioning_beacon_was_removed",
+    "fallback": "A positioning beacon was removed",
+    "pattern": "^A\\ positioning\\ beacon\\ was\\ removed$"
+  },
+  {
+    "key": "prefabdeploy.error.beacon_position_is_not_loaded_or_outside_world_limits",
+    "fallback": "Beacon position is not loaded or outside world limits",
+    "pattern": "^Beacon\\ position\\ is\\ not\\ loaded\\ or\\ outside\\ world\\ limits$"
+  },
+  {
+    "key": "prefabdeploy.error.floating_beacon_needs_an_empty_position",
+    "fallback": "Floating beacon needs an empty position",
+    "pattern": "^Floating\\ beacon\\ needs\\ an\\ empty\\ position$"
+  },
+  {
+    "key": "prefabdeploy.error.construction_area_is_locked",
+    "fallback": "Construction area is locked",
+    "pattern": "^Construction\\ area\\ is\\ locked$"
+  },
+  {
+    "key": "prefabdeploy.error.spawn_protection",
+    "fallback": "Spawn protection",
+    "pattern": "^Spawn\\ protection$"
+  },
+  {
+    "key": "prefabdeploy.error.server_spawn_protection",
+    "fallback": "Server spawn protection",
+    "pattern": "^Server\\ spawn\\ protection$"
+  },
+  {
+    "key": "prefabdeploy.error.rule_denied",
+    "fallback": "Rule denied",
+    "pattern": "^Rule\\ denied$"
+  },
+  {
+    "key": "prefabdeploy.error.no_alternative_condition_satisfied",
+    "fallback": "No alternative condition satisfied",
+    "pattern": "^No\\ alternative\\ condition\\ satisfied$"
+  },
+  {
+    "key": "prefabdeploy.error.excluded_by_rule",
+    "fallback": "Excluded by rule",
+    "pattern": "^Excluded\\ by\\ rule$"
+  },
+  {
+    "key": "prefabdeploy.error.advancement_required_arg",
+    "fallback": "Advancement required: %s",
+    "pattern": "^Advancement\\ required:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.ftb_quest_required_arg",
+    "fallback": "FTB quest required: %s",
+    "pattern": "^FTB\\ quest\\ required:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.dimension_condition_not_satisfied",
+    "fallback": "Dimension condition not satisfied",
+    "pattern": "^Dimension\\ condition\\ not\\ satisfied$"
+  },
+  {
+    "key": "prefabdeploy.error.unlock_flag_required_arg",
+    "fallback": "Unlock flag required: %s",
+    "pattern": "^Unlock\\ flag\\ required:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.condition_unavailable_ftb_quests_is_required",
+    "fallback": "Condition unavailable: FTB Quests is required",
+    "pattern": "^Condition\\ unavailable:\\ FTB\\ Quests\\ is\\ required$"
+  },
+  {
+    "key": "prefabdeploy.error.condition_unavailable_ftb_teams_is_required",
+    "fallback": "Condition unavailable: FTB Teams is required",
+    "pattern": "^Condition\\ unavailable:\\ FTB\\ Teams\\ is\\ required$"
+  },
+  {
+    "key": "prefabdeploy.error.condition_unavailable_missing_script_rule_arg",
+    "fallback": "Condition unavailable: missing script rule %s",
+    "pattern": "^Condition\\ unavailable:\\ missing\\ script\\ rule\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.condition_unavailable_unknown_rule_arg",
+    "fallback": "Condition unavailable: unknown rule %s",
+    "pattern": "^Condition\\ unavailable:\\ unknown\\ rule\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.condition_unavailable_arg",
+    "fallback": "Condition unavailable: %s",
+    "pattern": "^Condition\\ unavailable:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.building_is_hidden",
+    "fallback": "Building is hidden",
+    "pattern": "^Building\\ is\\ hidden$"
+  },
+  {
+    "key": "prefabdeploy.error.server_position_limit_exceeded",
+    "fallback": "Server position limit exceeded",
+    "pattern": "^Server\\ position\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.server_blueprint_size_limit_exceeded",
+    "fallback": "Server blueprint size limit exceeded",
+    "pattern": "^Server\\ blueprint\\ size\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.ftb_teams_is_required",
+    "fallback": "FTB Teams is required",
+    "pattern": "^FTB\\ Teams\\ is\\ required$"
+  },
+  {
+    "key": "prefabdeploy.error.ftb_quests_is_required",
+    "fallback": "FTB Quests is required",
+    "pattern": "^FTB\\ Quests\\ is\\ required$"
+  },
+  {
+    "key": "prefabdeploy.error.no_ftb_team",
+    "fallback": "No FTB team",
+    "pattern": "^No\\ FTB\\ team$"
+  },
+  {
+    "key": "prefabdeploy.error.ftb_chunks_no_edit_permission_at_arg",
+    "fallback": "FTB Chunks: no edit permission at %s",
+    "pattern": "^FTB\\ Chunks:\\ no\\ edit\\ permission\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.ftb_chunks_permission_adapter_unavailable_arg",
+    "fallback": "FTB Chunks permission adapter unavailable: %s",
+    "pattern": "^FTB\\ Chunks\\ permission\\ adapter\\ unavailable:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.viscriptshop_is_required",
+    "fallback": "ViScriptShop is required",
+    "pattern": "^ViScriptShop\\ is\\ required$"
+  },
+  {
+    "key": "prefabdeploy.error.viscriptshop_currency_configuration_unavailable",
+    "fallback": "ViScriptShop currency configuration unavailable",
+    "pattern": "^ViScriptShop\\ currency\\ configuration\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.replacement_currency_needs_a_recoverable_costprovider",
+    "fallback": "Replacement currency needs a recoverable CostProvider",
+    "pattern": "^Replacement\\ currency\\ needs\\ a\\ recoverable\\ CostProvider$"
+  },
+  {
+    "key": "prefabdeploy.error.viscriptshop_deduction_mismatch",
+    "fallback": "ViScriptShop deduction mismatch",
+    "pattern": "^ViScriptShop\\ deduction\\ mismatch$"
+  },
+  {
+    "key": "prefabdeploy.error.cost_provider_unavailable_arg",
+    "fallback": "Cost provider unavailable: %s",
+    "pattern": "^Cost\\ provider\\ unavailable:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.cannot_price_block_automatically_arg_use_manual_pricing",
+    "fallback": "Cannot price block automatically: %s; use manual pricing",
+    "pattern": "^Cannot\\ price\\ block\\ automatically:\\ (.*?);\\ use\\ manual\\ pricing$"
+  },
+  {
+    "key": "prefabdeploy.error.explicit_cost_definition_required_use_mode_free",
+    "fallback": "Explicit cost definition required (use mode: free)",
+    "pattern": "^Explicit\\ cost\\ definition\\ required\\ \\(use\\ mode:\\ free\\)$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_cost_mode",
+    "fallback": "Unknown cost mode",
+    "pattern": "^Unknown\\ cost\\ mode$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_cost_item_arg",
+    "fallback": "Unknown cost item: %s",
+    "pattern": "^Unknown\\ cost\\ item:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.item_cost_must_be_positive",
+    "fallback": "Item cost must be positive",
+    "pattern": "^Item\\ cost\\ must\\ be\\ positive$"
+  },
+  {
+    "key": "prefabdeploy.error.negative_xp_cost",
+    "fallback": "Negative XP cost",
+    "pattern": "^Negative\\ XP\\ cost$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_amount_must_be_nonnegative_with_at_most_two_decimals",
+    "fallback": "Currency amount must be nonnegative with at most two decimals",
+    "pattern": "^Currency\\ amount\\ must\\ be\\ nonnegative\\ with\\ at\\ most\\ two\\ decimals$"
+  },
+  {
+    "key": "prefabdeploy.error.missing_recoverable_cost_provider_arg",
+    "fallback": "Missing recoverable cost provider: %s",
+    "pattern": "^Missing\\ recoverable\\ cost\\ provider:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.missing_material_arg_arg_arg",
+    "fallback": "Missing material: %s %s/%s",
+    "pattern": "^Missing\\ material:\\ (.*?)\\ (.*?)/(.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.not_enough_xp_points",
+    "fallback": "Not enough XP points",
+    "pattern": "^Not\\ enough\\ XP\\ points$"
+  },
+  {
+    "key": "prefabdeploy.error.not_enough_viscriptshop_currency",
+    "fallback": "Not enough ViScriptShop currency",
+    "pattern": "^Not\\ enough\\ ViScriptShop\\ currency$"
+  },
+  {
+    "key": "prefabdeploy.error.viscriptshop_adapter_unavailable",
+    "fallback": "ViScriptShop adapter unavailable",
+    "pattern": "^ViScriptShop\\ adapter\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_api_returned_an_unknown_payment_state",
+    "fallback": "Currency API returned an unknown payment state",
+    "pattern": "^Currency\\ API\\ returned\\ an\\ unknown\\ payment\\ state$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_deduction_mismatch",
+    "fallback": "Currency deduction mismatch",
+    "pattern": "^Currency\\ deduction\\ mismatch$"
+  },
+  {
+    "key": "prefabdeploy.error.cost_reservation_failed",
+    "fallback": "Cost reservation failed",
+    "pattern": "^Cost\\ reservation\\ failed$"
+  },
+  {
+    "key": "prefabdeploy.error.cannot_refund_committed_transaction",
+    "fallback": "Cannot refund committed transaction",
+    "pattern": "^Cannot\\ refund\\ committed\\ transaction$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_result_is_uncertain_audit_and_reconcile_before_retrying",
+    "fallback": "Currency result is uncertain; audit and reconcile before retrying",
+    "pattern": "^Currency\\ result\\ is\\ uncertain;\\ audit\\ and\\ reconcile\\ before\\ retrying$"
+  },
+  {
+    "key": "prefabdeploy.error.recovery_cost_provider_missing",
+    "fallback": "Recovery cost provider missing",
+    "pattern": "^Recovery\\ cost\\ provider\\ missing$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_refund_mismatch",
+    "fallback": "Currency refund mismatch",
+    "pattern": "^Currency\\ refund\\ mismatch$"
+  },
+  {
+    "key": "prefabdeploy.error.currency_refund_unavailable_or_uncertain",
+    "fallback": "Currency refund unavailable or uncertain",
+    "pattern": "^Currency\\ refund\\ unavailable\\ or\\ uncertain$"
+  },
+  {
+    "key": "prefabdeploy.error.cannot_settle_a_missing_or_refunded_cost_receipt",
+    "fallback": "Cannot settle a missing or refunded cost receipt",
+    "pattern": "^Cannot\\ settle\\ a\\ missing\\ or\\ refunded\\ cost\\ receipt$"
+  },
+  {
+    "key": "prefabdeploy.error.settlement_provider_missing",
+    "fallback": "Settlement provider missing",
+    "pattern": "^Settlement\\ provider\\ missing$"
+  },
+  {
+    "key": "prefabdeploy.error.player_transaction_could_not_be_saved",
+    "fallback": "Player transaction could not be saved",
+    "pattern": "^Player\\ transaction\\ could\\ not\\ be\\ saved$"
+  },
+  {
+    "key": "prefabdeploy.error.affected_chunk_limit_exceeded",
+    "fallback": "Affected chunk limit exceeded",
+    "pattern": "^Affected\\ chunk\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.deployment_dimension_is_unavailable",
+    "fallback": "Deployment dimension is unavailable",
+    "pattern": "^Deployment\\ dimension\\ is\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.another_task_has_locked_these_chunks",
+    "fallback": "Another task has locked these chunks",
+    "pattern": "^Another\\ task\\ has\\ locked\\ these\\ chunks$"
+  },
+  {
+    "key": "prefabdeploy.error.player_disconnected",
+    "fallback": "Player disconnected",
+    "pattern": "^Player\\ disconnected$"
+  },
+  {
+    "key": "prefabdeploy.error.player_disconnected_before_payment",
+    "fallback": "Player disconnected before payment",
+    "pattern": "^Player\\ disconnected\\ before\\ payment$"
+  },
+  {
+    "key": "prefabdeploy.error.explore_chunk_before_deployment_arg",
+    "fallback": "Explore chunk before deployment: %s",
+    "pattern": "^Explore\\ chunk\\ before\\ deployment:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.chunk_could_not_be_loaded",
+    "fallback": "Chunk could not be loaded",
+    "pattern": "^Chunk\\ could\\ not\\ be\\ loaded$"
+  },
+  {
+    "key": "prefabdeploy.error.forbidden_entity_arg",
+    "fallback": "Forbidden entity: %s",
+    "pattern": "^Forbidden\\ entity:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.entity_could_not_be_loaded",
+    "fallback": "Entity could not be loaded",
+    "pattern": "^Entity\\ could\\ not\\ be\\ loaded$"
+  },
+  {
+    "key": "prefabdeploy.error.player_entered_the_construction_area",
+    "fallback": "Player entered the construction area",
+    "pattern": "^Player\\ entered\\ the\\ construction\\ area$"
+  },
+  {
+    "key": "prefabdeploy.error.block_placement_was_rejected_at_arg",
+    "fallback": "Block placement was rejected at %s",
+    "pattern": "^Block\\ placement\\ was\\ rejected\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.entity_creation_failed",
+    "fallback": "Entity creation failed",
+    "pattern": "^Entity\\ creation\\ failed$"
+  },
+  {
+    "key": "prefabdeploy.error.entity_identity_collision",
+    "fallback": "Entity identity collision",
+    "pattern": "^Entity\\ identity\\ collision$"
+  },
+  {
+    "key": "prefabdeploy.error.rollback_block_rejected",
+    "fallback": "Rollback block rejected",
+    "pattern": "^Rollback\\ block\\ rejected$"
+  },
+  {
+    "key": "prefabdeploy.error.outside_world_limits_arg",
+    "fallback": "Outside world limits: %s",
+    "pattern": "^Outside\\ world\\ limits:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.protected_block_arg_at_arg",
+    "fallback": "Protected block: %s at %s",
+    "pattern": "^Protected\\ block:\\ (.*?)\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.forbidden_blueprint_content_arg",
+    "fallback": "Forbidden blueprint content: %s",
+    "pattern": "^Forbidden\\ blueprint\\ content:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.original_world_snapshot_exceeds_the_128_mib_safety_limit",
+    "fallback": "Original world snapshot exceeds the 128 MiB safety limit",
+    "pattern": "^Original\\ world\\ snapshot\\ exceeds\\ the\\ 128\\ MiB\\ safety\\ limit$"
+  },
+  {
+    "key": "prefabdeploy.error.recovery_journal_exceeds_its_safety_limit_no_payment_was_reserved",
+    "fallback": "Recovery journal exceeds its safety limit; no payment was reserved",
+    "pattern": "^Recovery\\ journal\\ exceeds\\ its\\ safety\\ limit;\\ no\\ payment\\ was\\ reserved$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_fluid_tick_type",
+    "fallback": "Unknown fluid tick type",
+    "pattern": "^Unknown\\ fluid\\ tick\\ type$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_block_tick_type",
+    "fallback": "Unknown block tick type",
+    "pattern": "^Unknown\\ block\\ tick\\ type$"
+  },
+  {
+    "key": "prefabdeploy.error.block_entity_could_not_be_loaded_at_arg",
+    "fallback": "Block entity could not be loaded at %s",
+    "pattern": "^Block\\ entity\\ could\\ not\\ be\\ loaded\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.compressed_blueprint_too_large",
+    "fallback": "Compressed blueprint too large",
+    "pattern": "^Compressed\\ blueprint\\ too\\ large$"
+  },
+  {
+    "key": "prefabdeploy.error.blueprint_must_use_minecraft_1_21_1_dataversion_3955_found_arg",
+    "fallback": "Blueprint must use Minecraft 1.21.1 DataVersion 3955; found %s",
+    "pattern": "^Blueprint\\ must\\ use\\ Minecraft\\ 1\\.21\\.1\\ DataVersion\\ 3955;\\ found\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.blueprint_has_no_affected_positions",
+    "fallback": "Blueprint has no affected positions",
+    "pattern": "^Blueprint\\ has\\ no\\ affected\\ positions$"
+  },
+  {
+    "key": "prefabdeploy.error.entity_tick_limit_exceeded",
+    "fallback": "Entity/tick limit exceeded",
+    "pattern": "^Entity/tick\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_block_entity",
+    "fallback": "Unknown block entity",
+    "pattern": "^Unknown\\ block\\ entity$"
+  },
+  {
+    "key": "prefabdeploy.error.block_entity_is_incompatible_with_block_at_arg",
+    "fallback": "Block entity is incompatible with block at %s",
+    "pattern": "^Block\\ entity\\ is\\ incompatible\\ with\\ block\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.tick_outside_blueprint_bounds",
+    "fallback": "Tick outside blueprint bounds",
+    "pattern": "^Tick\\ outside\\ blueprint\\ bounds$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_scheduled_tick_type",
+    "fallback": "Unknown scheduled tick type",
+    "pattern": "^Unknown\\ scheduled\\ tick\\ type$"
+  },
+  {
+    "key": "prefabdeploy.error.entity_hierarchy_limit_exceeded",
+    "fallback": "Entity hierarchy limit exceeded",
+    "pattern": "^Entity\\ hierarchy\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_entity_arg",
+    "fallback": "Unknown entity: %s",
+    "pattern": "^Unknown\\ entity:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.duplicate_entity_uuid_in_blueprint",
+    "fallback": "Duplicate entity UUID in blueprint",
+    "pattern": "^Duplicate\\ entity\\ UUID\\ in\\ blueprint$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_entity_coordinates",
+    "fallback": "Invalid entity coordinates",
+    "pattern": "^Invalid\\ entity\\ coordinates$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_blueprint_bounds",
+    "fallback": "Invalid blueprint bounds",
+    "pattern": "^Invalid\\ blueprint\\ bounds$"
+  },
+  {
+    "key": "prefabdeploy.error.too_many_positions",
+    "fallback": "Too many positions",
+    "pattern": "^Too\\ many\\ positions$"
+  },
+  {
+    "key": "prefabdeploy.error.empty_palette",
+    "fallback": "Empty palette",
+    "pattern": "^Empty\\ palette$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_packed_index",
+    "fallback": "Invalid packed index",
+    "pattern": "^Invalid\\ packed\\ index$"
+  },
+  {
+    "key": "prefabdeploy.error.truncated_block_states",
+    "fallback": "Truncated block states",
+    "pattern": "^Truncated\\ block\\ states$"
+  },
+  {
+    "key": "prefabdeploy.error.region_exceeds_position_limit_arg",
+    "fallback": "Region exceeds position limit: %s",
+    "pattern": "^Region\\ exceeds\\ position\\ limit:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_leash_coordinates",
+    "fallback": "Invalid leash coordinates",
+    "pattern": "^Invalid\\ leash\\ coordinates$"
+  },
+  {
+    "key": "prefabdeploy.error.supported_litematic_versions_5_7",
+    "fallback": "Supported litematic versions: 5..7",
+    "pattern": "^Supported\\ litematic\\ versions:\\ 5\\.\\.7$"
+  },
+  {
+    "key": "prefabdeploy.error.no_litematic_regions",
+    "fallback": "No litematic regions",
+    "pattern": "^No\\ litematic\\ regions$"
+  },
+  {
+    "key": "prefabdeploy.error.position_limit_exceeded",
+    "fallback": "Position limit exceeded",
+    "pattern": "^Position\\ limit\\ exceeded$"
+  },
+  {
+    "key": "prefabdeploy.error.conflicting_overlapping_regions_at_arg",
+    "fallback": "Conflicting overlapping regions at %s",
+    "pattern": "^Conflicting\\ overlapping\\ regions\\ at\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_entity_position",
+    "fallback": "Invalid entity position",
+    "pattern": "^Invalid\\ entity\\ position$"
+  },
+  {
+    "key": "prefabdeploy.error.missing_passenger_position",
+    "fallback": "Missing passenger position",
+    "pattern": "^Missing\\ passenger\\ position$"
+  },
+  {
+    "key": "prefabdeploy.error.nbt_content_nesting_exceeds_64_levels",
+    "fallback": "NBT content nesting exceeds 64 levels",
+    "pattern": "^NBT\\ content\\ nesting\\ exceeds\\ 64\\ levels$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_stored_item_arg",
+    "fallback": "Unknown stored item: %s",
+    "pattern": "^Unknown\\ stored\\ item:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_stored_item_component_arg",
+    "fallback": "Unknown stored item component: %s",
+    "pattern": "^Unknown\\ stored\\ item\\ component:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_block_arg",
+    "fallback": "Unknown block: %s",
+    "pattern": "^Unknown\\ block:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.unknown_property_arg",
+    "fallback": "Unknown property: %s",
+    "pattern": "^Unknown\\ property:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_state_value_arg",
+    "fallback": "Invalid state value: %s",
+    "pattern": "^Invalid\\ state\\ value:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.missing_structure_size",
+    "fallback": "Missing structure size",
+    "pattern": "^Missing\\ structure\\ size$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_block_position",
+    "fallback": "Invalid block position",
+    "pattern": "^Invalid\\ block\\ position$"
+  },
+  {
+    "key": "prefabdeploy.error.position_outside_structure",
+    "fallback": "Position outside structure",
+    "pattern": "^Position\\ outside\\ structure$"
+  },
+  {
+    "key": "prefabdeploy.error.duplicate_structure_position",
+    "fallback": "Duplicate structure position",
+    "pattern": "^Duplicate\\ structure\\ position$"
+  },
+  {
+    "key": "prefabdeploy.error.unsupported_journal_version",
+    "fallback": "Unsupported journal version",
+    "pattern": "^Unsupported\\ journal\\ version$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_journal_transform",
+    "fallback": "Invalid journal transform",
+    "pattern": "^Invalid\\ journal\\ transform$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_beacon_refund_count",
+    "fallback": "Invalid beacon refund count",
+    "pattern": "^Invalid\\ beacon\\ refund\\ count$"
+  },
+  {
+    "key": "prefabdeploy.error.missing_source_arg",
+    "fallback": "Missing source: %s",
+    "pattern": "^Missing\\ source:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.unsupported_format_arg",
+    "fallback": "Unsupported format: %s",
+    "pattern": "^Unsupported\\ format:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.unsupported_blueprint_format_arg",
+    "fallback": "Unsupported blueprint format: %s",
+    "pattern": "^Unsupported\\ blueprint\\ format:\\ (.*?)$"
+  },
+  {
+    "key": "prefabdeploy.error.ground_reference_outside_blueprint",
+    "fallback": "Ground reference outside blueprint",
+    "pattern": "^Ground\\ reference\\ outside\\ blueprint$"
+  },
+  {
+    "key": "prefabdeploy.error.atomic_replacement_interrupted",
+    "fallback": "Atomic replacement interrupted",
+    "pattern": "^Atomic\\ replacement\\ interrupted$"
+  },
+  {
+    "key": "prefabdeploy.error.atomic_journal_replacement_is_required_on_this_filesystem",
+    "fallback": "Atomic journal replacement is required on this filesystem",
+    "pattern": "^Atomic\\ journal\\ replacement\\ is\\ required\\ on\\ this\\ filesystem$"
+  },
+  {
+    "key": "prefabdeploy.error.invalid_journal_size",
+    "fallback": "Invalid journal size",
+    "pattern": "^Invalid\\ journal\\ size$"
+  },
+  {
+    "key": "prefabdeploy.error.journal_checksum_mismatch",
+    "fallback": "Journal checksum mismatch",
+    "pattern": "^Journal\\ checksum\\ mismatch$"
+  }
+]

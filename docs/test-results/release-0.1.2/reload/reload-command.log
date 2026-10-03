@@ -1,0 +1,123 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-reload-012/tmp
+Reusing configuration cache.
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :preparePrefabGameTests UP-TO-DATE
+> Task :prepareGameTestServerRun UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava
+> Task :classes
+
+> Task :runGameTestServer
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-reload-012/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[00:57:44] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430]
+[00:57:44] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[00:57:44] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[00:57:45] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[00:57:45] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[00:57:45] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[00:57:45] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.2 (prefabdeploy)
+[00:57:47] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[00:57:47] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[00:57:51] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[00:58:01] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[00:58:01] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[00:58:01] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[00:58:01] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[00:58:01] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[00:58:02] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[00:58:02] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[00:58:02] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Administrator/.cache/prefabdeploy-reload-012/build/moddev/artifacts/neoforge-21.1.248.jar%23125!/assets/.mcassetsroot' uses unexpected schema
+[00:58:02] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/Users/Administrator/.cache/prefabdeploy-reload-012/build/moddev/artifacts/neoforge-21.1.248.jar%23125!/data/.mcassetsroot' uses unexpected schema
+[00:58:02] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [prefabreload]
+[00:58:04] [Worker-Main-22/ERROR] [io.gi.pr.PrefabDeploy/]: Unable to load prefab reloadtest:bad
+java.io.FileNotFoundException: reloadtest:blueprints/missing.nbt
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.ResourceProvider.lambda$getResourceOrThrow$1(ResourceProvider.java:18) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.ResourceProvider.getResourceOrThrow(ResourceProvider.java:18) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.lambda$prepare$1(PrefabLibrary.java:49) ~[%23127!/:?] {re:classloading}
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1317) ~[?:?] {}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.prepare(PrefabLibrary.java:39) ~[%23127!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.prepare(PrefabLibrary.java:17) ~[%23127!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$0(SimplePreparableReloadListener.java:17) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) [?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?] {}
+[00:58:05] [main/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[00:58:05] [main/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[00:58:05] [main/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 5 prefab definitions
+[00:58:06] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[00:58:06] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[00:58:06] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 369 ms
+[00:58:06] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[00:58:06] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[00:58:07] [Server thread/INFO] [minecraft/GameTestServer]: 1 tests are now running at position -11017022, -59, 7411544!
+[00:58:08] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (1 tests)...
+[00:58:08] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[00:58:08] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[00:58:08] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[00:58:09] [Server thread/INFO] [minecraft/MinecraftServer]: Reloading prefab data...
+[00:58:09] [Worker-Main-3/ERROR] [io.gi.pr.PrefabDeploy/]: Unable to load prefab reloadtest:bad
+java.io.FileNotFoundException: reloadtest:blueprints/missing.nbt
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.ResourceProvider.lambda$getResourceOrThrow$1(ResourceProvider.java:18) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.ResourceProvider.getResourceOrThrow(ResourceProvider.java:18) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.lambda$prepare$1(PrefabLibrary.java:49) ~[%23127!/:?] {re:classloading}
+	at java.base/java.util.TreeMap.forEach(TreeMap.java:1317) ~[?:?] {}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.prepare(PrefabLibrary.java:39) ~[%23127!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.2/io.github.prefabdeploy.library.PrefabLibrary.prepare(PrefabLibrary.java:17) ~[%23127!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$0(SimplePreparableReloadListener.java:17) ~[neoforge-21.1.248.jar%23125!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) [?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) [?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?] {}
+[00:58:09] [Server thread/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[00:58:09] [Server thread/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[00:58:09] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 5 prefab definitions
+[00:58:10] [Server thread/INFO] [minecraft/MinecraftServer]: Loaded 5 buildings (1 unavailable)
+[00:58:10] [Server thread/INFO] [minecraft/MinecraftServer]: Reloading prefab data...
+[00:58:10] [Server thread/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[00:58:10] [Server thread/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[00:58:10] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 4 prefab definitions
+[00:58:11] [Server thread/INFO] [minecraft/MinecraftServer]: Loaded 4 buildings (0 unavailable)
+[00:58:11] [Server thread/INFO] [minecraft/MinecraftServer]: Reloading prefab data...
+[00:58:11] [Server thread/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[00:58:11] [Server thread/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[00:58:11] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[00:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: Loaded 3 buildings (0 unavailable)
+[00:58:12] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: PREFAB HOT RELOAD DISCOVERY UPDATE DELETE SNAPSHOT VERIFIED
+[00:58:12] [Server thread/INFO] [minecraft/GameTestServer]: [+]
+[00:58:12] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 5.027 s ======================
+[00:58:12] [Server thread/INFO] [minecraft/GameTestServer]: All 1 required tests passed :)
+[00:58:12] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[00:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[00:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[00:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[00:58:12] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[00:58:15] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[00:58:15] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+BUILD SUCCESSFUL in 38s
+9 actionable tasks: 2 executed, 7 up-to-date
+Configuration cache entry reused.

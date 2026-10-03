@@ -1,0 +1,15 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.codex/cache/prefabdeploy-nf248/tmp
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed: 'compatTest' and 'vssJar' were removed.
+> Task :processTestResources NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+> Task :test UP-TO-DATE
+
+BUILD SUCCESSFUL in 2s
+6 actionable tasks: 6 up-to-date
+Configuration cache entry stored.

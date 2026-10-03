@@ -1,0 +1,74 @@
+{
+  "version": "0.1.2",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "neoforge_minimum": "21.1.248",
+  "neoforge_compiled_version": "21.1.248",
+  "neoforge_tested_versions": [
+    "21.1.248"
+  ],
+  "date": "2026-10-04T01:10:52+02:00",
+  "source_java_sha256": "cba434a3f9606558cd26f7869f4efc36c39d85c603d9e2810c2b2affdceacb55",
+  "jar_sha256": "ff590985c0b464d807cbad57a0eb83aef381ee9262cc985c27e88f8952582ce6",
+  "build_log": "build-0.1.2.log",
+  "build_artifacts_match": true,
+  "archive_and_metadata_integrity": true,
+  "unit_tests_passed": 10,
+  "gametest_base": {
+    "entries_passed": 35,
+    "core_executed": 31,
+    "optional_skipped": 4
+  },
+  "gametest_compat": {
+    "entries_passed": 35,
+    "optional_skipped": 0
+  },
+  "hard_crash_restarts_passed": [
+    "BLOCKS",
+    "TICKS",
+    "COMMIT"
+  ],
+  "native_client_flow_passed": true,
+  "preview_and_deployment_p95_targets_passed": true,
+  "runtime_checks_status": "passed",
+  "manual_acceptance_status": "captured_model_gui_and_shader_scenarios_reviewed_see_limits",
+  "manual_acceptance_checklist": "../RELEASE-0.1.2.md",
+  "historical_acceptance_records": [
+    "acceptance-0.1.0.json",
+    "acceptance-0.1.1-build-only.json",
+    "acceptance-0.1.1.json"
+  ],
+  "benchmark": "release-0.1.2/client-benchmark.json",
+  "measurement_limits": "../TESTING-0.1.2.md",
+  "published": false,
+  "server_hot_reload_passed": true,
+  "saved_beacon_reload_passed": true,
+  "shader_profiles_passed": [
+    {
+      "pack": "(off)",
+      "iris": "1.8.14-beta.1+mc1.21.1",
+      "sodium": "0.8.13+mc1.21.1"
+    },
+    {
+      "pack": "ComplementaryReimagined_r5.9.zip",
+      "iris": "1.8.14-beta.1+mc1.21.1",
+      "sodium": "0.8.13+mc1.21.1"
+    },
+    {
+      "pack": "BSL_v10.1.1.zip",
+      "iris": "1.8.14-beta.1+mc1.21.1",
+      "sodium": "0.8.13+mc1.21.1"
+    }
+  ],
+  "gui_screenshot_dimensions_reviewed": [
+    [
+      640,
+      400
+    ],
+    [
+      427,
+      267
+    ]
+  ],
+  "runtime_reports": "release-0.1.2"
+}

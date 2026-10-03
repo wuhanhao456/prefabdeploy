@@ -1,0 +1,54 @@
+{
+  "version": "0.1.1",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "neoforge_minimum": "21.1.248",
+  "neoforge_compiled_version": "21.1.248",
+  "neoforge_tested_versions": [
+    "21.1.248"
+  ],
+  "date": "2026-10-03T22:55:40+02:00",
+  "source_java_sha256": "609d14c8a81b52c340cc7ad7824d35837d111e2a0f7f5d5f59fe0d3e42e397b7",
+  "jar_sha256": "494515c404dd2f05322089dbb2ec12c5fba9f39dd068837ad5b9fd7922df3a17",
+  "build_log": "build-0.1.1.log",
+  "build_artifacts_match": true,
+  "archive_and_metadata_integrity": true,
+  "unit_tests_passed": 10,
+  "gametest_base": {
+    "entries_passed": 31,
+    "core_executed": 27,
+    "optional_skipped": 4
+  },
+  "gametest_compat": {
+    "entries_passed": 31,
+    "optional_skipped": 0
+  },
+  "hard_crash_restarts_passed": [
+    "BLOCKS",
+    "TICKS",
+    "COMMIT"
+  ],
+  "native_client_flow_passed": true,
+  "preview_and_deployment_p95_targets_passed": true,
+  "runtime_checks_status": "passed",
+  "manual_acceptance_status": "partial_visual_review_see_checklist",
+  "manual_acceptance_checklist": "../RELEASE-0.1.1.md",
+  "historical_acceptance_records": [
+    "acceptance-0.1.0.json",
+    "acceptance-0.1.1-build-only.json"
+  ],
+  "benchmark": "release-0.1.1/client-benchmark.json",
+  "measurement_limits": "../TESTING-0.1.1.md",
+  "published": false,
+  "gui_screenshot_dimensions_reviewed": [
+    [
+      640,
+      400
+    ],
+    [
+      427,
+      267
+    ]
+  ],
+  "runtime_reports": "release-0.1.1"
+}

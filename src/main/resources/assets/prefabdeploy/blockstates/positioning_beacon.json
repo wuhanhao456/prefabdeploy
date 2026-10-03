@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "beaconvisual:block/frame"
+    }
+  }
+}

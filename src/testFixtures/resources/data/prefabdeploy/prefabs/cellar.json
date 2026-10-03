@@ -1,0 +1,12 @@
+{
+  "name": "Cellar & Landing / 地下室与平台",
+  "category": "examples",
+  "source": "prefabdeploy:blueprints/cellar.litematic",
+  "ground_y": 4,
+  "visible": true,
+  "unlock": true,
+  "cost": {
+    "mode": "combined",
+    "xp": 5
+  }
+}

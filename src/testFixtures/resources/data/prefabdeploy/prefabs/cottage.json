@@ -1,0 +1,11 @@
+{
+  "name": "Oak Cottage / 橡木小屋",
+  "category": "examples",
+  "source": "prefabdeploy:blueprints/cottage.nbt",
+  "ground_y": 1,
+  "visible": true,
+  "unlock": true,
+  "cost": {
+    "mode": "auto"
+  }
+}

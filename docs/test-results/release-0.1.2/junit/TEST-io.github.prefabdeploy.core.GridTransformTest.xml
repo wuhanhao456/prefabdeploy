@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.prefabdeploy.core.GridTransformTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-03T23:05:34.535Z" hostname="EPYC" time="0.049">
+  <properties/>
+  <testcase name="beaconCIsPerpendicularWithNoMirror()" classname="io.github.prefabdeploy.core.GridTransformTest" time="0.039"/>
+  <testcase name="cellsAndContinuousCoordinatesAgreeAtAllFourRotations()" classname="io.github.prefabdeploy.core.GridTransformTest" time="0.004"/>
+  <testcase name="basementUsesReferencePlaneRatherThanLowestBlock()" classname="io.github.prefabdeploy.core.GridTransformTest" time="0.001"/>
+  <testcase name="fortyEightWideMeansBoundaryDistanceFortyEight()" classname="io.github.prefabdeploy.core.GridTransformTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

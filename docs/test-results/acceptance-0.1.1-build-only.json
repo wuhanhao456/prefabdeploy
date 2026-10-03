@@ -1,0 +1,29 @@
+{
+  "version": "0.1.1",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "neoforge_minimum": "21.1.248",
+  "neoforge_compiled_version": "21.1.248",
+  "neoforge_tested_versions": [],
+  "date": "2026-10-03T22:02:45+02:00",
+  "source_java_sha256": "e261bc3dc1e6ea391d6388414787d1b88d841797ead0521a57d1f4e22f64243f",
+  "jar_sha256": "494515c404dd2f05322089dbb2ec12c5fba9f39dd068837ad5b9fd7922df3a17",
+  "build_log": "build-0.1.1.log",
+  "build_artifacts_match": true,
+  "archive_and_metadata_integrity": true,
+  "unit_tests_passed": null,
+  "gametest_base": null,
+  "gametest_compat": null,
+  "hard_crash_restarts_passed": [],
+  "native_client_flow_passed": null,
+  "preview_and_deployment_p95_targets_passed": null,
+  "runtime_checks_status": "not_run_by_user_request",
+  "manual_acceptance_status": "not_run",
+  "manual_acceptance_checklist": "../RELEASE-0.1.1.md",
+  "historical_acceptance_records": [
+    "acceptance-0.1.0.json"
+  ],
+  "benchmark": null,
+  "measurement_limits": "../TESTING.md",
+  "published": false
+}

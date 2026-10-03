@@ -1,0 +1,13 @@
+{
+  "name": "Performance 50000",
+  "category": "performance",
+  "source": "prefabbench:blueprints/50000.nbt",
+  "ground_y": 0,
+  "ignore_air": false,
+  "visible": true,
+  "unlock": true,
+  "cost": {
+    "mode": "free"
+  },
+  "requirements_text": "Free performance fixture; use a dedicated test world"
+}
