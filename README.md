@@ -4,6 +4,8 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 当前版本：**0.1.2**。需要 **Java 21** 和 **NeoForge 21.1.248 或更高的 1.21.1 版本**。客户端和服务器安装同一版本。许可：[MPL-2.0](LICENSE)。
 
+本模组由AI生成。使用时默认使用者知晓可能存在的稳定性或兼容性问题。
+
 ## 安装
 
 从 [0.1.2 发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2) 下载安装包。发布页同时提供源码和 SHA-256 清单。
