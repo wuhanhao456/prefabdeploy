@@ -6,6 +6,8 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 ## 安装
 
+从 [0.1.2 发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2) 下载安装包。发布页同时提供源码和 SHA-256 清单。
+
 将 `prefabdeploy-0.1.2.jar` 放入实例的 `mods/`。删除同一 Mod 的旧版 JAR。正式版不包含测试建筑。
 
 ## 合成配方

@@ -28,3 +28,5 @@ Iris 1.8.14-beta.1 与 Sodium 0.8.13 的组合通过测试。分别测试关闭�
 将 `prefabdeploy-0.1.2.jar` 放入客户端和服务器的 `mods/`。删除同一 Mod 的旧版 JAR。服务器将建筑数据包放入世界的 `datapacks/` 后执行 `/prefab reload`。单人玩家和局域网主机可使用本地蓝图文件夹。
 
 源码仓库：[wuhanhao456/prefabdeploy](https://github.com/wuhanhao456/prefabdeploy)。
+
+[0.1.2 发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2) 提供上述文件。上传后已核对文件大小和 GitHub 返回的 SHA-256。发布记录位于 `test-results/release-0.1.2/publication.json`。源码 ZIP 保留上传前的验收快照。

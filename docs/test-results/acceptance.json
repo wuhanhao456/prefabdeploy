@@ -40,7 +40,7 @@
   ],
   "benchmark": "release-0.1.2/client-benchmark.json",
   "measurement_limits": "../TESTING-0.1.2.md",
-  "published": false,
+  "published": true,
   "server_hot_reload_passed": true,
   "saved_beacon_reload_passed": true,
   "shader_profiles_passed": [
@@ -72,5 +72,7 @@
   ],
   "runtime_reports": "release-0.1.2",
   "clean_checkout_build_passed": true,
-  "clean_checkout_commit": "caaf1f4a644b9099a9fac6bd6156dc3ad4c595e5"
+  "clean_checkout_commit": "caaf1f4a644b9099a9fac6bd6156dc3ad4c595e5",
+  "release_url": "https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2",
+  "publication_record": "release-0.1.2/publication.json"
 }
