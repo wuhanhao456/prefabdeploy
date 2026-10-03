@@ -82,15 +82,91 @@ data/yourpack/blueprints/house.nbt
 
 ## 规则
 
-`visible`、`unlock`、`conditions` 使用同一种语法。`visible` 不通过时，该建筑定义和预览都不发送给玩家；`unlock` 不通过仍可看到锁定条目；`conditions` 在部署时重新检查。省略规则表示通过。
+`visible`、`unlock`、`conditions` 使用同一种语法。将规则写入建筑 JSON 的对应字段。
+
+| 字段 | 检查结果 |
+| --- | --- |
+| `visible` | 不通过时隐藏条目，也不发送预览 |
+| `unlock` | 不通过时显示锁定条目，禁止选择和部署 |
+| `conditions` | 检查当前部署条件；部署时重新检查 |
+
+省略字段表示通过。`requirements_text` 只显示说明，不执行检查。免费建筑仍需通过规则。
+
+### 写入解锁条件
+
+以下片段用于合并或替换建筑 JSON 中的字段。它们不是完整建筑定义。完整定义仍需 `source` 和 `cost`。
+
+不设解锁门槛：
 
 ```json
-{"type":"all","rules":[
-  {"type":"ftb_quest","id":"0123456789ABCDEF"},
-  {"type":"flag","scope":"team","id":"housing_tier_2"},
-  {"type":"dimension","id":"minecraft:overworld"}
-]}
+{"unlock": true}
 ```
+
+暂时禁止解锁时，改为 `"unlock": false`。要求玩家完成原版或数据包进度时，使用进度资源 ID：
+
+```json
+{
+  "unlock": {"type": "advancement", "id": "minecraft:story/mine_stone"},
+  "requirements_text": "完成石器时代。"
+}
+```
+
+要求完成 FTB 任务时，使用 `ftb_quest`。任务 ID 的获取方法见下方 [FTB 联动](#ftb-联动)。
+
+```json
+{
+  "unlock": {"type": "ftb_quest", "id": "0123456789ABCDEF"},
+  "requirements_text": "完成住宅许可任务。"
+}
+```
+
+`0123456789ABCDEF` 是占位 ID。必须替换为你的实际任务 ID。
+
+### 组合规则
+
+使用 `all` 要求全部条件通过。下面要求完成石器时代和指定 FTB 任务，并限制在主世界部署：
+
+```json
+{
+  "unlock": {
+    "type": "all",
+    "rules": [
+      {"type": "advancement", "id": "minecraft:story/mine_stone"},
+      {"type": "ftb_quest", "id": "0123456789ABCDEF"}
+    ]
+  },
+  "conditions": {"type": "dimension", "id": "minecraft:overworld"},
+  "requirements_text": "完成石器时代和住宅许可任务。仅限主世界。"
+}
+```
+
+使用 `any` 允许任意一项通过。下面允许完成任务或取得个人许可：
+
+```json
+{
+  "unlock": {
+    "type": "any",
+    "rules": [
+      {"type": "ftb_quest", "id": "0123456789ABCDEF"},
+      {"type": "flag", "scope": "player", "id": "housing_tier_2"}
+    ]
+  },
+  "requirements_text": "完成住宅许可任务，或取得二级住宅许可。"
+}
+```
+
+使用 `not` 排除一个条件。下面禁止在下界部署：
+
+```json
+{
+  "conditions": {
+    "type": "not",
+    "rule": {"type": "dimension", "id": "minecraft:the_nether"}
+  }
+}
+```
+
+### 规则类型
 
 | 规则 | 字段 |
 | --- | --- |
@@ -104,7 +180,138 @@ data/yourpack/blueprints/house.nbt
 | `flag` | 标记 `id`，`scope` 为 `player` 或 `team` |
 | `script` | 已注册的规则 `id` |
 
-所需联动或脚本缺失时关闭对应建筑，`not` 和 `any` 也不能绕过缺失依赖。FTB Chunks 安装后自动逐位置检查编辑权限，无需在定义中再写领地规则。可用脚本实现额外地形、坐标或整合包限制。
+所需联动或脚本缺失时拒绝对应建筑。`not` 和 `any` 也不能绕过缺失依赖。例如，上面的 `any` 包含 FTB 任务规则，因此仍需安装 FTB Quests。注册 `script` 规则的方法见 [KubeJS 指南](KUBEJS.md#注册规则)。
+
+## FTB 联动
+
+### 依赖与用途
+
+| 模组 | 用途 |
+| --- | --- |
+| FTB Quests | `ftb_quest` 读取任务完成状态 |
+| FTB Teams | 提供当前团队 ID；`flag` 的 `team` 范围使用该 ID |
+| FTB Chunks | 自动检查建筑位置的领地编辑权限 |
+
+安装对应模组的依赖，包括 FTB Library。任务解锁直接由 Prefab Deploy 检查，不需要 KubeJS。已验证的联动版本见 [Java API](API.md#已验证的可选版本)。
+
+### 获取任务 ID
+
+1. 管理员打开 FTB 任务书，进入编辑模式。
+2. 右键目标任务节点，选择“复制 ID”（Copy ID）。
+3. 将复制的十六进制 ID 写入 `unlock.id`，保留字符串引号。
+4. 保存建筑 JSON，执行 `/prefab reload`，重新打开建筑库。
+
+需要整项任务完成后解锁时，复制任务节点的 ID。不要复制章节、奖励或任务内子目标的 ID。任务标题和配置文件名也不能代替 ID。ID 不带 `0x` 前缀。“复制 ID”入口见 [FTB Quests 官方说明](https://github.com/FTBTeam/FTB-Quests/blob/main/CHANGELOG.md)。
+
+也可在实例的 `config/ftbquests/quests/chapters/*.snbt` 中查找任务。使用 `quests` 列表内对应任务的 `id`，不要使用文件顶部的章节 `id`。
+
+`ftb_quest` 检查玩家当前 FTB 团队的任务完成状态。它不检查是否领取奖励。任务完成后，重新打开建筑库查看解锁结果。任务状态被重置后，该规则会再次阻止部署。
+
+### 个人许可与团队许可
+
+`flag` 是 Prefab Deploy 保存的解锁标记。它不会自动读取 FTB 任务、GameStages 或商店购买记录。通过 KubeJS 或 Java 接口授予标记。
+
+个人许可只解锁该玩家：
+
+```json
+{
+  "unlock": {"type": "flag", "scope": "player", "id": "housing_tier_2"},
+  "requirements_text": "取得二级住宅许可。"
+}
+```
+
+团队许可解锁当前 FTB 团队的成员：
+
+```json
+{
+  "unlock": {"type": "flag", "scope": "team", "id": "housing_tier_2"},
+  "requirements_text": "团队取得二级住宅许可。"
+}
+```
+
+在有真实服务器玩家对象的脚本事件中调用 `PrefabAPI.grantPlayer(player, 'housing_tier_2')` 或 `PrefabAPI.grantTeam(player, 'housing_tier_2')`。标记名必须与 JSON 一致。撤销时调用对应的 `revokePlayer` 或 `revokeTeam`。事件示例见 [KubeJS 指南](KUBEJS.md#解锁标记)。
+
+团队标记绑定 FTB 团队 ID。玩家换队后使用新团队的标记。需要按任务进度解锁时，直接使用 `ftb_quest`。
+
+### FTB Chunks 领地权限
+
+安装 FTB Chunks 后，Mod 自动逐位置检查编辑权限。建筑 JSON 无需添加领地规则。已解锁的建筑仍需通过领地检查。建筑跨入玩家无权编辑的领地时，整次部署会被拒绝。此类验证失败不会扣费。
+
+## ViScriptShop 货币联动
+
+这里的商店模组是 ViScriptShop。`cost.viscriptshop` 收取部署玩家的原生余额。团队解锁仍从实际部署玩家扣款，不使用团队钱包。
+
+仅收取 12.50 商店货币：
+
+```json
+{"cost": {"mode": "manual", "viscriptshop": 12.50}}
+```
+
+收取自动建筑材料，再加 12.50 商店货币和 20 经验点：
+
+```json
+{"cost": {"mode": "combined", "viscriptshop": 12.50, "xp": 20}}
+```
+
+金额必须非负，最多两位小数。每次部署都会收费。使用 `free` 模式时不收费。扣款和退款细节见 [费用自定义](COSTS.md#viscriptshop-货币)。
+
+该接口支持 ViScriptShop 原生玩家余额。使用 Magic Coins 时，不能启用 ViScriptShop 的货币替换选项 `isReplaceMoneyToMagicCoin`。替代货币需要单独的可恢复费用提供者。
+
+如果需求是“购买一次，之后永久解锁”，使用 `flag` 和购买成功事件。配置方法见 [购买建筑许可](KUBEJS.md#购买建筑许可)。它与每次部署收取货币分开配置。
+
+## FTB 任务与商店货币组合示例
+
+下面的完整定义要求完成住宅许可任务。每次部署收取 2 个绿宝石、20 经验点和 12.50 商店货币。`manual` 不额外收取自动建筑材料。
+
+```json
+{
+  "name": "许可住宅",
+  "category": "住宅",
+  "source": "yourpack:blueprints/house.nbt",
+  "ground_y": 2,
+  "ignore_air": false,
+  "visible": true,
+  "unlock": {"type": "ftb_quest", "id": "0123456789ABCDEF"},
+  "conditions": {"type": "dimension", "id": "minecraft:overworld"},
+  "requirements_text": "完成住宅许可任务。仅限主世界。",
+  "cost": {
+    "mode": "manual",
+    "items": [{"id": "minecraft:emerald", "count": 2}],
+    "xp": 20,
+    "viscriptshop": 12.50
+  }
+}
+```
+
+替换任务 ID 和蓝图路径。根据蓝图设置参考层。需要玩家提供建筑材料时，将模式改为 `combined`。
+
+ViScriptShop 1.2.2.4 提供 FTB Quests 的“VSS虚拟货币”奖励。可在任务编辑器中添加该奖励，并设置金额，例如 25。玩家领取奖励后，余额增加，可支付上面的部署费用。该奖励由 ViScriptShop 提供，见[奖励实现](https://github.com/zhenshiz/ViScriptShop/blob/master/src/main/java/com/viscriptshop/compat/ftbquests/VirtualCurrencyReward.java)。
+
+完成任务与领取奖励是两步。未领取奖励时，建筑可能已解锁，但余额仍不足。普通金币物品不会自动计入 ViScriptShop 余额。
+
+使用生存模式验证以下流程：
+
+1. 未完成任务时，建筑显示为锁定。
+2. 完成任务后，重新打开建筑库。建筑解锁。
+3. 领取货币奖励，准备物品和经验点。
+4. 在有编辑权限的位置部署，核对扣款。
+5. 移除所需物品或降低余额，再尝试部署。费用不足时应拒绝部署。
+6. 在无编辑权限的领地尝试部署。验证整次部署被拒绝，费用保持原值。
+
+## 联动排查
+
+| 现象 | 检查项 |
+| --- | --- |
+| 建筑没有显示 | 检查 `visible`、数据包是否启用及导入错误 |
+| FTB 任务完成后仍锁定 | 检查实际任务 ID、当前团队和任务完成状态；重新打开建筑库 |
+| 领取了任务奖励，但建筑仍锁定 | `ftb_quest` 检查任务完成状态；`flag` 需要单独授予标记 |
+| 团队许可不生效 | 检查 FTB Teams、当前团队、`scope` 和标记名 |
+| 写了条件说明，但未阻止部署 | `requirements_text` 只显示文本；同时配置 `unlock` 或 `conditions` |
+| 已解锁，但不能部署 | 检查部署条件、费用、蓝图错误和位置权限 |
+| 商店货币不可用 | 检查 ViScriptShop 依赖、原生余额模式及服务端日志 |
+| 商店购买后没有解锁 | 检查 KubeJS 服务器脚本、购买成功事件和实际商店名称 |
+
+修改建筑 JSON 后执行 `/prefab reload`。修改 KubeJS 脚本后，先重载服务器脚本或重启，再执行 `/prefab reload`。建筑重载命令不会重读脚本文件。
 
 ## 开发测试资源
 

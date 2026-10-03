@@ -76,6 +76,49 @@ PrefabAPI.revokeTeam(player, 'housing_tier_2')
 {"type":"flag","scope":"player","id":"housing_tier_2"}
 ```
 
+这些调用需要真实的服务器玩家对象。将它们放入提供玩家对象的事件处理函数。不要直接把含有未定义 `player` 的调用放在脚本文件顶层。
+
+`player` 标记属于个人。`team` 标记属于调用时的 FTB 团队。两种标记使用不同的所有者。授予方式必须与建筑规则中的 `scope` 一致。标记不会自动同步 GameStages 或商店购买记录。
+
+## 购买建筑许可
+
+此示例在 ViScriptShop 购买成功后授予个人许可。需要 ViScriptShop 和 KubeJS。事件与 getter 按 ViScriptShop 1.2.2.4 核对。
+
+1. 在 ViScriptShop 中创建单独的许可商店。
+2. 将商店名称设置为 `housing_permit`。这是商店配置的名称，不是商品名或文件名。
+3. 商店只保留一个住宅许可交易，例如收取 50 商店货币并交付一张纸。
+4. 在建筑 JSON 中合并下面的片段。
+
+```json
+{
+  "unlock": {"type": "flag", "scope": "player", "id": "housing_tier_2"},
+  "requirements_text": "购买二级住宅许可。",
+  "cost": {"mode": "auto"}
+}
+```
+
+在 `kubejs/server_scripts/housing_permit.js` 中写入：
+
+```js
+ViScriptShopEvents.buySuccess(event => {
+  const shopName = String(event.getShopInfo().getName())
+  if (shopName !== 'housing_permit') return
+  PrefabAPI.grantPlayer(event.getPlayer(), 'housing_tier_2')
+})
+```
+
+ViScriptShop 已处理购买付款。此事件只授予标记，不再扣款。建筑使用 `auto`，因此每次部署仍收取建筑材料。需要许可后的部署免费时，将建筑费用改为 `{"mode":"free"}`。
+
+此事件匹配整个商店。ViScriptShop 1.2.2.4 的 `BuySuccess` 脚本对象只提供玩家和商店信息，没有商品 ID getter。不要在 `housing_permit` 中加入普通商品，否则购买这些商品也会授予许可。接口来源见 [事件注册](https://github.com/zhenshiz/ViScriptShop/blob/master/src/main/java/com/viscriptshop/event/ViScriptShopEventsJS.java)和[事件参数](https://github.com/zhenshiz/ViScriptShop/blob/master/src/main/java/com/viscriptshop/event/kubejs/ShopServerEventJS.java)。
+
+许可保存为标记。丢弃示例中的纸不会取消许可。需要撤销时，在提供玩家对象的脚本中调用 `PrefabAPI.revokePlayer(player, 'housing_tier_2')`。
+
+需要团队许可时，将建筑的 `scope` 改为 `team`，并将事件中的 `grantPlayer` 改为 `grantTeam`。此时还需 FTB Teams。许可授予购买者当时所在的团队。
+
+修改脚本后，重载 KubeJS 服务器脚本或重启服务器。随后执行 `/prefab reload`。用生存模式检查以下结果：购买失败不授予标记；购买成功后重新打开建筑库可见解锁；部署时按建筑 `cost` 收费。还需确认其他商店的购买不会解锁该建筑。
+
+FTB 任务直接解锁和任务货币奖励的配置见 [FTB 联动](DATAPACKS.md#ftb-联动)与[组合示例](DATAPACKS.md#ftb-任务与商店货币组合示例)。
+
 ## 自定义费用
 
 `event.registerCost(id, provider)` 接收完整的 Java `CostProvider` 实例。这个接口包含多个方法，不能只传一个箭头函数。可以使用 Java 类或 Rhino `JavaAdapter`。实现必须满足幂等和玩家 NBT 原子保存要求，见[费用自定义](COSTS.md)。
