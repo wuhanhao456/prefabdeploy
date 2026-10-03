@@ -7,7 +7,7 @@
   "neoforge_tested_versions": [
     "21.1.248"
   ],
-  "date": "2026-10-04T01:10:52+02:00",
+  "date": "2026-10-04T01:14:20+02:00",
   "source_java_sha256": "cba434a3f9606558cd26f7869f4efc36c39d85c603d9e2810c2b2affdceacb55",
   "jar_sha256": "ff590985c0b464d807cbad57a0eb83aef381ee9262cc985c27e88f8952582ce6",
   "build_log": "build-0.1.2.log",
@@ -70,5 +70,7 @@
       267
     ]
   ],
-  "runtime_reports": "release-0.1.2"
+  "runtime_reports": "release-0.1.2",
+  "clean_checkout_build_passed": true,
+  "clean_checkout_commit": "caaf1f4a644b9099a9fac6bd6156dc3ad4c595e5"
 }

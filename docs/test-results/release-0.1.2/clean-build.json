@@ -1,0 +1,11 @@
+{
+  "commit": "caaf1f4a644b9099a9fac6bd6156dc3ad4c595e5",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "clean_checkout_build_passed": true,
+  "artifacts_byte_identical": true,
+  "sha256": {
+    "prefabdeploy-0.1.2.jar": "ff590985c0b464d807cbad57a0eb83aef381ee9262cc985c27e88f8952582ce6",
+    "prefabdeploy-0.1.2-sources.jar": "03dc10f086caf29acac31a588af81546117acc9776c7240ec9d89ba35a7002da"
+  }
+}

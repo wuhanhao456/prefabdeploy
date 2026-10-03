@@ -160,6 +160,14 @@ def main():
         compiled = args.build_dir / "libs" / artifact.name
         require(compiled.is_file() and digest(compiled) == digest(artifact),
                 f"Delivery differs from the build artifact: {artifact.name}")
+    if runtime:
+        clean = json.loads(text(args.runtime_reports / "clean-build.json"))
+        require(clean.get("clean_checkout_build_passed") and clean.get("artifacts_byte_identical"),
+                "Clean checkout build is unverified")
+        for artifact in (jar, sources_jar):
+            require(clean["sha256"][artifact.name] == digest(artifact), "Clean build belongs to another artifact")
+        runtime["clean_checkout_build_passed"] = True
+        runtime["clean_checkout_commit"] = clean["commit"]
     with zipfile.ZipFile(jar) as archive:
         require(archive.testzip() is None, "Damaged JAR")
         names = set(archive.namelist())
