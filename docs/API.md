@@ -98,4 +98,4 @@ Java 扩展接口签名保持不变。`catalog_start` 增加 `local_import` 布�
 
 本地扫描在后台线程执行。目录合并和 KubeJS `registry` 在服务器线程执行。文件变化或数据包重载触发目录重建。活动会话和任务保持原快照。新增界面文字和错误使用中英文翻译键。
 
-费用说明见[COSTS.md](COSTS.md)。面向整合包作者的脚本见[KUBEJS.md](KUBEJS.md)。源码修改入口见[AGENTS.md](../AGENTS.md)。
+费用说明见[COSTS.md](COSTS.md)。面向整合包作者的脚本见[KUBEJS.md](KUBEJS.md)。指导 AI 创建建筑数据包和魔改的流程见[AGENTS.md](../AGENTS.md)。

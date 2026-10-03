@@ -72,7 +72,7 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 - [费用自定义](docs/COSTS.md)：费用结构、材料、XP、货币和自定义提供者。
 - [KubeJS 指南](docs/KUBEJS.md)：面向整合包作者的脚本和事件示例。
 - [Java 扩展接口](docs/API.md)：导入器、规则、费用和 NBT 坐标适配。
-- [Agent 指南](AGENTS.md)：代码入口、实现约束和修改步骤。
+- [AI 制作与魔改指南](AGENTS.md)：指导 AI 创建建筑数据包，配置建筑、解锁需求和费用，并使用 KubeJS 与扩展接口魔改。
 - [管理员说明](docs/ADMIN.md)：配置、恢复和交易核对。
 - [0.1.2 验证记录](docs/TESTING-0.1.2.md)。
 - [English quick start](docs/QUICKSTART.en.md)。
