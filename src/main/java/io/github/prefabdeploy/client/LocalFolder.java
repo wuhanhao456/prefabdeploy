@@ -10,7 +10,7 @@ import net.minecraft.network.chat.Component;
 final class LocalFolder {
   static void open() {
     var mc = Minecraft.getInstance();
-    if (!Client.localImportAllowed || !mc.hasSingleplayerServer()) return;
+    if (!Client.supported() || !Client.localImportAllowed || !mc.hasSingleplayerServer()) return;
     try {
       var folder = LocalBlueprints.directory();
       Files.createDirectories(folder);

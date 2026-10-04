@@ -2,7 +2,7 @@
 
 Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署工具选择建筑、查看预览并部署。服务器管理建筑数据包。单人玩家和局域网主机还可以读取本地蓝图。
 
-当前版本：**0.1.2**。需要 **Java 21** 和 **NeoForge 21.1.248 或更高的 1.21.1 版本**。客户端和服务器安装同一版本。许可：[MPL-2.0](LICENSE)。
+当前版本：**0.1.2**。需要 **Java 21** 和 **NeoForge 21.1.248 或更高的 1.21.1 版本**。使用建筑功能时，客户端和服务器安装同一版本。许可：[MPL-2.0](LICENSE)。
 
 本模组由AI生成。使用时默认使用者知晓可能存在的稳定性或兼容性问题。
 
@@ -11,6 +11,8 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 从 [0.1.2 发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2) 下载安装包。发布页同时提供源码和 SHA-256 清单。
 
 将 `prefabdeploy-0.1.2.jar` 放入实例的 `mods/`。删除同一 Mod 的旧版 JAR。正式版不包含测试建筑。
+
+客户端额外安装本 Mod 时，请下载 [客户端可选安装构建](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip)，解压后使用其中的 JAR。连接未安装 Prefab Deploy 的服务器时，自动停用建筑库、预览和定位，并隐藏本 Mod 的创造物品。保存的快捷栏在该连接中跳过这些物品，原快捷栏文件保留。进入单人世界或连接已安装本 Mod 的服务器后恢复功能。客户端的其他 Mod 仍须与服务器兼容。该构建沿用 0.1.2 版本号；原发布页单独提供的旧 JAR 不包含此改动。构建与验证结果见[客户端可选安装验证](docs/TESTING-CLIENT-OPTIONAL.md)。
 
 ## 合成配方
 

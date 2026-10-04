@@ -1,6 +1,8 @@
 # Prefab Deploy 0.1.2
 
-Prefab Deploy lets players preview and deploy saved buildings. It runs on Minecraft 1.21.1, NeoForge 21.1.248 or later for 1.21.1, and Java 21. Install the same Mod version on the client and server.
+Prefab Deploy lets players preview and deploy saved buildings. It runs on Minecraft 1.21.1, NeoForge 21.1.248 or later for 1.21.1, and Java 21. Install the same Mod version on the client and server to use building features.
+
+To join servers without Prefab Deploy, including vanilla servers, download the [client optional build](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip) and install the JAR inside. Building features and creative items are automatically disabled on those connections. Saved hotbars omit prefab items without modifying the saved file. Features return in singleplayer or on a supported server. Other installed mods must remain compatible with the server. This build retains version 0.1.2; the original standalone release JAR does not contain this change. See the [client compatibility verification](TESTING-CLIENT-OPTIONAL.md).
 
 ## Use
 

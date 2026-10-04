@@ -52,10 +52,12 @@ public final class Client {
   private static final ArrayDeque<Long> FRAME_SAMPLES = new ArrayDeque<>();
 
   public static void init(IEventBus bus) {
+    Network.SERVER_SUPPORTED = Client::supported;
     Network.CLIENT = Client::receive;
-    Network.PLACEMENT = () -> token != null;
+    Network.PLACEMENT = () -> supported() && token != null;
     Network.TOOL =
         a -> {
+          if (!supported()) return;
           if (a.equals("cancel")) cancelPlacement();
           else tool();
         };
@@ -81,7 +83,8 @@ public final class Client {
     NeoForge.EVENT_BUS.addListener(Client::hud);
     NeoForge.EVENT_BUS.addListener(
         (InputEvent.InteractionKeyMappingTriggered e) -> {
-          if (e.isUseItem()
+          if (supported()
+              && e.isUseItem()
               && e.getHand() == net.minecraft.world.InteractionHand.MAIN_HAND
               && token != null
               && MC.player != null
@@ -95,7 +98,8 @@ public final class Client {
         });
     NeoForge.EVENT_BUS.addListener(
         (InputEvent.MouseScrollingEvent e) -> {
-          if (token != null
+          if (supported()
+              && token != null
               && beacons
               && MC.player != null
               && MC.player.isShiftKeyDown()
@@ -110,13 +114,39 @@ public final class Client {
             e.setCanceled(true);
           }
         });
-    NeoForge.EVENT_BUS.addListener(
-        (ClientPlayerNetworkEvent.LoggingOut e) -> {
-          reset();
-          clearAssets();
-          catalog = List.of();
-          localImportAllowed = false;
-        });
+    NeoForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingIn e) -> clearConnection());
+    NeoForge.EVENT_BUS.addListener((ClientPlayerNetworkEvent.LoggingOut e) -> clearConnection());
+  }
+
+  public static boolean supported() {
+    var connection = MC.getConnection();
+    return connection != null && connection.getConnection().isConnected()
+        && connection.hasChannel(Network.Message.TYPE);
+  }
+
+  public static boolean unavailableItem(net.minecraft.world.item.ItemStack stack) {
+    return !supported() && containsPrefabItem(stack);
+  }
+
+  private static boolean containsPrefabItem(net.minecraft.world.item.ItemStack stack) {
+    if (stack.isEmpty()) return false;
+    if (net.minecraft.core.registries.BuiltInRegistries.ITEM.getKey(stack.getItem())
+        .getNamespace().equals(PrefabDeploy.ID)) return true;
+    var container = stack.get(net.minecraft.core.component.DataComponents.CONTAINER);
+    if (container != null && container.stream().anyMatch(Client::containsPrefabItem)) return true;
+    var bundle = stack.get(net.minecraft.core.component.DataComponents.BUNDLE_CONTENTS);
+    if (bundle != null)
+      for (var item : bundle.items()) if (containsPrefabItem(item)) return true;
+    var projectiles = stack.get(net.minecraft.core.component.DataComponents.CHARGED_PROJECTILES);
+    return projectiles != null && projectiles.getItems().stream().anyMatch(Client::containsPrefabItem);
+  }
+
+  private static void clearConnection() {
+    reset();
+    clearAssets();
+    catalog = List.of();
+    localImportAllowed = false;
+    if (MC.screen instanceof LibraryScreen) MC.setScreen(null);
   }
 
   public static PreviewMesh mesh(String id) {
@@ -163,6 +193,7 @@ public final class Client {
   }
 
   public static void choose(CompoundTag entry, boolean beacon) {
+    if (!supported()) return;
     var n = Network.message("select");
     n.putString("id", entry.getString("id"));
     n.putBoolean("beacons", beacon);
@@ -170,6 +201,7 @@ public final class Client {
   }
 
   public static void requestPreview(String id) {
+    if (!supported()) return;
     if (!ASSETS.containsKey(id)) {
       var n = Network.message("preview");
       n.putString("id", id);
@@ -179,6 +211,7 @@ public final class Client {
   }
 
   private static void tool() {
+    if (!supported()) return;
     if (MC.player != null && MC.player.isShiftKeyDown() && token != null) {
       cancelPlacement();
       return;
@@ -229,8 +262,9 @@ public final class Client {
     if (MC.player == null) return;
     if (rotate != null)
       while (rotate.consumeClick())
-        if (token != null && !fixed && !beacons && MC.screen == null)
+        if (supported() && token != null && !fixed && !beacons && MC.screen == null)
           turns = Math.floorMod(turns + 1, 4);
+    if (!supported()) return;
     if (token != null && !fixed && !beacons) anchor = rayAnchor();
     TRANSFERS.entrySet().removeIf(e -> System.nanoTime() - e.getValue().started > 30_000_000_000L);
   }
@@ -255,6 +289,7 @@ public final class Client {
   }
 
   private static void receive(CompoundTag n) {
+    if (!supported()) return;
     switch (n.getString("op")) {
       case "catalog_start" -> {
         catalog = List.of();
@@ -387,6 +422,7 @@ public final class Client {
 
   private static void renderWorld(RenderLevelStageEvent e) {
     if (e.getStage() != RenderLevelStageEvent.Stage.AFTER_TRANSLUCENT_BLOCKS
+        || !supported()
         || token == null
         || MC.level == null) return;
     long started = System.nanoTime();
@@ -501,7 +537,7 @@ public final class Client {
   }
 
   private static void hud(RenderGuiEvent.Post e) {
-    if (token == null || MC.player == null) return;
+    if (!supported() || token == null || MC.player == null) return;
     var gui = e.getGuiGraphics();
     int width = MC.getWindow().getGuiScaledWidth();
     record HudLine(Component text, int color) {}
@@ -584,6 +620,10 @@ public final class Client {
     deploying = false;
     markers = List.of();
     turns = 0;
+    ground = 0;
+    anchor = BlockPos.ZERO;
+    maxDistance = 32;
+    floatDistance = 8;
     text = "";
     displayText = Component.empty();
   }

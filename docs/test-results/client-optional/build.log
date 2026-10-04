@@ -1,0 +1,21 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-client-optional/tmp
+Calculating task graph as no cached configuration is available for tasks: test assemble sourcesJar
+> Task :processTestResources NO-SOURCE
+> Task :jarJar NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava FROM-CACHE
+> Task :testClasses UP-TO-DATE
+> Task :jar
+> Task :sourcesJar
+> Task :assemble
+
+> Task :test
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-client-optional/tmp
+
+BUILD SUCCESSFUL in 5s
+8 actionable tasks: 3 executed, 1 from cache, 4 up-to-date
+Configuration cache entry stored.

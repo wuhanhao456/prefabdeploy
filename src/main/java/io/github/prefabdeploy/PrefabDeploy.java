@@ -68,6 +68,7 @@ public final class PrefabDeploy {
                   .icon(() -> new ItemStack(TOOL.get()))
                   .displayItems(
                       (parameters, output) -> {
+                        if (FMLEnvironment.dist == Dist.CLIENT && !Network.serverSupported()) return;
                         output.accept(TOOL.get());
                         output.accept(BEACON_ITEM.get());
                       })
@@ -82,6 +83,7 @@ public final class PrefabDeploy {
     modBus.addListener(Network::register);
     modBus.addListener(
         (BuildCreativeModeTabContentsEvent e) -> {
+          if (FMLEnvironment.dist == Dist.CLIENT && !Network.serverSupported()) return;
           if (e.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             e.accept(TOOL);
             e.accept(BEACON_ITEM);
@@ -141,7 +143,7 @@ public final class PrefabDeploy {
       io.github.beaconvisual.client.BeaconVisualClient.register(modBus, BEACON_VISUAL);
       modBus.addListener((net.neoforged.fml.event.lifecycle.FMLClientSetupEvent e) ->
           e.enqueueWork(() -> io.github.blueprintitem.client.BlueprintHandRenderer.register(
-              stack -> stack.is(TOOL.get()))));
+              stack -> Network.serverSupported() && stack.is(TOOL.get()))));
     }
   }
 

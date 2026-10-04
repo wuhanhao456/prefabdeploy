@@ -10,6 +10,8 @@ param(
     [ValidateSet('', 'write', 'read')][string]$CrashMode = '',
     [ValidateSet('BLOCKS', 'TICKS', 'COMMIT')][string]$CrashStage = 'TICKS',
     [switch]$ClientSmoke,
+    [switch]$ConnectionSmoke,
+    [string]$ConnectionServers,
     [switch]$ModelReloadSmoke,
     [string]$ShaderModsDir,
     [string]$ShaderSmoke,
@@ -36,6 +38,10 @@ if ($CompatFixtures) { $taskArguments += '-PcompatFixtures' }
 if ($VssJar) { $taskArguments += "-PvssJar=$((Get-Item -LiteralPath $VssJar).FullName.Replace('\','/'))" }
 if ($CrashMode) { $taskArguments += "-PcrashMode=$CrashMode", "-PcrashStage=$CrashStage" }
 if ($ClientSmoke) { $taskArguments += '-PclientSmoke' }
+if ($ConnectionSmoke) {
+    if (!$ConnectionServers -or !$TestRun) { throw 'ConnectionSmoke requires ConnectionServers and TestRun.' }
+    $taskArguments += '-PconnectionSmoke', "-PprefabConnectionServers=$ConnectionServers"
+}
 if ($ModelReloadSmoke) { $taskArguments += '-PmodelReloadSmoke' }
 if ($ShaderModsDir) { $taskArguments += "-PshaderModsDir=$(([IO.Path]::GetFullPath($ShaderModsDir)).Replace('\','/'))" }
 if ($ShaderSmoke) { $taskArguments += "-PshaderSmoke=$ShaderSmoke" }

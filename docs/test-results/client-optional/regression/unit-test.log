@@ -1,0 +1,23 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-client-optional-regression/tmp
+Reusing configuration cache.
+> Task :processTestResources NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+
+> Task :compileJava
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/Users/Administrator/.cache/prefabdeploy-client-optional-regression/tmp
+> Task :test
+
+[Incubating] Problems report is available at: file:////lin/main_save_area/ai_area/codex/%E9%A2%84%E5%88%B6%E5%BB%BA%E7%AD%91/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 6s
+6 actionable tasks: 2 executed, 4 up-to-date
+Configuration cache entry reused.

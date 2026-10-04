@@ -30,6 +30,13 @@ neoForge {
     runs {
         client {
             client()
+            if (providers.gradleProperty('connectionSmoke').isPresent()) {
+                systemProperty 'prefabdeploy.connectionSmoke', 'true'
+                systemProperty 'prefabdeploy.connectionServers', providers.gradleProperty('prefabConnectionServers').get()
+                systemProperty 'prefabdeploy.reportDir', file(providers.gradleProperty('prefabReportDir').orElse('docs/test-results').get()).absolutePath
+                gameDirectory = file(providers.gradleProperty('prefabTestRun').get())
+                programArguments.addAll '--username', 'PrefabCompat', '--width', '1280', '--height', '800'
+            }
             if (providers.gradleProperty('clientSmoke').isPresent()) {
                 systemProperty 'prefabdeploy.clientSmoke', 'true'
                 if (providers.gradleProperty('modelReloadSmoke').isPresent()) systemProperty 'prefabdeploy.modelReloadSmoke', 'true'
@@ -44,6 +51,7 @@ neoForge {
         server {
             server()
             programArgument '--nogui'
+            if (providers.gradleProperty('prefabTestRun').isPresent()) gameDirectory = file(providers.gradleProperty('prefabTestRun').get())
         }
         gameTestServer {
             type = 'gameTestServer'
@@ -87,7 +95,7 @@ dependencies {
 test { useJUnitPlatform() }
 tasks.named('jar') {
     from('LICENSE') { into 'META-INF' }
-    exclude 'io/github/prefabdeploy/testing/**', 'io/github/prefabdeploy/client/ClientSmoke*'
+    exclude 'io/github/prefabdeploy/testing/**', 'io/github/prefabdeploy/client/*Smoke*'
     exclude 'data/prefabdeploy/structure/**', 'data/prefabcrash/**'
 }
 var generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {

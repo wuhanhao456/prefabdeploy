@@ -15,6 +15,8 @@ public final class Network {
   public static Consumer<CompoundTag> CLIENT = n -> {};
   public static Consumer<String> TOOL = a -> {};
   public static java.util.function.BooleanSupplier PLACEMENT = () -> false;
+  // Installed by the physical client; common/server code never loads client classes.
+  public static java.util.function.BooleanSupplier SERVER_SUPPORTED = () -> false;
 
   public record Message(CompoundTag data) implements CustomPacketPayload {
     public static final Type<Message> TYPE =
@@ -37,6 +39,7 @@ public final class Network {
 
   public static void register(RegisterPayloadHandlersEvent e) {
     e.registrar("1")
+        .optional()
         .playBidirectional(
             Message.TYPE,
             Message.CODEC,
@@ -53,13 +56,20 @@ public final class Network {
   }
 
   public static void send(ServerPlayer p, CompoundTag data) {
+    if (p.connection == null || !p.connection.getConnection().isConnected()
+        || !p.connection.hasChannel(Message.TYPE)) return;
     if (data.sizeInBytes() > 512 * 1024)
       throw new IllegalArgumentException("Prefab network message exceeds its safety limit");
     PacketDistributor.sendToPlayer(p, new Message(data));
   }
 
   public static void request(CompoundTag data) {
+    if (!serverSupported()) return;
     PacketDistributor.sendToServer(new Message(data));
+  }
+
+  public static boolean serverSupported() {
+    return SERVER_SUPPORTED.getAsBoolean();
   }
 
   private Network() {}

@@ -1,0 +1,16 @@
+{
+  "mod_version": "0.1.2",
+  "sha256": "6a8fa0f9c42c9dcc3f07000e599b763c565582721ef491add077456daa4ea73e",
+  "client_mixins": [
+    "client.CreativeItemMixin",
+    "client.HotbarMixin",
+    "client.CreativeTabsMixin"
+  ],
+  "runtime_classes_match_tested_build": 96,
+  "test_classes_excluded": true,
+  "test_prefabs_excluded": true,
+  "metadata_and_license_present": true,
+  "unit_tests": 10,
+  "remote_connections": 5,
+  "passed": true
+}
