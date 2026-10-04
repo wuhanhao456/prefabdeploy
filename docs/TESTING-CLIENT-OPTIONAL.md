@@ -53,3 +53,5 @@ python tools/test_client_connections.py --cache $compatCache --vanilla-jar "$env
 从 [GitHub 发布页下载客户端可选安装构建](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip)，或使用本地交付目录 `dist/client-optional/`。解压后将其中的 `prefabdeploy-0.1.2.jar` 替换到客户端 `mods/`，同一实例只保留一个 Prefab Deploy JAR。无需修改缺装服务器，也无需配置开关。
 
 本次构建沿用 0.1.2 版本号，但包含上述源码改动。它与此前发布的 0.1.2 文件不同；核对 ZIP 内的 `SHA256SUMS.txt`。原发布页单独提供的 JAR 和源码 ZIP 保留此前内容。
+
+GitHub 上传后已核对新增 ZIP 和外部校验清单的大小、平台返回的 SHA-256 及重新下载文件的 SHA-256，并验证 ZIP 内的全部校验值。此前五个发布文件保持原内容。结果见[发布核验记录](test-results/client-optional/publication.json)。

@@ -36,3 +36,5 @@ Iris 1.8.14-beta.1 与 Sodium 0.8.13 的组合通过测试。分别测试关闭�
 2026 年 10 月 4 日追加 [prefabdeploy-0.1.2-client-optional.zip](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip)。版本号仍为 0.1.2。解压后使用其中的 JAR，可连接未安装本 Mod 的 NeoForge 和原版服务器，连接中自动停用建筑功能。单人世界和支持服务器保留建筑功能。
 
 ZIP 包含新 JAR、sources JAR、许可、安装说明和 SHA-256 清单。原发布文件保持原内容。五次真实远程连接、单人回归、基础 GameTest 和单元测试通过；本次没有重跑可选联动、光影及崩溃恢复。具体范围见[客户端可选安装验证](TESTING-CLIENT-OPTIONAL.md)。
+
+上传后的大小、GitHub SHA-256 和重新下载校验全部通过；此前五个发布文件保持原内容。核验记录位于 [test-results/client-optional/publication.json](test-results/client-optional/publication.json)。

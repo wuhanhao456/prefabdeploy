@@ -1,0 +1,56 @@
+{
+  "version": "0.1.2",
+  "build": "client-optional",
+  "repository": "https://github.com/wuhanhao456/prefabdeploy",
+  "release": "https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2",
+  "tag": "v0.1.2",
+  "verified_at": "2026-10-04T10:05:38.383900+00:00",
+  "source_commit": "a8ba819da52d5a822f89f326ef4308b88bba37a6",
+  "source_commit_pushed": true,
+  "release_notes_verified": true,
+  "assets": {
+    "prefabdeploy-0.1.2-client-optional.zip": {
+      "sha256": "ad875f85434155bd2edbde76fa7e1f4312e67b70a4ddfa617f18d6692b828a44",
+      "bytes": 462645,
+      "github_digest_verified": true,
+      "download_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip"
+    },
+    "SHA256SUMS-client-optional.txt": {
+      "sha256": "a96df7ef3d809bb4b75fd8f4d62446cb674c77a792386f2acd2ec343795c6a7f",
+      "bytes": 106,
+      "github_digest_verified": true,
+      "download_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/SHA256SUMS-client-optional.txt"
+    }
+  },
+  "original_assets": {
+    "prefabdeploy-0.1.2-source.zip": {
+      "sha256": "f943841b13a002ceadb5441b10eaade9c6bc471e168b6029fa2575e7eae3619c",
+      "bytes": 58683573,
+      "unchanged": true
+    },
+    "prefabdeploy-0.1.2-sources.jar": {
+      "sha256": "03dc10f086caf29acac31a588af81546117acc9776c7240ec9d89ba35a7002da",
+      "bytes": 176935,
+      "unchanged": true
+    },
+    "prefabdeploy-0.1.2.jar": {
+      "sha256": "ff590985c0b464d807cbad57a0eb83aef381ee9262cc985c27e88f8952582ce6",
+      "bytes": 304828,
+      "unchanged": true
+    },
+    "prefabdeploy-performance.zip": {
+      "sha256": "6d6c9dc8dc2c4df76e8aca3d2b6a09d0a1f221f72d5be4304a51912e6a9a7017",
+      "bytes": 79854,
+      "unchanged": true
+    },
+    "SHA256SUMS.txt": {
+      "sha256": "215ab130aec16ce1443cc6babc05fb775a6d71a4d149367d12aaa0963f0f752e",
+      "bytes": 381,
+      "unchanged": true
+    }
+  },
+  "downloaded_archive_checksums_verified": true,
+  "passed": true
+}
