@@ -69,6 +69,8 @@ KubeJS、FTB Library/Teams/Chunks/Quests 和 ViScriptShop 1.2.2.4 组合通过�
 
 `jar` 与 `sourcesJar` 构建通过。正式 JAR 包含来源桥接和持久化 Mixin。测试类和测试建筑未进入正式 JAR。中英文各有 230 个翻译键。键名和参数数量一致。全部主资源 JSON 解析通过。构建日志见 [build.log](test-results/resources-compat/build.log)。交付文件哈希见 [build-sha256.txt](test-results/resources-compat/build-sha256.txt)。
 
+资源兼容 ZIP 和外部校验清单已上传到 GitHub。GitHub 文件大小和 SHA-256 与本地文件一致。重新下载后的文件及 ZIP 内校验清单均通过核对。发布记录见 [publication.json](test-results/resources-compat/publication.json)。
+
 ## 复现与范围
 
 ```powershell

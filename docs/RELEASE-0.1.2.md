@@ -58,3 +58,5 @@ ZIP 包含新 JAR、sources JAR、许可、安装说明和 SHA-256 清单。原�
 五种安装组合均通过服务器启动和部署检查。完整资源组合执行并通过 21 项用例。首轮 20 个进程崩溃点通过。最后一次背包缓存修正后复测其中 2 个崩溃点。10 项单元测试通过。基础和原有联动 GameTest 的 35 个入口通过。基础套件跳过 4 个可选联动入口。整套 BeLoong 客户端操作尚未验证。详细范围见[资源兼容验证](TESTING-RESOURCES.md)。
 
 版本号仍为 0.1.2。ZIP 包含正式 JAR、源码 JAR、许可、安装说明、文档和内部 SHA-256 清单。外部校验清单为 `SHA256SUMS-resource-compat.txt`。发布页中的旧独立 JAR 和旧 ZIP 保留各自的内容。
+
+已核对 GitHub 文件大小和 SHA-256。重新下载后，外部文件和 ZIP 内文件的校验值均一致。此前七个发布文件保持原内容。核验记录见 [publication.json](test-results/resources-compat/publication.json)。
