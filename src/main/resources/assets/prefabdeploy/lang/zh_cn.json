@@ -28,7 +28,7 @@
   "prefabdeploy.reference": "参考面以上：%s ｜地下：%s",
   "prefabdeploy.cost": "建造成本",
   "prefabdeploy.conditions": "条件：%s",
-  "prefabdeploy.available": "条件满足 · 最终位置由服务器验证",
+  "prefabdeploy.available": "条件满足 · 可建造",
   "prefabdeploy.empty": "没有匹配的可见建筑。",
   "prefabdeploy.loading_preview": "正在读取预览…",
   "prefabdeploy.building_preview": "正在准备模型：%s 个方块",
