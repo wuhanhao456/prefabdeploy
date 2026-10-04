@@ -61,6 +61,12 @@ neoForge {
             gameDirectory = layout.buildDirectory.dir('gametest-run').get().asFile
             if (providers.gradleProperty('prefabTestRun').isPresent()) gameDirectory = file(providers.gradleProperty('prefabTestRun').get())
             if (providers.gradleProperty('compatFixtures').isPresent()) systemProperty 'prefabdeploy.compatFixtures', 'true'
+            if (providers.gradleProperty('resourceSmoke').isPresent()) systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabresources'
+            if (providers.gradleProperty('resourceCrashMode').isPresent()) {
+                systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabresourcecrash'
+                systemProperty 'prefabdeploy.resourceCrashMode', providers.gradleProperty('resourceCrashMode').get()
+                systemProperty 'prefabdeploy.resourceCrashStage', providers.gradleProperty('resourceCrashStage').get()
+            }
             if (providers.gradleProperty('crashMode').isPresent()) {
                 systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabcrash'
                 systemProperty 'prefabdeploy.crashMode', providers.gradleProperty('crashMode').get()
@@ -144,3 +150,13 @@ if (providers.gradleProperty('shaderModsDir').isPresent()) {
     tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'preparePrefabShaderMods' }
 }
 idea { module { downloadSources = true } }
+// Use unmodified optional JARs, including their nested dependency metadata.
+if (providers.gradleProperty('resourceModsDir').isPresent()) {
+    tasks.register('preparePrefabResourceMods', Copy) {
+        from(providers.gradleProperty('resourceModsDir').get()) { include '*.jar' }
+        into testRunDirectory.map { new File(it, 'mods') }
+    }
+    tasks.matching { it.name == 'runGameTestServer' }.configureEach {
+        dependsOn 'preparePrefabResourceMods'
+    }
+}

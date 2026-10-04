@@ -2,7 +2,9 @@
 
 Prefab Deploy lets players preview and deploy saved buildings. It runs on Minecraft 1.21.1, NeoForge 21.1.248 or later for 1.21.1, and Java 21. Install the same Mod version on the client and server to use building features.
 
-To join servers without Prefab Deploy, including vanilla servers, download the [client optional build](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip) and install the JAR inside. Building features and creative items are automatically disabled on those connections. Saved hotbars omit prefab items without modifying the saved file. Features return in singleplayer or on a supported server. Other installed mods must remain compatible with the server. This build retains version 0.1.2; the original standalone release JAR does not contain this change. See the [client compatibility verification](TESTING-CLIENT-OPTIONAL.md).
+Download the [resource compatibility build](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-resource-compat.zip). Install the JAR inside the ZIP. Keep only one Prefab Deploy JAR in each instance. This build retains version 0.1.2. Earlier release files keep their previous contents.
+
+This build also includes client optional installation. On servers without Prefab Deploy, building features are disabled. The creative inventory hides Prefab Deploy items. Saved hotbars omit these items without changing the saved file. Features return in singleplayer or on a supported server. Other installed mods must remain compatible with the server. Earlier connection tests are recorded in [client compatibility verification](TESTING-CLIENT-OPTIONAL.md). Current test coverage is recorded in [resource compatibility verification](TESTING-RESOURCES.md).
 
 ## Use
 
@@ -29,7 +31,9 @@ Local buildings use the filename as their name. The ground reference is 0. Air o
 
 Local import is available only to the singleplayer or LAN world host. LAN guests cannot access the host's local buildings. The folder button is disabled on dedicated servers. Server buildings come from datapacks. The release JAR includes no test buildings.
 
-See the [datapack guide](DATAPACKS.md), [cost guide](COSTS.md), [KubeJS guide](KUBEJS.md) and [Java API](API.md). The project uses [MPL-2.0](../LICENSE).
+Item costs use the player inventory first, then carried Sophisticated Backpacks, then the player's current Beyond Dimensions primary network. Quantities can be combined across these sources. Automatic water blocks are free. Automatic lava blocks consume lava buckets first. Each remaining lava block consumes 1000 mB from the network. Manually configured bucket costs still require items. Backpack tanks do not contribute fluid.
+
+Supported versions and recovery rules are listed in [resource compatibility](RESOURCE-COMPAT.md). See the [datapack guide](DATAPACKS.md), [cost guide](COSTS.md), [KubeJS guide](KUBEJS.md) and [Java API](API.md). The project uses [MPL-2.0](../LICENSE).
 
 ## Recipes and server reload
 

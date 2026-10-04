@@ -1,0 +1,45 @@
+{
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "java": "21.0.11",
+  "os": "Windows Server 2025",
+  "processors": 32,
+  "tick_budget_ms": 2.0,
+  "operations_per_tick": 512,
+  "mode": "GameTestServer; scheduler time, not survival TPS",
+  "runs": [
+    {
+      "samples": 148,
+      "peak_active_jobs": 1,
+      "max_job_operations_per_tick": 512,
+      "p50_ms": 2.006,
+      "p95_ms": 2.1095,
+      "max_ms": 6.702899,
+      "heap_used_bytes": 508526280,
+      "positions": 10000,
+      "elapsed_ms": 1597.9314
+    },
+    {
+      "samples": 320,
+      "peak_active_jobs": 1,
+      "max_job_operations_per_tick": 512,
+      "p50_ms": 1.4549,
+      "p95_ms": 2.0121,
+      "max_ms": 14.7331,
+      "heap_used_bytes": 701666472,
+      "positions": 50000,
+      "elapsed_ms": 1014.022
+    },
+    {
+      "samples": 681,
+      "peak_active_jobs": 1,
+      "max_job_operations_per_tick": 512,
+      "p50_ms": 1.154699,
+      "p95_ms": 2.008699,
+      "max_ms": 17.767901,
+      "heap_used_bytes": 525493232,
+      "positions": 100000,
+      "elapsed_ms": 1975.4446
+    }
+  ]
+}

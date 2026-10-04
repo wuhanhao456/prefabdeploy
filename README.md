@@ -8,11 +8,11 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 ## 安装
 
-从 [0.1.2 发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.2) 下载安装包。发布页同时提供源码和 SHA-256 清单。
+下载 [资源兼容构建](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-resource-compat.zip)。解压后，将其中的 `prefabdeploy-0.1.2.jar` 放入实例的 `mods/`。同一实例只保留一个 Prefab Deploy JAR。使用建筑功能时，客户端和服务器安装此构建。正式 JAR 不包含测试建筑。
 
-将 `prefabdeploy-0.1.2.jar` 放入实例的 `mods/`。删除同一 Mod 的旧版 JAR。正式版不包含测试建筑。
+此构建增加精妙背包和超越维度资源兼容，也包含此前的客户端可选安装功能。版本号仍为 0.1.2。发布页中的旧独立 JAR 和旧 ZIP 保留各自的内容。完整源码见仓库；ZIP 内另附源码 JAR、安装说明和 SHA-256 清单。
 
-客户端额外安装本 Mod 时，请下载 [客户端可选安装构建](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-client-optional.zip)，解压后使用其中的 JAR。连接未安装 Prefab Deploy 的服务器时，自动停用建筑库、预览和定位，并隐藏本 Mod 的创造物品。保存的快捷栏在该连接中跳过这些物品，原快捷栏文件保留。进入单人世界或连接已安装本 Mod 的服务器后恢复功能。客户端的其他 Mod 仍须与服务器兼容。该构建沿用 0.1.2 版本号；原发布页单独提供的旧 JAR 不包含此改动。构建与验证结果见[客户端可选安装验证](docs/TESTING-CLIENT-OPTIONAL.md)。
+连接未安装 Prefab Deploy 的服务器时，客户端停用建筑库、预览和定位。创造物品栏隐藏本 Mod 的物品。保存的快捷栏跳过这些物品，原快捷栏文件保持不变。进入单人世界或支持服务器后恢复功能。客户端的其他 Mod 仍须与服务器兼容。此前的连接测试见[客户端可选安装验证](docs/TESTING-CLIENT-OPTIONAL.md)。本次资源构建的验证范围见[资源兼容验证](docs/TESTING-RESOURCES.md)。
 
 ## 合成配方
 
@@ -50,6 +50,8 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 生存模式按建筑定义收取费用。创造模式免除费用，但仍检查规则和位置权限。部署成功后移除定位信标，并返还实际消耗的信标。取消定位后，已放置的信标可手动拆回。
 
+物品依次从玩家库存、随身精妙背包、当前绑定的超越维度主网络扣取。数量可以跨来源合并。自动材料中的水免费。自动岩浆先消耗岩浆桶，剩余格数从网络扣取每格 1000 mB 岩浆。手动配置的水桶和岩浆桶仍按物品收费。已有建筑 `cost` 无需修改。支持版本和恢复方式见[资源兼容](docs/RESOURCE-COMPAT.md)。
+
 ## 本地蓝图
 
 在建筑库点击“打开蓝图文件夹”。将文件放入实例目录的 `prefabdeploy/blueprints/`。重新打开建筑库后读取新增或修改的文件。子目录也会读取。
@@ -74,6 +76,7 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 - [建筑数据包与规则](docs/DATAPACKS.md)：目录结构、解锁条件、FTB 联动、ViScriptShop 联动和重载方法。
 - [费用自定义](docs/COSTS.md)：费用结构、材料、XP、货币和自定义提供者。
+- [BeLoong 资源兼容](docs/RESOURCE-COMPAT.md)：随身背包、绑定网络、扣费顺序和持久化恢复。
 - [KubeJS 指南](docs/KUBEJS.md)：面向整合包作者的脚本、事件和购买建筑许可示例。
 - [Java 扩展接口](docs/API.md)：导入器、规则、费用和 NBT 坐标适配。
 - [AI 制作与魔改指南](AGENTS.md)：指导 AI 创建建筑数据包，配置建筑、解锁需求和费用，并使用 KubeJS 与扩展接口魔改。

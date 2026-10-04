@@ -20,7 +20,9 @@ public final class OptionalMods {
       var types = m.getParameterTypes();
       for (int i = 0; i < args.length; i++)
         if (args[i] != null && !boxed(types[i]).isInstance(args[i])) continue outer;
-      return m.invoke(receiver instanceof Class<?> ? null : receiver, args);
+      Object target = receiver instanceof Class<?> ? null : receiver;
+      if (!m.canAccess(target)) m.trySetAccessible();
+      return m.invoke(target, args);
     }
     throw new NoSuchMethodException(cls.getName() + "." + name);
   }

@@ -1,0 +1,90 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed: the value of 'resourceCrashMode' was changed.
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :preparePrefabResourceMods UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :preparePrefabGameTests UP-TO-DATE
+> Task :prepareGameTestServerRun
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :runGameTestServer
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[19:22:55] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430]
+[19:22:55] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[19:22:55] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[19:22:55] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[19:22:55] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[19:22:56] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
+[19:22:56] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Beyond Dimensions 0.7.30 (beyonddimensions)
+		Curios API 9.5.1+1.21.1 (curios)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.2 (prefabdeploy)
+		Sophisticated Backpacks 3.26.3 (sophisticatedbackpacks)
+		Sophisticated Core 1.5.1 (sophisticatedcore)
+[19:22:58] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[19:22:58] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[19:22:58] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:22:58] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.mixins.json could not be read. If this is a development environment you can ignore this message
+[19:23:02] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[19:23:12] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:23:12] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:23:12] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:23:12] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:23:12] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:23:13] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[19:23:13] [modloading-worker-0/INFO] [co.wi.be.BeyondDimensions/]: Discovered 15 common integration modules and 2 client integration modules
+[19:23:15] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:23:15] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/assets/.mcassetsroot' uses unexpected schema
+[19:23:15] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/data/.mcassetsroot' uses unexpected schema
+[19:23:15] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [prefabresourcecrash]
+[19:23:16] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/rs_net_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:rs_net_pathway
+[19:23:16] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/mana_pool_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:mana_pool_pathway
+[19:23:16] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/ars_source_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:ars_source_pathway
+[19:23:16] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/schematicannon_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:schematicannon_pathway
+[19:23:17] [main/INFO] [minecraft/RecipeManager]: Loaded 1398 recipes
+[19:23:18] [main/INFO] [minecraft/AdvancementTree]: Loaded 1503 advancements
+[19:23:18] [main/INFO] [Curios API/]: Loaded 10 curio slots
+[19:23:18] [main/INFO] [Curios API/]: Loaded 1 curio entities
+[19:23:18] [main/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[19:23:19] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[19:23:19] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[19:23:20] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 51%
+[19:23:20] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 873 ms
+[19:23:20] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[19:23:20] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[19:23:20] [Server thread/INFO] [co.wi.be.BeyondDimensions/]: 维度网络初始化完成(服务端)
+[19:23:21] [Server thread/INFO] [minecraft/GameTestServer]: 1 tests are now running at position 950530, -59, -3916207!
+[19:23:21] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (1 tests)...
+[19:23:21] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: [+]
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 1.683 s ======================
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: All 1 required tests passed :)
+[19:23:22] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[19:23:22] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[19:23:22] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[19:23:22] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[19:23:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:23:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:23:28] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+BUILD SUCCESSFUL in 38s
+10 actionable tasks: 2 executed, 8 up-to-date
+Configuration cache entry stored.

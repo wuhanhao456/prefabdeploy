@@ -27,3 +27,5 @@ ordering="AFTER"
 side="BOTH"
 [[mixins]]
 config="prefabdeploy.mixins.json"
+[[mixins]]
+config="prefabdeploy.resources.mixins.json"

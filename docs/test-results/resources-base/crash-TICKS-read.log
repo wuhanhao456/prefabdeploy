@@ -1,0 +1,88 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed: the value of 'crashMode' was changed.
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :prepareGameTestServerRun
+> Task :preparePrefabGameTests UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+
+> Task :runGameTestServer
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[18:37:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430]
+[18:37:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[18:37:47] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[18:37:47] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[18:37:47] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[18:37:48] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[18:37:48] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.2 (prefabdeploy)
+[18:37:50] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[18:37:50] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[18:37:51] [main/WARN] [mixin/]: Error loading class: net/p3pp3rf1y/sophisticatedbackpacks/backpack/wrapper/BackpackWrapper (java.lang.ClassNotFoundException: net.p3pp3rf1y.sophisticatedbackpacks.backpack.wrapper.BackpackWrapper)
+[18:37:53] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[18:38:04] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:38:04] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:38:04] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:38:04] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[18:38:04] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[18:38:04] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[18:38:05] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[18:38:05] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23125!/assets/.mcassetsroot' uses unexpected schema
+[18:38:05] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23125!/data/.mcassetsroot' uses unexpected schema
+[18:38:05] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [prefabcrash]
+[18:38:07] [main/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[18:38:08] [main/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[18:38:08] [main/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[18:38:09] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[18:38:09] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[18:38:10] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 51%
+[18:38:10] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 888 ms
+[18:38:10] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[18:38:10] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[18:38:10] [Server thread/INFO] [minecraft/GameTestServer]: 1 tests are now running at position 598313, -59, 6939011!
+[18:38:11] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (1 tests)...
+[18:38:11] [Server thread/INFO] [minecraft/GameTestServer]: [ ]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [_]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: [+]
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: ========= 1 GAME TESTS COMPLETE IN 2.004 s ======================
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: All 1 required tests passed :)
+[18:38:12] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[18:38:12] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[18:38:12] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[18:38:12] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[18:38:13] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[18:38:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[18:38:18] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+BUILD SUCCESSFUL in 37s
+9 actionable tasks: 2 executed, 7 up-to-date
+Configuration cache entry stored.

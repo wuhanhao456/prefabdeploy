@@ -45,7 +45,7 @@ public final class Costs {
     return pinned == null ? PrefabApi.COSTS.get(id) : pinned.get(id);
   }
 
-  private record Materials(Map<Item, Integer> items, String error) {}
+  private record Materials(Map<Item, Integer> items, int lava, String error) {}
 
   private static final Map<io.github.prefabdeploy.blueprint.Blueprint, Materials> MATERIALS =
       new IdentityHashMap<>();
@@ -60,11 +60,13 @@ public final class Costs {
       if (cached != null) return cached;
     }
     var needed = new LinkedHashMap<Item, Integer>();
+    int lava = 0;
     String error = "";
     try {
       for (var v : bp.voxels()) {
         var s = v.state();
-        if (s.isAir()) continue;
+        if (s.isAir() || s.is(Blocks.WATER)) continue;
+        if (s.is(Blocks.LAVA)) { lava = Math.addExact(lava, 1); continue; }
         if (s.hasProperty(BlockStateProperties.DOUBLE_BLOCK_HALF)
             && s.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER)
           continue;
@@ -75,8 +77,6 @@ public final class Costs {
             || s.is(Blocks.BUBBLE_COLUMN)
             || s.is(Blocks.FIRE)) continue;
         Item item = s.getBlock().asItem();
-        if (s.is(Blocks.WATER)) item = Items.WATER_BUCKET;
-        if (s.is(Blocks.LAVA)) item = Items.LAVA_BUCKET;
         if (s.is(Blocks.REDSTONE_WIRE)) item = Items.REDSTONE;
         if (item == Items.AIR)
           throw new IllegalArgumentException(
@@ -93,7 +93,7 @@ public final class Costs {
     } catch (Exception ex) {
       error = ex.getMessage();
     }
-    var result = new Materials(Map.copyOf(needed), error);
+    var result = new Materials(Map.copyOf(needed), lava, error);
     synchronized (MATERIALS) {
       if (MATERIALS.size() >= 256) MATERIALS.remove(MATERIALS.keySet().iterator().next());
       MATERIALS.put(bp, result);
@@ -121,6 +121,7 @@ public final class Costs {
     if (spec == null)
       throw new IllegalArgumentException("Explicit cost definition required (use mode: free)");
     var out = new CompoundTag();
+    out.putInt("materialVersion", 1);
     var needed = new LinkedHashMap<Item, Integer>();
     String mode = PrefabLibrary.string(spec, "mode", "manual");
     if (!Set.of("free", "manual", "auto", "combined").contains(mode))
@@ -129,6 +130,7 @@ public final class Costs {
       var basis = materials(prefab.blueprint());
       if (!basis.error.isEmpty()) throw new IllegalArgumentException(basis.error);
       needed.putAll(basis.items);
+      out.putInt("autoLava", basis.lava);
     }
     if (!mode.equals("free") && spec.has("items"))
       for (var element : spec.getAsJsonArray("items")) {
@@ -184,18 +186,7 @@ public final class Costs {
   }
 
   public static void check(ServerPlayer p, CompoundTag quote) {
-    var items = quote.getList("items", Tag.TAG_COMPOUND);
-    for (int i = 0; i < items.size(); i++) {
-      var n = items.getCompound(i);
-      var item = BuiltInRegistries.ITEM.get(ResourceLocation.parse(n.getString("id")));
-      int have = 0;
-      for (int slot = 0; slot < p.getInventory().getContainerSize(); slot++)
-        if (p.getInventory().getItem(slot).is(item))
-          have += p.getInventory().getItem(slot).getCount();
-      if (have < n.getInt("count"))
-        throw new IllegalStateException(
-            "Missing material: " + n.getString("id") + " " + have + "/" + n.getInt("count"));
-    }
+    MaterialPayments.plan(p, quote);
     if (p.totalExperience < quote.getInt("xp"))
       throw new IllegalStateException("Not enough XP points");
     try {
@@ -213,6 +204,8 @@ public final class Costs {
       var n = list.getCompound(i);
       parts.add(n.getInt("count") + " × " + n.getString("id"));
     }
+    if (q.getInt("autoLava") > 0) parts.add(q.getInt("autoLava") + " lava buckets or "
+        + ((long) q.getInt("autoLava") * 1000) + " mB bound-network lava");
     if (q.getInt("xp") > 0) parts.add(q.getInt("xp") + " XP");
     if (q.getDouble("money") > 0) parts.add(q.getDouble("money") + " VSS");
     var custom = q.getList("custom", Tag.TAG_COMPOUND);
@@ -236,6 +229,9 @@ public final class Costs {
               item.getDescriptionId(), item.getName(new ItemStack(item)).getString(), List.of());
       parts.add(UiText.tr("cost.material", "%s × %s", n.getInt("count"), name));
     }
+    if (q.getInt("autoLava") > 0) parts.add(UiText.tr("cost.lava",
+        "%s lava buckets (or %s mB from the bound network)", q.getInt("autoLava"),
+        (long) q.getInt("autoLava") * 1000));
     if (q.getInt("xp") > 0) parts.add(UiText.tr("cost.xp", "%s XP points", q.getInt("xp")));
     if (q.getDouble("money") > 0)
       parts.add(UiText.tr("cost.money", "%s ViScriptShop currency", q.getDouble("money")));
@@ -246,30 +242,25 @@ public final class Costs {
   }
 
   public static void reserve(ServerPlayer p, UUID id, CompoundTag quote) {
-    if (!state(p, id).isEmpty()) return;
+    if (!state(p, id).isEmpty()) {
+      var existing = receipts(p).getCompound(id.toString());
+      if (existing.contains("resources") && !existing.getBoolean("resourcesReady")
+          && existing.getString("state").equals("RESERVED"))
+        throw new IllegalStateException("Resource reservation is incomplete; recovery is pending");
+      return;
+    }
     check(p, quote);
+    var materials = MaterialPayments.plan(p, quote);
     pin(id, quote);
     var receipt = new CompoundTag();
     receipt.put("quote", quote.copy());
     receipt.putString("state", "RESERVED");
     var escrow = new ListTag();
     receipt.put("escrow", escrow);
+    receipt.put("resources", materials.snapshot());
     receipts(p).put(id.toString(), receipt);
     try {
-      var list = quote.getList("items", Tag.TAG_COMPOUND);
-      for (int i = 0; i < list.size(); i++) {
-        var n = list.getCompound(i);
-        var item = BuiltInRegistries.ITEM.get(ResourceLocation.parse(n.getString("id")));
-        int remaining = n.getInt("count");
-        for (int slot = 0; slot < p.getInventory().getContainerSize() && remaining > 0; slot++) {
-          var stack = p.getInventory().getItem(slot);
-          if (stack.is(item)) {
-            var removed = stack.split(Math.min(remaining, stack.getCount()));
-            remaining -= removed.getCount();
-            escrow.add(removed.save(p.registryAccess()));
-          }
-        }
-      }
+      MaterialPayments.reserveLocal(p, materials, escrow);
       if (quote.getInt("xp") > 0) p.giveExperiencePoints(-quote.getInt("xp"));
       receipt.putBoolean("xpPaid", true);
       if (quote.getDouble("money") > 0) {
@@ -293,6 +284,12 @@ public final class Costs {
         provider(id, n.getString("id")).reserve(p, id, n.getCompound("quote"));
       }
       save(p);
+      MaterialPayments.fault(id, "player_saved");
+      MaterialPayments.reserveExternal(p, id, materials);
+      receipt.putBoolean("resourcesReady", true);
+      MaterialPayments.fault(id, "resources_before_confirmation");
+      save(p);
+      MaterialPayments.fault(id, "resources_ready");
     } catch (Exception ex) {
       try {
         refund(p, id);
@@ -303,6 +300,12 @@ public final class Costs {
         } catch (Exception persistence) {
           ex.addSuppressed(persistence);
         }
+      }
+      if (!materials.external().isEmpty()) {
+        var failure = UiText.failure(UiText.tr("resource.reservation_failed",
+            "Resource reservation failed: %s", UiText.fromThrowable(ex)));
+        failure.initCause(ex);
+        throw failure;
       }
       throw new IllegalStateException("Cost reservation failed", ex);
     }
@@ -322,6 +325,13 @@ public final class Costs {
       throw new IllegalStateException(
           "Currency result is uncertain; audit and reconcile before retrying");
     var q = receipt.getCompound("quote");
+    var refundItems = readEscrow(p, receipt);
+    try {
+      MaterialPayments.finish(p, id, receipt.getList("resources", Tag.TAG_COMPOUND), false);
+    } catch (Exception ex) {
+      throw UiText.failure(UiText.tr("resource.recovery_pending",
+          "Resource recovery is pending; retain the receipt and retry recovery: %s", UiText.fromThrowable(ex)));
+    }
     var custom = receipt.getList("paidCustom", Tag.TAG_COMPOUND);
     for (int i = custom.size() - 1; i >= 0; i--) {
       var n = custom.getCompound(i);
@@ -357,13 +367,14 @@ public final class Costs {
     var escrow = receipt.getList("escrow", Tag.TAG_COMPOUND);
     var pending = new ListTag();
     for (int i = 0; i < escrow.size(); i++) {
-      var stack = ItemStack.parseOptional(p.registryAccess(), escrow.getCompound(i));
+      var stack = refundItems.get(i);
       p.getInventory().add(stack);
       if (!stack.isEmpty()) pending.add(stack.save(p.registryAccess()));
     }
     receipt.put("escrow", pending);
     receipt.putString("state", "REFUNDED");
     save(p);
+    MaterialPayments.fault(id, "player_refund_saved");
   }
 
   public static void commit(ServerPlayer p, UUID id) {
@@ -374,6 +385,14 @@ public final class Costs {
     }
     if (!receipt.getString("state").equals("RESERVED"))
       throw new IllegalStateException("Cannot settle a missing or refunded cost receipt");
+    if (receipt.contains("resources") && !receipt.getBoolean("resourcesReady"))
+      throw new IllegalStateException("Resource reservation is incomplete; recovery is pending");
+    try {
+      MaterialPayments.finish(p, id, receipt.getList("resources", Tag.TAG_COMPOUND), true);
+    } catch (Exception ex) {
+      throw UiText.failure(UiText.tr("resource.recovery_pending",
+          "Resource recovery is pending; retain the receipt and retry recovery: %s", UiText.fromThrowable(ex)));
+    }
     var custom = receipt.getList("paidCustom", Tag.TAG_COMPOUND);
     for (int i = 0; i < custom.size(); i++) {
       var n = custom.getCompound(i);
@@ -384,6 +403,7 @@ public final class Costs {
     receipt.putString("state", "COMMITTED");
     receipt.put("escrow", new ListTag());
     save(p);
+    MaterialPayments.fault(id, "player_commit_saved");
   }
 
   public static void claim(ServerPlayer p) {
@@ -391,10 +411,11 @@ public final class Costs {
     for (String key : all.getAllKeys()) {
       var r = all.getCompound(key);
       if (!r.getString("state").equals("REFUNDED")) continue;
+      var claimItems = readEscrow(p, r);
       var remaining = new ListTag();
       var escrow = r.getList("escrow", Tag.TAG_COMPOUND);
       for (int i = 0; i < escrow.size(); i++) {
-        var stack = ItemStack.parseOptional(p.registryAccess(), escrow.getCompound(i));
+        var stack = claimItems.get(i);
         p.getInventory().add(stack);
         if (!stack.isEmpty()) remaining.add(stack.save(p.registryAccess()));
       }
@@ -417,8 +438,30 @@ public final class Costs {
     return root.getCompound(RECEIPTS);
   }
 
+  private static List<ItemStack> readEscrow(ServerPlayer p, CompoundTag receipt) {
+    var items = new ArrayList<ItemStack>();
+    boolean strict = receipt.getCompound("quote").getInt("materialVersion") == 1;
+    for (var tag : receipt.getList("escrow", Tag.TAG_COMPOUND)) {
+      var n = (CompoundTag) tag;
+      if (!strict) items.add(ItemStack.parseOptional(p.registryAccess(), n));
+      else {
+        try {
+          items.add(ItemStack.CODEC.parse(p.registryAccess().createSerializationContext(NbtOps.INSTANCE), n)
+              .getOrThrow(IllegalStateException::new));
+        } catch (Exception ex) {
+          throw UiText.failure(UiText.tr("resource.recovery_pending",
+              "Resource recovery is pending; retain the receipt and retry recovery: %s", UiText.fromThrowable(ex)));
+        }
+      }
+    }
+    return items;
+  }
+
   public static CompoundTag auditReceipt(ServerPlayer p, UUID id) {
-    return receipts(p).getCompound(id.toString()).copy();
+    var receipt = receipts(p).getCompound(id.toString()).copy();
+    if (receipt.contains("resources")) receipt.put("externalReceipts",
+        MaterialPayments.audit(p, id, receipt.getList("resources", Tag.TAG_COMPOUND)));
+    return receipt;
   }
 
   public static void reconcileCurrency(ServerPlayer p, UUID id, double stillOwed) {

@@ -99,6 +99,8 @@ public final class PrefabDeploy {
         (ServerStoppingEvent e) -> {
           DeploymentManager.stop();
           Sessions.clear();
+          io.github.prefabdeploy.compat.BackpackWrapperCache.clear();
+            io.github.prefabdeploy.server.MaterialPayments.testHook(null);
           io.github.prefabdeploy.library.LocalBlueprints.clear();
         });
     NeoForge.EVENT_BUS.addListener(

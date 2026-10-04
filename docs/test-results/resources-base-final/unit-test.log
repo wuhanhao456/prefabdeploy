@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+Starting a Gradle Daemon, 2 busy and 2 stopped Daemons could not be reused, use --status for details
+Calculating task graph as no cached configuration is available for tasks: test
+> Task :processTestResources NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava FROM-CACHE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+
+BUILD SUCCESSFUL in 16s
+6 actionable tasks: 1 executed, 1 from cache, 4 up-to-date
+Configuration cache entry stored.

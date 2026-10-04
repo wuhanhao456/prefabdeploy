@@ -40,6 +40,10 @@ public final class MachineCoordinates implements NbtTransformAdapter {
 
 `CostProvider` 提供 `quote`、`reserve`、`commit` 和 `refund`。报价是不可变意义的 NBT 快照，事务 ID 是幂等键。首版要求 `atomicWithPlayerSave()` 为 true：扣款及凭据必须全部在该玩家自己的 NBT 中，交给核心一起原子保存；不要在回调里自行异步保存玩家。
 
+资源兼容保留 `CostProvider` 的公开签名和约束。`MaterialPayments` 与 `ResourceSources` 是内部实现，不属于稳定扩展 API。背包和网络使用内部事务协议，没有注册为自定义费用提供者。
+
+新报价追加 `materialVersion: 1` 和 `autoLava`。缺少材料版本的旧报价仍使用库存协议。玩家凭据追加 `resources` 和 `resourcesReady`。外部 SavedData 保存 `prefabdeploy_resource_receipts`。字段用途和保存流程见[资源兼容](RESOURCE-COMPAT.md)。
+
 ```json
 {"cost":{"mode":"manual","custom":[
   {"provider":"yourmod:points","amount":50}

@@ -1,5 +1,70 @@
 [
   {
+    "key": "prefabdeploy.error.resource_persistence_adapter_unavailable",
+    "fallback": "Resource persistence adapter unavailable",
+    "pattern": "^Resource\\ persistence\\ adapter\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.bound_network_changed_or_permission_was_revoked",
+    "fallback": "Bound network changed or permission was revoked",
+    "pattern": "^Bound\\ network\\ changed\\ or\\ permission\\ was\\ revoked$"
+  },
+  {
+    "key": "prefabdeploy.error.bound_network_permission_unavailable",
+    "fallback": "Bound network permission unavailable",
+    "pattern": "^Bound\\ network\\ permission\\ unavailable$"
+  },
+  {
+    "key": "prefabdeploy.error.funding_backpack_is_no_longer_carried",
+    "fallback": "Funding backpack is no longer carried",
+    "pattern": "^Funding\\ backpack\\ is\\ no\\ longer\\ carried$"
+  },
+  {
+    "key": "prefabdeploy.error.material_changed_before_reservation",
+    "fallback": "Material changed before reservation",
+    "pattern": "^Material\\ changed\\ before\\ reservation$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_receipt_file_is_missing_recovery_is_pending",
+    "fallback": "Resource receipt file is missing; recovery is pending",
+    "pattern": "^Resource\\ receipt\\ file\\ is\\ missing;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_receipt_file_differs_recovery_is_pending",
+    "fallback": "Resource receipt file differs; recovery is pending",
+    "pattern": "^Resource\\ receipt\\ file\\ differs;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_receipt_file_cannot_be_read_recovery_is_pending",
+    "fallback": "Resource receipt file cannot be read; recovery is pending",
+    "pattern": "^Resource\\ receipt\\ file\\ cannot\\ be\\ read;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.original_network_is_unavailable_recovery_is_pending",
+    "fallback": "Original network is unavailable; recovery is pending",
+    "pattern": "^Original\\ network\\ is\\ unavailable;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.original_backpack_is_unavailable_recovery_is_pending",
+    "fallback": "Original backpack is unavailable; recovery is pending",
+    "pattern": "^Original\\ backpack\\ is\\ unavailable;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_result_is_uncertain_recovery_is_pending",
+    "fallback": "Resource result is uncertain; recovery is pending",
+    "pattern": "^Resource\\ result\\ is\\ uncertain;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_reservation_is_incomplete_recovery_is_pending",
+    "fallback": "Resource reservation is incomplete; recovery is pending",
+    "pattern": "^Resource\\ reservation\\ is\\ incomplete;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.resource_transaction_could_not_be_saved",
+    "fallback": "Resource transaction could not be saved",
+    "pattern": "^Resource\\ transaction\\ could\\ not\\ be\\ saved$"
+  },
+  {
     "key": "prefabdeploy.error.unable_to_read_blueprint_data",
     "fallback": "Unable to read blueprint data",
     "pattern": "^Unable\\ to\\ read\\ blueprint\\ data$"

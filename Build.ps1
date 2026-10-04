@@ -15,7 +15,11 @@ param(
     [switch]$ModelReloadSmoke,
     [string]$ShaderModsDir,
     [string]$ShaderSmoke,
-    [switch]$ReloadSmoke
+    [switch]$ReloadSmoke,
+    [string]$ResourceModsDir,
+    [switch]$ResourceSmoke,
+    [ValidateSet('', 'write', 'read')][string]$ResourceCrashMode = '',
+    [string]$ResourceCrashStage
 )
 $ErrorActionPreference = 'Stop'
 $taskRoot = $PSScriptRoot
@@ -46,6 +50,12 @@ if ($ModelReloadSmoke) { $taskArguments += '-PmodelReloadSmoke' }
 if ($ShaderModsDir) { $taskArguments += "-PshaderModsDir=$(([IO.Path]::GetFullPath($ShaderModsDir)).Replace('\','/'))" }
 if ($ShaderSmoke) { $taskArguments += "-PshaderSmoke=$ShaderSmoke" }
 if ($ReloadSmoke) { $taskArguments += '-PreloadSmoke' }
+if ($ResourceModsDir) { $taskArguments += "-PresourceModsDir=$(([IO.Path]::GetFullPath($ResourceModsDir)).Replace('\','/'))" }
+if ($ResourceSmoke) { $taskArguments += '-PresourceSmoke' }
+if ($ResourceCrashMode) {
+    if (!$ResourceModsDir -or !$ResourceCrashStage) { throw 'ResourceCrashMode requires ResourceModsDir and ResourceCrashStage.' }
+    $taskArguments += "-PresourceCrashMode=$ResourceCrashMode", "-PresourceCrashStage=$ResourceCrashStage"
+}
 $taskArguments += $Task
 $taskLog = Join-Path $CacheRoot ('logs/gradle-' + (Get-Date -Format 'yyyyMMdd-HHmmss-ffff') + '.log')
 Write-Host "Gradle $($Task -join ', ') -> $taskLog"
@@ -53,10 +63,14 @@ Push-Location -LiteralPath $taskRoot
 try {
     & java @taskArguments *> $taskLog
     $taskCode = $LASTEXITCODE
-    $taskExpectedCrash = $CrashMode -eq 'write' -and (Select-String -LiteralPath $taskLog -SimpleMatch 'PREFAB HARD CRASH READY:' -Quiet) -and (Select-String -LiteralPath $taskLog -SimpleMatch 'exit value 91' -Quiet)
+    $taskExpectedCrash = ($CrashMode -eq 'write' -or $ResourceCrashMode -eq 'write') -and (Select-String -LiteralPath $taskLog -SimpleMatch 'PREFAB HARD CRASH READY:' -Quiet) -and (Select-String -LiteralPath $taskLog -SimpleMatch 'exit value 91' -Quiet)
     if ($taskCode -ne 0 -and !$taskExpectedCrash) {
         Get-Content -LiteralPath $taskLog -Tail 40
         throw "Gradle failed ($taskCode). See $taskLog"
+    }
+    if (($ResourceSmoke -or $ResourceCrashMode -eq 'read') -and
+        !(Select-String -LiteralPath $taskLog -Pattern 'All \d+ required tests passed' -Quiet)) {
+        throw "Resource GameTests did not report success. See $taskLog"
     }
     if ($Task -contains 'build' -or $Task -contains 'jar') {
         $taskDist = Join-Path $taskRoot 'dist'
