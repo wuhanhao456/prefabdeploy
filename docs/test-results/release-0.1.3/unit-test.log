@@ -1,0 +1,18 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+Starting a Gradle Daemon, 2 busy Daemons could not be reused, use --status for details
+Calculating task graph as configuration cache cannot be reused because file 'gradle.properties' has changed.
+> Task :processTestResources NO-SOURCE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :compileJava FROM-CACHE
+> Task :generateModMetadata
+> Task :processResources
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+
+BUILD SUCCESSFUL in 19s
+6 actionable tasks: 3 executed, 1 from cache, 2 up-to-date
+Configuration cache entry stored.

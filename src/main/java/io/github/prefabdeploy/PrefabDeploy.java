@@ -75,6 +75,7 @@ public final class PrefabDeploy {
                   .build());
 
   public PrefabDeploy(IEventBus modBus, ModContainer container) {
+    ContainerReceipts.register(modBus);
     BLOCKS.register(modBus);
     ITEMS.register(modBus);
     TABS.register(modBus);
@@ -99,6 +100,8 @@ public final class PrefabDeploy {
         (ServerStoppingEvent e) -> {
           DeploymentManager.stop();
           Sessions.clear();
+          io.github.prefabdeploy.compat.BoundContainers.clear();
+          BoundResourceJournal.clear(e.getServer());
           io.github.prefabdeploy.compat.BackpackWrapperCache.clear();
             io.github.prefabdeploy.server.MaterialPayments.testHook(null);
           io.github.prefabdeploy.library.LocalBlueprints.clear();

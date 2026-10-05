@@ -329,6 +329,7 @@ public final class DeploymentManager {
     String error = "";
     io.github.prefabdeploy.UiText errorDisplay = io.github.prefabdeploy.UiText.literal("");
     CompoundTag price = new CompoundTag();
+    CompoundTag materialBinding = new CompoundTag();
     CompletableFuture<?> pending;
     CompletableFuture<Optional<CompoundTag>> chunkDisk;
     CompletableFuture<ChunkResult<ChunkAccess>> chunkLoad;
@@ -343,6 +344,7 @@ public final class DeploymentManager {
       this.markers = List.copyOf(markers);
       beaconRefundCount = markers.size();
       this.dry = dry;
+      materialBinding = Sessions.materialBinding(p);
       dimension = p.level().dimension();
       level = p.serverLevel();
       if (p instanceof net.neoforged.neoforge.common.util.FakePlayer) testPlayer = p;
@@ -448,7 +450,13 @@ public final class DeploymentManager {
             Rules.allowedResult(
                     p, prefab, new BlockPos(transform.x(), transform.y(), transform.z()))
                 .require();
-            price = Costs.quote(p, prefab);
+            var binding = materialBinding;
+            if (!binding.isEmpty() && !p.gameMode.isCreative()) {
+              var affected = new HashSet<BlockPos>();
+              for (var voxel : prefab.blueprint().voxels()) affected.add(NbtTransforms.pos(transform, voxel.pos()));
+              binding = BoundContainers.forConstruction(p, binding, dimension, affected);
+            }
+            price = Costs.quote(p, prefab, binding, id);
             if (!dry) Costs.pin(id, price);
             next(Phase.VALIDATE);
             return;

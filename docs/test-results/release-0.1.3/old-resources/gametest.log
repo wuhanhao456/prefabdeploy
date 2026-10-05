@@ -1,0 +1,144 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+Calculating task graph as configuration cache cannot be reused because file 'gradle.properties' has changed.
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :prepareGameTestServerRun
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :preparePrefabResourceMods
+> Task :preparePrefabGameTests
+
+> Task :runGameTestServer
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[20:01:02] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430]
+[20:01:02] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[20:01:02] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[20:01:02] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[20:01:02] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[20:01:03] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 3 dependencies adding them to mods collection
+[20:01:03] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Beyond Dimensions 0.7.30 (beyonddimensions)
+		Curios API 9.5.1+1.21.1 (curios)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.3 (prefabdeploy)
+		Sophisticated Backpacks 3.26.3 (sophisticatedbackpacks)
+		Sophisticated Core 1.5.1 (sophisticatedcore)
+[20:01:05] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[20:01:05] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[20:01:05] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.neoforge.mixins.json could not be read. If this is a development environment you can ignore this message
+[20:01:05] [main/WARN] [mixin/]: Reference map 'curios.refmap.json' for curios.mixins.json could not be read. If this is a development environment you can ignore this message
+[20:01:09] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[20:01:19] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:01:19] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:01:19] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:01:19] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[20:01:19] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[20:01:19] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[20:01:20] [modloading-worker-0/INFO] [co.wi.be.BeyondDimensions/]: Discovered 15 common integration modules and 2 client integration modules
+[20:01:21] [main/ERROR] [minecraft/Settings]: Failed to load properties from file: server.properties
+java.nio.file.NoSuchFileException: server.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?] {}
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?] {}
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.Settings.loadFromFile(Settings.java:38) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerProperties.fromFile(DedicatedServerProperties.java:132) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerSettings.<init>(DedicatedServerSettings.java:12) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:125) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+[20:01:21] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[20:01:21] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdc/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/assets/.mcassetsroot' uses unexpected schema
+[20:01:21] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdc/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/data/.mcassetsroot' uses unexpected schema
+[20:01:21] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [prefabresources]
+[20:01:23] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/rs_net_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:rs_net_pathway
+[20:01:23] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/mana_pool_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:mana_pool_pathway
+[20:01:23] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/ars_source_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:ars_source_pathway
+[20:01:23] [Worker-Main-3/ERROR] [minecraft/LootDataType]: Couldn't parse element ResourceKey[minecraft:root / minecraft:loot_table]:beyonddimensions:blocks/schematicannon_pathway - Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: beyonddimensions:schematicannon_pathway
+[20:01:24] [main/INFO] [minecraft/RecipeManager]: Loaded 1398 recipes
+[20:01:24] [main/INFO] [minecraft/AdvancementTree]: Loaded 1503 advancements
+[20:01:24] [main/INFO] [Curios API/]: Loaded 10 curio slots
+[20:01:24] [main/INFO] [Curios API/]: Loaded 1 curio entities
+[20:01:24] [main/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[20:01:26] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[20:01:26] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[20:01:26] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 371 ms
+[20:01:26] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[20:01:26] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[20:01:26] [Server thread/INFO] [co.wi.be.BeyondDimensions/]: 维度网络初始化完成(服务端)
+[20:01:26] [Server thread/INFO] [minecraft/GameTestServer]: 45 tests are now running at position 5908982, -59, -5955172!
+[20:01:32] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (45 tests)...
+[20:01:32] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 5867ms or 117 ticks behind
+[20:01:33] [Server thread/INFO] [minecraft/GameTestServer]: [                                             ]
+[20:01:34] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER TEST SKIPPED: ae2 is absent
+[20:01:34] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER TEST SKIPPED: ae2 is absent
+[20:01:34] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The material container chunk is not loaded
+[20:01:34] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The material container is in another dimension
+[20:01:35] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER TEST SKIPPED: ae2 is absent
+[20:01:35] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER TEST SKIPPED: sophisticatedstorage is absent
+[20:01:35] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER TEST SKIPPED: ae2 is absent
+[20:01:35] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: Construction area is locked
+[20:01:35] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The bound material source is inside the construction area
+[20:01:35] [Server thread/ERROR] [io.gi.pr.PrefabDeploy/]: Prefab task 84ef1150-1b26-4b07-8a19-60c132db94c9 failed in RESERVE
+java.lang.IllegalStateException: Injected fault at after_payment
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager$Job.fault(DeploymentManager.java:1093) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager$Job.step(DeploymentManager.java:571) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager.tick(DeploymentManager.java:187) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.PrefabDeploy.lambda$new$14(PrefabDeploy.java:111) ~[%23135!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%23106!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23106!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar%23106!/:?] {}
+	at TRANSFORMER/neoforge@21.1.248/net.neoforged.neoforge.event.EventHooks.fireServerTickPost(EventHooks.java:1020) ~[neoforge-21.1.248.jar%23130!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:958) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.gametest.framework.GameTestServer.tickServer(GameTestServer.java:171) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:713) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+[20:01:35] [Server thread/INFO] [minecraft/GameTestServer]: [+++__++++++++++++++++++++++++++++++++_+++++  ]
+[20:01:36] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++++++++++++++++++++++++++++++]
+[20:01:36] [Server thread/INFO] [minecraft/GameTestServer]: ========= 45 GAME TESTS COMPLETE IN 9.219 s ======================
+[20:01:36] [Server thread/INFO] [minecraft/GameTestServer]: All 45 required tests passed :)
+[20:01:36] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[20:01:36] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[20:01:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[20:01:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[20:01:37] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[20:01:48] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[20:01:49] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+BUILD SUCCESSFUL in 52s
+10 actionable tasks: 4 executed, 6 up-to-date
+Configuration cache entry stored.

@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-05T20:05:47+02:00",
+  "version": "0.1.3",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "unit_tests_passed": 10,
+  "gametest_profiles": {
+    "base": {
+      "entries_passed": 35,
+      "logged_container_dependency_skips": 0,
+      "log": "gametest-base.log"
+    },
+    "containers": {
+      "entries_passed": 45,
+      "logged_container_dependency_skips": 0,
+      "log": "containers/gametest.log"
+    },
+    "old_resources": {
+      "entries_passed": 45,
+      "logged_container_dependency_skips": 5,
+      "log": "old-resources/gametest.log"
+    }
+  },
+  "dependency_skip_scope": {
+    "base": "4 optional integrations skipped",
+    "containers": "old backpack/Beyond Dimensions scenarios skipped; covered separately",
+    "old_resources": "AE2, Sophisticated Storage and FTB scenarios skipped; covered separately"
+  },
+  "client_flow_passed": true,
+  "client_cancel_keeps_binding": true,
+  "tooltip_visual_evidence": "../container-binding/tooltip/screenshots (previous development build; reviewed)",
+  "current_full_client_tooltip_images_capture_hover": false,
+  "prior_cold_restart_pairs_passed": 8,
+  "cold_restart_rerun_for_013": false,
+  "prior_cold_evidence": "../container-binding/crash",
+  "shipping_runtime_equivalent_to_prior_build": true,
+  "java_source_sha256": "45ef0837b5804d63ffff18f095fc2b372945daed791a41c65c4acdea88e0068e",
+  "sha256": {
+    "prefabdeploy-0.1.3.jar": "0bd18356b52f9a1f648669c51b5f7c824850e38f9d274c7b2c15e554c26b4d1c",
+    "prefabdeploy-0.1.3-sources.jar": "f10e3ec3fceedf723061e882fe5161966cbda4f790766d4d870423e3893753b9"
+  },
+  "third_party_jars_packaged": false,
+  "published": false,
+  "not_rerun": [
+    "shader matrices",
+    "remote optional-client connections",
+    "full BeLoong modpack",
+    "all historical crash hooks"
+  ]
+}

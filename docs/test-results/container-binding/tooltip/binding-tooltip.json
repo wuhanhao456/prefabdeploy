@@ -1,0 +1,12 @@
+{
+  "java": "21.0.11",
+  "mod_version": "0.1.2",
+  "neoforge": "21.1.248",
+  "renderer": "NVIDIA GeForce RTX 5060 Ti/PCIe/SSE2",
+  "width": 1280,
+  "height": 800,
+  "language": "zh_cn",
+  "measurement": "400+ cached preview frames; CPU submission and asynchronous GPU timestamp duration",
+  "runs": [],
+  "gray_binding_tooltip_and_coordinates_verified": true
+}

@@ -2,6 +2,7 @@ package io.github.prefabdeploy.server;
 
 import io.github.prefabdeploy.UiText;
 import io.github.prefabdeploy.compat.ResourceSources;
+import io.github.prefabdeploy.compat.BoundContainers;
 import java.util.*;
 import java.util.function.BiConsumer;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -49,11 +50,18 @@ public final class MaterialPayments {
       needed.merge(item, (long) n.getInt("count"), Math::addExact);
     }
     int version = quote.getInt("materialVersion");
-    if (version != 0 && version != 1) throw new IllegalStateException("Unknown material quote version");
-    long lava = version == 1 ? quote.getInt("autoLava") : 0;
+    if (version < 0 || version > 2) throw new IllegalStateException("Unknown material quote version");
+    long lava = version >= 1 ? quote.getInt("autoLava") : 0;
     if (lava < 0) throw new IllegalStateException("Invalid saved lava cost");
     if (needed.isEmpty() && lava == 0) return new Plan(new ListTag(), List.of());
     var candidates = new ArrayList<Candidate>();
+    if (version == 2) {
+      UUID transaction = quote.hasUUID("materialTransaction") ? quote.getUUID("materialTransaction") : null;
+      for (var source : BoundContainers.available(p, quote.getCompound("boundContainer"), transaction)) {
+        try { add(candidates, source); }
+        catch (Exception ex) { BoundContainers.notice(p, ex); }
+      }
+    }
     for (int slot = 0; slot < p.getInventory().getContainerSize(); slot++) {
       var stack = p.getInventory().getItem(slot);
       if (stack.isEmpty() || (!needed.containsKey(stack.getItem())
@@ -64,7 +72,7 @@ public final class MaterialPayments {
     }
     allocate(p, candidates, needed);
     lava = take(p, candidates, Items.LAVA_BUCKET, lava);
-    if (version == 1 && (missing(needed) || lava > 0)) {
+    if (version >= 1 && (missing(needed) || lava > 0)) {
       try {
         var bags = new ArrayList<Candidate>();
         for (var source : ResourceSources.backpacks(p)) add(bags, source);
@@ -159,8 +167,8 @@ public final class MaterialPayments {
     for (var a : plan.external) {
       var source = a.source;
       source.validateFunding(id);
-      ResourceReceiptStorage.verify(source.data, source.path);
-      var ledger = ResourceReceiptStorage.receipts(source.data);
+      source.verify();
+      var ledger = source.receipts();
       String key = receiptKey(id, source);
       if (ledger.contains(key)) {
         var existing = ledger.getCompound(key);
@@ -178,8 +186,17 @@ public final class MaterialPayments {
       ledger.put(key, receipt);
       try {
         for (var resource : a.resources) {
-          source.extract((CompoundTag) resource);
-          receipt.getList("escrow", Tag.TAG_COMPOUND).add(resource.copy());
+          var requested = (CompoundTag) resource;
+          receipt.putString("state", "UNCERTAIN");
+          source.beforeMutation();
+          var actual = source.take(requested);
+          long amount = actual.getLong("amount");
+          if (amount < 0 || amount > requested.getLong("amount"))
+            throw new IllegalStateException("Resource extraction returned an unknown result");
+          if (amount > 0) receipt.getList("escrow", Tag.TAG_COMPOUND).add(actual.copy());
+          receipt.putString("state", "RESERVED");
+          if (amount != requested.getLong("amount") || !actual.getCompound("item").equals(requested.getCompound("item"))
+              || !actual.getCompound("fluid").equals(requested.getCompound("fluid"))) throw new ResourceSources.Changed();
         }
         source.changed();
         receipt.putString("state", "RESERVED");
@@ -199,8 +216,8 @@ public final class MaterialPayments {
     for (var tag : allocations) {
       var allocation = (CompoundTag) tag;
       var source = ResourceSources.resolve(p, allocation.getCompound("source"));
-      ResourceReceiptStorage.verify(source.data, source.path);
-      var ledger = ResourceReceiptStorage.receipts(source.data);
+      source.verify();
+      var ledger = source.receipts();
       String key = receiptKey(id, source);
       if (!ledger.contains(key)) {
         if (commit) throw new IllegalStateException("Reserved resource receipt is missing");
@@ -223,18 +240,28 @@ public final class MaterialPayments {
         var escrow = receipt.getList("escrow", Tag.TAG_COMPOUND);
         var pending = new ListTag();
         try {
-          for (var resourceTag : escrow) {
-            var resource = (CompoundTag) resourceTag;
+          for (int index = 0; index < escrow.size(); index++) {
+            var resource = escrow.getCompound(index);
+            source.prepareReturn(resource);
+            receipt.putString("state", "UNCERTAIN");
+            source.beforeMutation();
             long left = source.insert(resource);
+            if (left < 0 || left > resource.getLong("amount"))
+              throw new IllegalStateException("Resource insertion returned an unknown result");
             if (left > 0) {
               var n = resource.copy(); n.putLong("amount", left); pending.add(n);
             }
+            var remaining = pending.copy();
+            for (int next = index + 1; next < escrow.size(); next++) remaining.add(escrow.getCompound(next).copy());
+            receipt.put("escrow", remaining);
+            receipt.putString("state", "REFUND_PENDING");
           }
           source.changed();
           receipt.put("escrow", pending);
           receipt.putString("state", pending.isEmpty() ? "REFUNDED" : "REFUND_PENDING");
         } catch (Exception ex) {
-          receipt.putString("state", "UNCERTAIN");
+          // Failure before entering a mutation is recoverable when the original source returns.
+          // During/after a third-party call the persisted uncertainty marker must remain intact.
           persist(p, source);
           throw ex;
         }
@@ -261,9 +288,9 @@ public final class MaterialPayments {
       var row = new CompoundTag(); row.put("source", allocation.getCompound("source").copy());
       try {
         var source = ResourceSources.resolve(p, allocation.getCompound("source"));
-        ResourceReceiptStorage.verify(source.data, source.path);
-        var ledger = ResourceReceiptStorage.receipts(source.data);
-        row.putString("file", source.path.toString());
+        source.verify();
+        var ledger = source.receipts();
+        row.putString("file", source.location());
         row.put("receipt", ledger.getCompound(receiptKey(id, source)).copy());
       } catch (Exception ex) { row.putString("error", rootMessage(ex)); }
       out.add(row);
@@ -277,8 +304,7 @@ public final class MaterialPayments {
     fault(id, source.identity.getString("kind") + ":" + stage);
   }
   private static void persist(ServerPlayer p, ResourceSources.Source source) {
-    source.data.setDirty();
-    ResourceReceiptStorage.save(source.data, source.path, p.registryAccess());
+    source.persist();
   }
   private static String rootMessage(Throwable ex) {
     while (ex.getCause() != null) ex = ex.getCause();

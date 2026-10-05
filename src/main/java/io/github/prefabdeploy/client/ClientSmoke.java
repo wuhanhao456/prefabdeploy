@@ -183,6 +183,36 @@ public final class ClientSmoke {
         }
         case 1 -> {
           if (MC.player.getMainHandItem().is(PrefabDeploy.TOOL.get())) {
+            toolTooltip();
+            stage = 90; ticks = 0;
+          }
+        }
+        case 90 -> {
+          if (ticks > 25) {
+            screenshot("tool-tooltip-unbound.png");
+            serverExecute(() -> {
+              var p = MC.getSingleplayerServer().getPlayerList().getPlayer(MC.player.getUUID());
+              var pos = new BlockPos(9, -55, 22);
+              p.serverLevel().setBlock(pos, Blocks.CHEST.defaultBlockState(), 3);
+              try {
+                io.github.prefabdeploy.item.ContainerBinding.write(p.getMainHandItem(),
+                    io.github.prefabdeploy.compat.BoundContainers.bind(p, new net.minecraft.world.phys.BlockHitResult(
+                        net.minecraft.world.phys.Vec3.atCenterOf(pos), net.minecraft.core.Direction.NORTH, pos, false)));
+                p.inventoryMenu.broadcastChanges();
+              } catch (Exception ex) { throw new RuntimeException(ex); }
+            });
+            stage = 91; ticks = 0;
+          }
+        }
+        case 91 -> {
+          if (ticks > 40 && !io.github.prefabdeploy.item.ContainerBinding.read(MC.player.getMainHandItem()).isEmpty()) {
+            screenshot("tool-tooltip-bound.png");
+            REPORT.addProperty("gray_binding_tooltip_and_coordinates_verified", true);
+            if (Boolean.getBoolean("prefabdeploy.bindingTooltipSmoke")) {
+              Files.writeString(directory().resolve("binding-tooltip.json"), new GsonBuilder().setPrettyPrinting().create().toJson(REPORT));
+              PrefabDeploy.LOGGER.info("BINDING TOOLTIP SMOKE COMPLETE"); MC.stop(); return;
+            }
+            MC.setScreen(null);
             Network.request(Network.message("catalog"));
             stage = 2;
           }
@@ -294,6 +324,9 @@ public final class ClientSmoke {
         }
         case 30 -> {
           if (Client.token == null && ticks > 10) {
+            if (io.github.prefabdeploy.item.ContainerBinding.read(MC.player.getMainHandItem()).isEmpty())
+              throw new IllegalStateException("Placement cancellation cleared the material binding");
+            REPORT.addProperty("shift_cancel_keeps_container_binding_verified", true);
             REPORT.addProperty("shift_right_click_follow_cancel_verified", true);
             Client.choose(gallery, false);
             stage = 31;
@@ -755,6 +788,16 @@ public final class ClientSmoke {
           "Shift-right-click was not intercepted before vanilla interaction");
   }
 
+  private static void toolTooltip() {
+    var screen = new net.minecraft.client.gui.screens.inventory.InventoryScreen(MC.player);
+    MC.setScreen(screen);
+    boolean creative = MC.screen instanceof net.minecraft.client.gui.screens.inventory.CreativeModeInventoryScreen;
+    double scale = MC.getWindow().getGuiScale();
+    org.lwjgl.glfw.GLFW.glfwSetCursorPos(MC.getWindow().getWindow(),
+        ((MC.screen.width - (creative ? 195 : 176)) / 2D + (creative ? 17 : 16)) * scale,
+        ((MC.screen.height - (creative ? 136 : 166)) / 2D + (creative ? 120 : 150)) * scale);
+  }
+
   private static void useInput() {
     MC.player.input.shiftKeyDown = false;
     MC.player.setShiftKeyDown(false);
@@ -782,7 +825,11 @@ public final class ClientSmoke {
         throw new IllegalStateException("Reloaded client beacon has no renderer");
       aimAt(new net.minecraft.world.phys.Vec3(7.5,-52.5,2.5));
       screenshot("beacon-reloaded.png");
-      Files.writeString(directory().resolve("model-reload.json"), "{\"mod_version\":\"0.1.2\",\"saved_beacon_reloaded\":true,\"client_renderer_available\":true}");
+      var report = new JsonObject();
+      report.addProperty("mod_version", net.neoforged.fml.ModList.get().getModContainerById(PrefabDeploy.ID).orElseThrow().getModInfo().getVersion().toString());
+      report.addProperty("saved_beacon_reloaded", true);
+      report.addProperty("client_renderer_available", true);
+      Files.writeString(directory().resolve("model-reload.json"), new Gson().toJson(report));
       PrefabDeploy.LOGGER.info("MODEL RELOAD SMOKE COMPLETE");
       MC.stop(); stage = 11;
     }

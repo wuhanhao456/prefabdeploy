@@ -1,0 +1,122 @@
+{
+  "java": "21.0.11",
+  "mod_version": "0.1.3",
+  "neoforge": "21.1.248",
+  "renderer": "NVIDIA GeForce RTX 5060 Ti/PCIe/SSE2",
+  "width": 1280,
+  "height": 800,
+  "language": "zh_cn",
+  "measurement": "400+ cached preview frames; CPU submission and asynchronous GPU timestamp duration",
+  "runs": [
+    {
+      "positions": 10000,
+      "cold_build_elapsed_ms": 357.7117,
+      "samples": 784,
+      "cpu_p95_ms": 0.2071,
+      "cpu_max_ms": 0.8064,
+      "gpu_p95_ms": 0.032576,
+      "heap_used_bytes": 625187080,
+      "last_frame_ms": 6.0521,
+      "native_server": {
+        "samples": 115,
+        "peak_active_jobs": 1,
+        "max_job_operations_per_tick": 512,
+        "p50_ms": 1.9938,
+        "p95_ms": 2.2222,
+        "max_ms": 9.6099,
+        "heap_used_bytes": 617509312,
+        "deployment_success": true,
+        "whole_server_tick_p95_ms": 6.9093,
+        "observed_tps": 19.99874477443668,
+        "server_ticks": 116,
+        "final_updates_drained": true
+      },
+      "world_preview": {
+        "samples": 739,
+        "cpu_p95_ms": 0.1606,
+        "cpu_max_ms": 1.3798,
+        "gpu_p95_ms": 0.022624,
+        "movement": "anchor shifted every tick; four rotations; frustum culling active"
+      }
+    },
+    {
+      "positions": 50000,
+      "cold_build_elapsed_ms": 901.7388,
+      "samples": 1200,
+      "cpu_p95_ms": 0.5859,
+      "cpu_max_ms": 1.7476,
+      "gpu_p95_ms": 0.06144,
+      "heap_used_bytes": 749646912,
+      "last_frame_ms": 4.1652,
+      "native_server": {
+        "samples": 410,
+        "peak_active_jobs": 1,
+        "max_job_operations_per_tick": 512,
+        "p50_ms": 0.5801,
+        "p95_ms": 2.0084,
+        "max_ms": 32.7183,
+        "heap_used_bytes": 749646912,
+        "deployment_success": true,
+        "whole_server_tick_p95_ms": 4.6806,
+        "observed_tps": 20.0,
+        "server_ticks": 417,
+        "final_updates_drained": true
+      },
+      "world_preview": {
+        "samples": 742,
+        "cpu_p95_ms": 0.4172,
+        "cpu_max_ms": 1.5563,
+        "gpu_p95_ms": 0.056608,
+        "movement": "anchor shifted every tick; four rotations; frustum culling active"
+      }
+    },
+    {
+      "positions": 100000,
+      "cold_build_elapsed_ms": 1398.0282,
+      "samples": 1200,
+      "cpu_p95_ms": 0.7721,
+      "cpu_max_ms": 10.4131,
+      "gpu_p95_ms": 0.114336,
+      "heap_used_bytes": 532475816,
+      "last_frame_ms": 4.6643,
+      "native_server": {
+        "samples": 800,
+        "peak_active_jobs": 1,
+        "max_job_operations_per_tick": 512,
+        "p50_ms": 0.5865,
+        "p95_ms": 1.5976,
+        "max_ms": 12.1623,
+        "heap_used_bytes": 532475816,
+        "deployment_success": true,
+        "whole_server_tick_p95_ms": 3.7129,
+        "observed_tps": 20.0,
+        "server_ticks": 816,
+        "final_updates_drained": true
+      },
+      "world_preview": {
+        "samples": 749,
+        "cpu_p95_ms": 0.4132,
+        "cpu_max_ms": 0.9592,
+        "gpu_p95_ms": 0.105024,
+        "movement": "anchor shifted every tick; four rotations; frustum culling active"
+      }
+    }
+  ],
+  "gray_binding_tooltip_and_coordinates_verified": true,
+  "local_host_import_verified": true,
+  "folder_button_capability_verified": true,
+  "lan_host_and_guest_access_verified": true,
+  "small_gui_width": 427,
+  "small_gui_height": 267,
+  "r_four_direction_cycle_verified": true,
+  "shift_cancel_keeps_container_binding_verified": true,
+  "shift_right_click_follow_cancel_verified": true,
+  "shift_right_click_validation_cancel_verified": true,
+  "outside_right_click_air_block_entity_verified": true,
+  "loading_preview_blocks_confirmation_verified": true,
+  "normal_right_click_confirm_deploy_verified": true,
+  "three_beacon_floating_flow_verified": true,
+  "survival_material_charge_verified": true,
+  "beacon_renderer_particles_verified": true,
+  "integrated_model_scenarios_captured": true
+}

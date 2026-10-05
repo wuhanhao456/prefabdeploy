@@ -1,0 +1,17 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed: the value of 'prefabReportDir' was changed and 'compatTest' and 'vssJar' were removed.
+> Task :processTestResources NO-SOURCE
+> Task :generateModMetadata UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava
+> Task :classes
+> Task :compileTestJava UP-TO-DATE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+
+BUILD SUCCESSFUL in 6s
+6 actionable tasks: 2 executed, 4 up-to-date
+Configuration cache entry stored.

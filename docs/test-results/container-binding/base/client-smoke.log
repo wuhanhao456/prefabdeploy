@@ -1,0 +1,185 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+Calculating task graph as configuration cache cannot be reused because the set of Gradle properties has changed: the values of 'prefabReportDir' and 'prefabTestRun' were changed.
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :generateModMetadata UP-TO-DATE
+> Task :writeClientLegacyClasspath UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :prepareClientRun
+> Task :preparePrefabClientSmoke
+
+> Task :runClient
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdb/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[16:40:37] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.248, --assetIndex, 17, --assetsDir, C:\\Users\\Administrator\\.gradle\\caches\\neoformruntime\\assets, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430, --quickPlaySingleplayer, prefab-smoke, --width, 1280, --height, 800]
+[16:40:37] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[16:40:37] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[16:40:37] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[16:40:37] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[16:40:38] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[16:40:38] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23138!/ Service=ModLauncher Env=CLIENT
+[16:40:38] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 5060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 610.88, NVIDIA Corporation
+[16:40:39] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[16:40:39] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.2 (prefabdeploy)
+[16:40:40] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[16:40:40] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.248, --gameDir, ., --assetsDir, C:\Users\Administrator\.gradle\caches\neoformruntime\assets, --assetIndex, 17, --quickPlaySingleplayer, prefab-smoke, --width, 1280, --height, 800]
+[16:40:41] [main/WARN] [mixin/]: Error loading class: net/p3pp3rf1y/sophisticatedbackpacks/backpack/wrapper/BackpackWrapper (java.lang.ClassNotFoundException: net.p3pp3rf1y.sophisticatedbackpacks.backpack.wrapper.BackpackWrapper)
+[16:40:44] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 229 Datafixer optimizations took 671 milliseconds
+[16:40:45] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[16:40:53] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:40:53] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:40:53] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:40:53] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[16:40:53] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[16:40:54] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23189!/assets/.mcassetsroot' uses unexpected schema
+[16:40:54] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdb/build/moddev/artifacts/neoforge-21.1.248.jar%23189!/data/.mcassetsroot' uses unexpected schema
+[16:40:54] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[16:40:54] [Render thread/INFO] [minecraft/Minecraft]: Setting user: Dev
+[16:40:54] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.3+5
+[16:40:54] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[16:40:55] [Render thread/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: []
+[16:40:56] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources, mod/prefabdeploy, mod/neoforge
+[16:40:56] [Worker-Main-13/INFO] [minecraft/UnihexProvider]: Found unifont_jp_patch-15.1.05.hex, loading
+[16:40:56] [Worker-Main-10/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.05.hex, loading
+[16:40:59] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
+[16:40:59] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[16:40:59] [Render thread/ERROR] [minecraft/SoundEngine]: Error starting SoundSystem. Turning off sounds & music
+java.lang.IllegalStateException: Failed to open OpenAL device
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.audio.Library.openDeviceOrFallback(Library.java:229) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/com.mojang.blaze3d.audio.Library.init(Library.java:83) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.sounds.SoundEngine.loadLibrary(SoundEngine.java:146) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.sounds.SoundEngine.reload(SoundEngine.java:138) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.sounds.SoundManager.apply(SoundManager.java:147) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.sounds.SoundManager.apply(SoundManager.java:48) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimplePreparableReloadListener.lambda$reload$1(SimplePreparableReloadListener.java:19) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading}
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:718) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:482) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.packs.resources.SimpleReloadInstance.lambda$new$3(SimpleReloadInstance.java:86) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.runAllTasks(BlockableEventLoop.java:111) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.runTick(Minecraft.java:1161) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.Minecraft.run(Minecraft.java:813) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.main.Main.main(Main.java:230) ~[neoforge-21.1.248.jar%23189!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.43.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.clientService(CommonLaunchHandler.java:124) ~[loader-4.0.43.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.NeoForgeClientDevLaunchHandler.runService(NeoForgeClientDevLaunchHandler.java:23) ~[loader-4.0.43.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.43.jar%23146!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%23128!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[16:40:59] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[16:41:00] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[16:41:00] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[16:41:00] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[16:41:00] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[16:41:00] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[16:41:00] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[16:41:00] [Render thread/INFO] [ne.ne.ne.cl.en.an.js.AnimationLoader/]: Loaded 0 entity animations
+[16:41:02] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 1293 recipes
+[16:41:02] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 1402 advancements
+[16:41:02] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[16:41:03] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 1.21.1
+[16:41:03] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[16:41:04] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[16:41:04] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: 准备生成区域中：0%
+[16:41:04] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: 准备生成区域中：0%
+[16:41:05] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: 准备生成区域中：51%
+[16:41:05] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[16:41:05] [progressListener/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 1158 ms
+[16:41:05] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 8, from 10
+[16:41:05] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 5, from 0
+[16:41:06] [Server thread/INFO] [minecraft/PlayerList]: Dev[local:E:a7741f54] logged in with entity id 1 at (4.5, -60.0, -0.5)
+[16:41:07] [Server thread/INFO] [minecraft/MinecraftServer]: Dev加入了游戏
+[16:41:07] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 2 advancements
+[16:41:08] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 3 advancements
+[16:41:09] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-tooltip-unbound.png
+[16:41:11] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-tooltip-bound.png
+[16:41:14] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为gallery-library.png
+[16:41:15] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using default channel type
+[16:41:15] [Server thread/INFO] [minecraft/IntegratedServer]: Started serving on 0
+[16:41:16] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为folder-button-disabled.png
+[16:41:18] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为gallery-library-small.png
+[16:41:32] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为gallery-world-preview.png
+[16:41:33] [Render thread/INFO] [minecraft/ChatComponent]: [System] [CHAT] 建筑建造完成，交易编号：cfec11bb-12a7-4d94-9bec-38abc5da631d
+[16:41:35] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为gallery-deployed.png
+[16:41:38] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为beacon-a-candidates.png
+[16:41:40] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为beacon-c-candidate.png
+[16:41:44] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为beacon-complete-preview.png
+[16:41:44] [Render thread/INFO] [minecraft/ChatComponent]: [System] [CHAT] 建筑建造完成，交易编号：3bba5f54-4296-4df9-8584-161f790b7032
+[16:41:48] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-two-hands-right.png
+[16:41:50] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-two-hands-left.png
+[16:41:52] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-single-hand-shield.png
+[16:41:54] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为beacon-model-motion-a.png
+[16:41:55] [IO-Worker-2/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为beacon-model-motion-b.png
+[16:41:57] [IO-Worker-1/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为tool-third-person.png
+[16:41:59] [IO-Worker-1/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为models-inventory.png
+[16:42:04] [Render thread/INFO] [minecraft/ChatComponent]: [System] [CHAT] 建筑建造完成，交易编号：cdb3f4a7-d26f-4566-825b-925dcb8fb247
+[16:42:04] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@51e28071 hand=1 prefabdeploy:deployment_tool text=
+[16:42:05] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT BENCHMARK {"positions":10000,"cold_build_elapsed_ms":352.9401,"samples":802,"cpu_p95_ms":0.2114,"cpu_max_ms":0.641,"gpu_p95_ms":0.027008,"heap_used_bytes":665089144,"last_frame_ms":4.9212,"native_server":{"samples":122,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":2.0028,"p95_ms":2.3855,"max_ms":24.396,"heap_used_bytes":657506896,"deployment_success":true,"whole_server_tick_p95_ms":8.5151,"observed_tps":20.0,"server_ticks":123,"final_updates_drained":true}}
+[16:42:11] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=9 screen=io.github.prefabdeploy.client.LibraryScreen@f157271 hand=1 prefabdeploy:deployment_tool text=
+[16:42:16] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@f157271 hand=1 prefabdeploy:deployment_tool text=
+[16:42:21] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@f157271 hand=1 prefabdeploy:deployment_tool text=
+[16:42:26] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@f157271 hand=1 prefabdeploy:deployment_tool text=
+[16:42:27] [Render thread/INFO] [minecraft/ChatComponent]: [System] [CHAT] 建筑建造完成，交易编号：b15a9d41-228b-436c-9c0f-b3ca1d4139d4
+[16:42:31] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@f157271 hand=1 prefabdeploy:deployment_tool text=
+[16:42:32] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT BENCHMARK {"positions":50000,"cold_build_elapsed_ms":949.1555,"samples":1200,"cpu_p95_ms":0.5943,"cpu_max_ms":1.9742,"gpu_p95_ms":0.05984,"heap_used_bytes":715523584,"last_frame_ms":3.981,"native_server":{"samples":413,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":0.6313,"p95_ms":2.0257,"max_ms":27.7646,"heap_used_bytes":707496424,"deployment_success":true,"whole_server_tick_p95_ms":5.408,"observed_tps":19.99927267561568,"server_ticks":420,"final_updates_drained":true}}
+[16:42:38] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=9 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:42:43] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:42:48] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:42:53] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:42:58] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:43:03] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:43:08] [Render thread/INFO] [minecraft/ChatComponent]: [System] [CHAT] 建筑建造完成，交易编号：0ff16f33-f5a1-4349-92b8-f88165ee7f87
+[16:43:08] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:43:13] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE stage=10 screen=io.github.prefabdeploy.client.LibraryScreen@536af138 hand=1 prefabdeploy:deployment_tool text=
+[16:43:18] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT BENCHMARK {"positions":100000,"cold_build_elapsed_ms":1250.2163,"samples":1200,"cpu_p95_ms":0.7629,"cpu_max_ms":5.3722,"gpu_p95_ms":0.11744,"heap_used_bytes":665789240,"last_frame_ms":5.079,"native_server":{"samples":802,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":0.6036,"p95_ms":1.9259,"max_ms":24.4452,"heap_used_bytes":665789240,"deployment_success":true,"whole_server_tick_p95_ms":4.0109,"observed_tps":19.999874726059407,"server_ticks":820,"final_updates_drained":true}}
+[16:43:18] [IO-Worker-1/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为100000-preview.png
+[16:43:23] [Render thread/INFO] [io.gi.pr.PrefabDeploy/]: CLIENT SMOKE COMPLETE {"java":"21.0.11","mod_version":"0.1.2","neoforge":"21.1.248","renderer":"NVIDIA GeForce RTX 5060 Ti/PCIe/SSE2","width":1280,"height":800,"language":"zh_cn","measurement":"400+ cached preview frames; CPU submission and asynchronous GPU timestamp duration","runs":[{"positions":10000,"cold_build_elapsed_ms":352.9401,"samples":802,"cpu_p95_ms":0.2114,"cpu_max_ms":0.641,"gpu_p95_ms":0.027008,"heap_used_bytes":665089144,"last_frame_ms":4.9212,"native_server":{"samples":122,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":2.0028,"p95_ms":2.3855,"max_ms":24.396,"heap_used_bytes":657506896,"deployment_success":true,"whole_server_tick_p95_ms":8.5151,"observed_tps":20.0,"server_ticks":123,"final_updates_drained":true},"world_preview":{"samples":720,"cpu_p95_ms":0.1647,"cpu_max_ms":0.3721,"gpu_p95_ms":0.022688,"movement":"anchor shifted every tick; four rotations; frustum culling active"}},{"positions":50000,"cold_build_elapsed_ms":949.1555,"samples":1200,"cpu_p95_ms":0.5943,"cpu_max_ms":1.9742,"gpu_p95_ms":0.05984,"heap_used_bytes":715523584,"last_frame_ms":3.981,"native_server":{"samples":413,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":0.6313,"p95_ms":2.0257,"max_ms":27.7646,"heap_used_bytes":707496424,"deployment_success":true,"whole_server_tick_p95_ms":5.408,"observed_tps":19.99927267561568,"server_ticks":420,"final_updates_drained":true},"world_preview":{"samples":736,"cpu_p95_ms":0.3865,"cpu_max_ms":1.7437,"gpu_p95_ms":0.057312,"movement":"anchor shifted every tick; four rotations; frustum culling active"}},{"positions":100000,"cold_build_elapsed_ms":1250.2163,"samples":1200,"cpu_p95_ms":0.7629,"cpu_max_ms":5.3722,"gpu_p95_ms":0.11744,"heap_used_bytes":665789240,"last_frame_ms":5.079,"native_server":{"samples":802,"peak_active_jobs":1,"max_job_operations_per_tick":512,"p50_ms":0.6036,"p95_ms":1.9259,"max_ms":24.4452,"heap_used_bytes":665789240,"deployment_success":true,"whole_server_tick_p95_ms":4.0109,"observed_tps":19.999874726059407,"server_ticks":820,"final_updates_drained":true},"world_preview":{"samples":732,"cpu_p95_ms":0.492,"cpu_max_ms":1.0189,"gpu_p95_ms":0.106656,"movement":"anchor shifted every tick; four rotations; frustum culling active"}}],"gray_binding_tooltip_and_coordinates_verified":true,"local_host_import_verified":true,"folder_button_capability_verified":true,"lan_host_and_guest_access_verified":true,"small_gui_width":427,"small_gui_height":267,"r_four_direction_cycle_verified":true,"shift_cancel_keeps_container_binding_verified":true,"shift_right_click_follow_cancel_verified":true,"shift_right_click_validation_cancel_verified":true,"outside_right_click_air_block_entity_verified":true,"loading_preview_blocks_confirmation_verified":true,"normal_right_click_confirm_deploy_verified":true,"three_beacon_floating_flow_verified":true,"survival_material_charge_verified":true,"beacon_renderer_particles_verified":true,"integrated_model_scenarios_captured":true}
+[16:43:23] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+[16:43:23] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Dev lost connection: 连接中断
+[16:43:23] [Server thread/INFO] [minecraft/MinecraftServer]: Dev退出了游戏
+[16:43:23] [IO-Worker-4/INFO] [io.gi.pr.PrefabDeploy/]: Smoke screenshot: 已将截图保存为100000-world-preview.png
+[16:43:23] [Server thread/INFO] [minecraft/ServerCommonPacketListenerImpl]: Stopping singleplayer server as player logged out
+[16:43:23] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[16:43:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[16:43:23] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[16:43:24] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (prefab-smoke): All chunks are saved
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[16:43:28] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+
+BUILD SUCCESSFUL in 2m 57s
+9 actionable tasks: 3 executed, 6 up-to-date
+Configuration cache entry stored.

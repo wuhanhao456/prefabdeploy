@@ -1,0 +1,8 @@
+df15a07f86ca1ca93aa66373f9d5d84dd3d4586631fceb38f4fbc85dad591e39  container/appliedenergistics2-19.2.18.jar
+2ce254edb931c3c3cf81d69abaf8f4ce5b871bf85e64984f366bf044173bd66a  container/guideme-21.1.19.jar
+a24fa6b250d6ea576016afaecdea5481fdf77159a7d94a0ce3f35be16e0d3520  container/sophisticatedcore-1.21.1-1.5.5.2363.jar
+bcc56ddc6c96d1a659997d8fcde4397eda81882aa37d4d9eafd409fbcb0e5475  container/sophisticatedstorage-1.21.1-1.6.1.2147.jar
+8832414c035521fb69d62983c0918e2b77b7beb5005954f4f94dac2c837f85b1  existing-resources/bd.jar
+a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde  existing-resources/curios.jar
+8656ae953d67d1d21e42ed3f103d2be07cdf23bab445c8fc3af468cfd8852514  existing-resources/sb.jar
+48d9b3703fedb455fc0aef1f57089f90cc0d2a2400979cef3bc37763fa125c41  existing-resources/sc.jar

@@ -39,6 +39,7 @@ neoForge {
             }
             if (providers.gradleProperty('clientSmoke').isPresent()) {
                 systemProperty 'prefabdeploy.clientSmoke', 'true'
+                if (providers.gradleProperty('bindingTooltipSmoke').isPresent()) systemProperty 'prefabdeploy.bindingTooltipSmoke', 'true'
                 if (providers.gradleProperty('modelReloadSmoke').isPresent()) systemProperty 'prefabdeploy.modelReloadSmoke', 'true'
                 if (providers.gradleProperty('shaderSmoke').isPresent()) systemProperty 'prefabdeploy.shaderSmoke', providers.gradleProperty('shaderSmoke').get()
                 systemProperty 'prefabdeploy.reportDir', file(providers.gradleProperty('prefabReportDir').orElse('docs/test-results').get()).absolutePath
@@ -66,6 +67,12 @@ neoForge {
                 systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabresourcecrash'
                 systemProperty 'prefabdeploy.resourceCrashMode', providers.gradleProperty('resourceCrashMode').get()
                 systemProperty 'prefabdeploy.resourceCrashStage', providers.gradleProperty('resourceCrashStage').get()
+            }
+            if (providers.gradleProperty('boundCrashMode').isPresent()) {
+                systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabboundcrash'
+                systemProperty 'prefabdeploy.boundCrashMode', providers.gradleProperty('boundCrashMode').get()
+                systemProperty 'prefabdeploy.boundCrashStage', providers.gradleProperty('boundCrashStage').get()
+                systemProperty 'prefabdeploy.boundCrashKind', providers.gradleProperty('boundCrashKind').get()
             }
             if (providers.gradleProperty('crashMode').isPresent()) {
                 systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabcrash'

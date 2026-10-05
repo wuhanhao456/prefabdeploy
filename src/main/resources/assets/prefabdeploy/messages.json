@@ -1,5 +1,20 @@
 [
   {
+    "key": "prefabdeploy.error.original_container_is_unavailable_recovery_is_pending",
+    "fallback": "Original container is unavailable; recovery is pending",
+    "pattern": "^Original\\ container\\ is\\ unavailable;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.original_ae2_network_changed_recovery_is_pending",
+    "fallback": "Original AE2 network changed; recovery is pending",
+    "pattern": "^Original\\ AE2\\ network\\ changed;\\ recovery\\ is\\ pending$"
+  },
+  {
+    "key": "prefabdeploy.error.bound_resource_journal_cannot_be_read_recovery_is_pending",
+    "fallback": "Bound resource journal cannot be read; recovery is pending",
+    "pattern": "^Bound\\ resource\\ journal\\ cannot\\ be\\ read;\\ recovery\\ is\\ pending$"
+  },
+  {
     "key": "prefabdeploy.error.resource_persistence_adapter_unavailable",
     "fallback": "Resource persistence adapter unavailable",
     "pattern": "^Resource\\ persistence\\ adapter\\ unavailable$"

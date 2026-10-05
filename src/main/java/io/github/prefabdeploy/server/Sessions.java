@@ -63,6 +63,7 @@ public final class Sessions {
     final UUID token = UUID.randomUUID();
     final Prefab prefab;
     final boolean beacons;
+    final CompoundTag materialBinding;
     final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimension;
     final List<BlockPos> markers = new ArrayList<>();
     GridTransform transform;
@@ -73,6 +74,7 @@ public final class Sessions {
 
     Session(Prefab f, ServerPlayer p, boolean beacon) {
       prefab = f;
+      materialBinding = io.github.prefabdeploy.item.ContainerBinding.read(p.getMainHandItem());
       beacons = beacon;
       dimension = p.level().dimension();
     }
@@ -80,6 +82,12 @@ public final class Sessions {
 
   public static boolean active(ServerPlayer p) {
     return ACTIVE.containsKey(p.getUUID());
+  }
+
+  public static CompoundTag materialBinding(ServerPlayer player) {
+    var session = ACTIVE.get(player.getUUID());
+    return session == null ? io.github.prefabdeploy.item.ContainerBinding.read(player.getMainHandItem())
+        : session.materialBinding.copy();
   }
 
   public static void receive(ServerPlayer p, CompoundTag request) {

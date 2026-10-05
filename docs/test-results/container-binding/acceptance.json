@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-05T17:04:16+02:00",
+  "version": "0.1.2",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "unit_tests_passed": 10,
+  "base_gametest_entries_passed": 35,
+  "old_resource_entries_passed": 43,
+  "container_claim_entries_passed": 45,
+  "optional_tests": "dependency-specific tests execute in separate matrices",
+  "cold_restart_pairs_passed": 8,
+  "client_cancel_keeps_binding": true,
+  "tooltip_screenshots_reviewed": true,
+  "java_source_sha256": "094c8bdbbf8dd4b39c05d057b36f3e55a06e6578abc02aa87163b8c5c6e6e422",
+  "sha256": {
+    "prefabdeploy-0.1.2.jar": "94f7189822b4966acdaf176123a8c01effe34f5372fc81f0fcdc7c34922489c7",
+    "prefabdeploy-0.1.2-sources.jar": "175e0ac9e5a27ad6ad4d75770cf7d7ce449b47f226921f9aa2c72387bdb0323f"
+  },
+  "third_party_jars_packaged": false,
+  "published": false
+}

@@ -102,12 +102,21 @@ public final class Costs {
   }
 
   public static CompoundTag quote(ServerPlayer player, Prefab prefab) {
-    var q = quoteUnchecked(player, prefab);
+    return quote(player, prefab, Sessions.materialBinding(player), null);
+  }
+
+  public static CompoundTag quote(ServerPlayer player, Prefab prefab, CompoundTag binding, UUID transaction) {
+    var q = quoteUnchecked(player, prefab, binding);
+    if (transaction != null) q.putUUID("materialTransaction", transaction);
     check(player, q);
     return q;
   }
 
   public static CompoundTag quoteUnchecked(ServerPlayer player, Prefab prefab) {
+    return quoteUnchecked(player, prefab, Sessions.materialBinding(player));
+  }
+
+  private static CompoundTag quoteUnchecked(ServerPlayer player, Prefab prefab, CompoundTag binding) {
     if (player.gameMode.isCreative()) {
       var free = new CompoundTag();
       free.putBoolean("creativeExempt", true);
@@ -121,7 +130,8 @@ public final class Costs {
     if (spec == null)
       throw new IllegalArgumentException("Explicit cost definition required (use mode: free)");
     var out = new CompoundTag();
-    out.putInt("materialVersion", 1);
+    out.putInt("materialVersion", 2);
+    if (!binding.isEmpty()) out.put("boundContainer", binding.copy());
     var needed = new LinkedHashMap<Item, Integer>();
     String mode = PrefabLibrary.string(spec, "mode", "manual");
     if (!Set.of("free", "manual", "auto", "combined").contains(mode))
@@ -440,7 +450,7 @@ public final class Costs {
 
   private static List<ItemStack> readEscrow(ServerPlayer p, CompoundTag receipt) {
     var items = new ArrayList<ItemStack>();
-    boolean strict = receipt.getCompound("quote").getInt("materialVersion") == 1;
+    boolean strict = receipt.getCompound("quote").getInt("materialVersion") >= 1;
     for (var tag : receipt.getList("escrow", Tag.TAG_COMPOUND)) {
       var n = (CompoundTag) tag;
       if (!strict) items.add(ItemStack.parseOptional(p.registryAccess(), n));

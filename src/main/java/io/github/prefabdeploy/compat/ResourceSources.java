@@ -22,16 +22,41 @@ public final class ResourceSources {
 
   public record Entry(CompoundTag resource, long available) {}
   public static final class Changed extends IllegalStateException {
-    private Changed() { super("Material changed before reservation"); }
+    public Changed() { super("Material changed before reservation"); }
   }
 
-  public static final class Source {
+  public static class Source {
     public final CompoundTag identity;
     public final SavedData data;
     public final Path path;
     private final ServerPlayer player;
     private final Object backpackWrapper;
     private final Object network, storage;
+
+    protected Source(ServerPlayer player, CompoundTag identity) {
+      this.player = player;
+      this.identity = identity.copy();
+      this.data = null;
+      this.path = null;
+      this.backpackWrapper = null;
+      this.network = null;
+      this.storage = null;
+    }
+
+    public CompoundTag receipts() { return ResourceReceiptStorage.receipts(data); }
+    public void verify() { ResourceReceiptStorage.verify(data, path); }
+    public String location() { return path.toString(); }
+    public void persist() {
+      data.setDirty();
+      ResourceReceiptStorage.save(data, path, player.registryAccess());
+    }
+    /** Remote storage writes an uncertainty marker before entering a third-party mutation. */
+    public void beforeMutation() {}
+    public void prepareReturn(CompoundTag resource) throws Exception {}
+    public CompoundTag take(CompoundTag requested) throws Exception {
+      extract(requested);
+      return requested.copy();
+    }
 
     private Source(ServerPlayer p, CompoundTag id, SavedData data, String filename,
         Object backpackWrapper, Object network) throws Exception {
@@ -267,6 +292,7 @@ public final class ResourceSources {
 
   public static Source resolve(ServerPlayer p, CompoundTag id) throws Exception {
     String kind = id.getString("kind");
+    if (kind.equals("container") || kind.equals("ae2")) return BoundContainers.resolve(p, id);
     if (kind.equals("network")) {
       version("beyonddimensions", "0.7.30");
       if (id.getInt("net") < 0) throw new IllegalStateException("Invalid saved network identity");

@@ -1,0 +1,248 @@
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+Calculating task graph as configuration cache cannot be reused because file 'gradle.properties' has changed.
+> Task :writeGameTestServerLegacyClasspath UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :createMinecraftArtifacts UP-TO-DATE
+> Task :prepareGameTestServerRun
+> Task :generateModMetadata
+> Task :preparePrefabResourceMods
+> Task :preparePrefabGameTests
+> Task :processResources
+
+> Task :compileJava
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+
+> Task :classes
+
+> Task :runGameTestServer
+Picked up JAVA_TOOL_OPTIONS: -Djdk.net.unixdomain.tmpdir=C:/pdc/tmp
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+[19:57:39] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserverdev, --gameDir, ., --fml.fmlVersion, 4.0.43, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.248, --fml.neoFormVersion, 20240808.144430]
+[19:57:39] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Microsoft OpenJDK 64-Bit Server VM 21.0.11+10-LTS
+[19:57:39] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.11 by Microsoft; OS Windows Server 2025 arch amd64 version 10.0
+[19:57:39] [main/INFO] [ne.ne.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserverdev
+[19:57:39] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/C:/Users/Administrator/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%2394!/ Service=ModLauncher Env=SERVER
+[19:57:40] [main/INFO] [ne.ne.fm.lo.mo.lo.JarInJarDependencyLocator/]: Found 5 dependencies adding them to mods collection
+[19:57:40] [main/INFO] [ne.ne.fm.lo.mo.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Applied Energistics 2 19.2.18 (ae2)
+		Architectury 13.0.8 (architectury)
+		Better Advanced Tooltips 2101.1.0-build.1 (betteradvancedtooltips)
+		FTB Chunks 2101.1.22 (ftbchunks)
+		FTB Library 2101.1.36 (ftblibrary)
+		FTB Quests 2101.1.36 (ftbquests)
+		FTB Teams 2101.1.11 (ftbteams)
+		GuideME 21.1.19 (guideme)
+		KubeJS 2101.7.2-build.368 (kubejs)
+		Minecraft 1.21.1 (minecraft)
+		NeoForge 21.1.248 (neoforge)
+		Prefab Deploy 0.1.3 (prefabdeploy)
+		Rhino 2101.2.7-build.81 (rhino)
+		Sophisticated Core 1.5.5 (sophisticatedcore)
+		Sophisticated Storage 1.6.1 (sophisticatedstorage)
+[19:57:42] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[19:57:42] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[19:57:42] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserverdev' with arguments [--gameDir, .]
+[19:57:43] [main/WARN] [mixin/]: Error loading class: net/p3pp3rf1y/sophisticatedbackpacks/backpack/wrapper/BackpackWrapper (java.lang.ClassNotFoundException: net.p3pp3rf1y.sophisticatedbackpacks.backpack.wrapper.BackpackWrapper)
+[19:57:44] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[19:57:57] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:57:57] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:57:57] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:57:57] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[19:57:57] [main/WARN] [minecraft/Commands]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[19:57:57] [modloading-worker-0/INFO] [ne.ne.ne.co.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.248, for MC 1.21.1
+[19:57:58] [modloading-worker-0/INFO] [KubeJS Startup/]: Capturing errors for startup scripts enabled
+[19:57:58] [modloading-worker-0/INFO] [KubeJS Client/]: Capturing errors for client scripts enabled
+[19:57:58] [modloading-worker-0/INFO] [KubeJS/]: Loading vanilla registries...
+[19:57:58] [modloading-worker-0/INFO] [KubeJS/]: Looking for KubeJS plugins...
+[19:57:58] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source kubejs
+[19:57:58] [modloading-worker-0/WARN] [KubeJS/]: Plugin dev.latvian.mods.kubejs.plugin.builtin.BuiltinKubeJSClientPlugin does not load on server side, skipping
+[19:57:58] [modloading-worker-0/INFO] [KubeJS/]: Found plugin source prefabdeploy
+[19:57:58] [modloading-worker-0/INFO] [KubeJS/]: Done in 55.31 ms
+[19:57:59] [modloading-worker-0/INFO] [KubeJS Startup/]: startup_scripts:main.js#2: Hello, World! (Loaded startup example script)
+[19:57:59] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded script startup_scripts:main.js in 0.032 s
+[19:57:59] [modloading-worker-0/INFO] [KubeJS Startup/]: Loaded 1/1 KubeJS startup scripts in 0.547 s with 0 errors and 0 warnings
+[19:57:59] [modloading-worker-0/INFO] [KubeJS Startup/]: Validated 0 files in kubejs/data/ in 1ms
+[19:58:01] [modloading-sync-worker/INFO] [KubeJS Startup/]: Capturing errors for startup scripts disabled
+[19:58:01] [modloading-sync-worker/INFO] [KubeJS Client/]: Capturing errors for client scripts disabled
+[19:58:01] [main/ERROR] [minecraft/Settings]: Failed to load properties from file: server.properties
+java.nio.file.NoSuchFileException: server.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108) ~[?:?] {}
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380) ~[?:?] {}
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:432) ~[?:?] {}
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420) ~[?:?] {}
+	at java.base/java.nio.file.Files.newInputStream(Files.java:160) ~[?:?] {}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.Settings.loadFromFile(Settings.java:38) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerProperties.fromFile(DedicatedServerProperties.java:132) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.dedicated.DedicatedServerSettings.<init>(DedicatedServerSettings.java:12) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.Main.main(Main.java:125) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:136) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.serverService(CommonLaunchHandler.java:128) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.NeoForgeServerDevLaunchHandler.runService(NeoForgeServerDevLaunchHandler.java:23) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.43/net.neoforged.fml.loading.targets.CommonLaunchHandler.lambda$launchService$4(CommonLaunchHandler.java:118) ~[loader-4.0.43.jar%23102!/:4.0] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.run(Launcher.java:103) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.Launcher.main(Launcher.java:74) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@11.0.5/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-11.0.5.jar%2382!/:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.run(BootstrapLauncher.java:210) [bootstraplauncher-2.0.2.jar:?] {}
+	at cpw.mods.bootstraplauncher@2.0.2/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:69) [bootstraplauncher-2.0.2.jar:?] {}
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?] {}
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?] {}
+	at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?] {}
+[19:58:01] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[19:58:01] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdc/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/assets/.mcassetsroot' uses unexpected schema
+[19:58:01] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/C:/pdc/build/moddev/artifacts/neoforge-21.1.248.jar%23129!/data/.mcassetsroot' uses unexpected schema
+[19:58:01] [main/INFO] [ne.ne.ne.ga.GameTestHooks/]: Enabled Gametest Namespaces: [prefabresources]
+[19:58:02] [main/INFO] [KubeJS Server/]: Capturing errors for server scripts enabled
+[19:58:02] [main/INFO] [KubeJS Server/]: server_scripts:main.js#2: Hello, World! (Loaded server example script)
+[19:58:02] [main/INFO] [KubeJS Server/]: Loaded script server_scripts:main.js in 0.002 s
+[19:58:02] [main/INFO] [KubeJS Server/]: Loaded 1/1 KubeJS server scripts in 0.082 s with 0 errors and 0 warnings
+[19:58:02] [main/INFO] [KubeJS/]: Loaded 25 data packs: bundle, trade_rebalance, vanilla, KubeJS Virtual Resource Pack [Before Mods, data], file/prefabdeploy-test-fixtures, mod_data, mod/rhino, mod/architectury, mod/ftblibrary, mod/sophisticatedstorage, mod/guideme, mod/ae2, mod/ftbteams, mod/ftbquests, mod/ftbchunks, mod/sophisticatedcore, mod/neoforge, mod/kubejs, mod/prefabdeploy, KubeJS Virtual Resource Pack [Internal, data], KubeJS Virtual Resource Pack [Registries, data], KubeJS Virtual Resource Pack [After Mods, data], KubeJS File Resource Pack [data], mod/betteradvancedtooltips, KubeJS Virtual Resource Pack [Last, data]
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SpawnExtraGridTestTools for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.QnbTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InscriberTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.AnnihilationPlaneTests for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.TestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.P2PTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.PatternProviderPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SubnetPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.GuidebookPlot for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.CrystalResonanceGeneratorTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InterfaceTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.PatternProviderLockModePlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.InvalidPatternTestPlot for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ChannelTests for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.AutoCraftingTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ExternalEnergyTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.ItemP2PTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.MemoryCardTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.SpatialTestPlots for plots
+[19:58:03] [Worker-Main-3/INFO] [AE2:C/]: Scanning class appeng.server.testplots.CraftingTerminalTestPlots for plots
+[19:58:04] [main/INFO] [minecraft/RecipeManager]: Loaded 2045 recipes
+[19:58:05] [main/INFO] [minecraft/AdvancementTree]: Loaded 2057 advancements
+[19:58:05] [main/INFO] [io.gi.pr.PrefabDeploy/]: Loaded 3 prefab definitions
+[19:58:07] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[19:58:07] [Server thread/INFO] [KubeJS Server/]: Capturing errors for server scripts disabled
+[19:58:07] [Server thread/INFO] [KubeJS Server/]: Server resource reload complete!
+[19:58:07] [worldgen/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[19:58:07] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 396 ms
+[19:58:07] [Server thread/INFO] [minecraft/GameTestServer]: Started game test server
+[19:58:08] [Server thread/INFO] [ne.ne.ne.se.pe.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[19:58:08] [Server thread/INFO] [minecraft/GameTestServer]: 45 tests are now running at position -5591699, -59, -12036227!
+[19:58:13] [Server thread/INFO] [minecraft/GameTestRunner]: Running test batch 'defaultBatch:0' (45 tests)...
+[19:58:13] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 5612ms or 112 ticks behind
+[19:58:14] [Server thread/INFO] [minecraft/GameTestServer]: [                                             ]
+[19:58:15] [Server thread/INFO] [AE2:S/]: Assigning ME player id 0 to Minecraft profile 1a209d91-642e-3b35-9019-45ea24f41fed ([UNKNOWN])
+[19:58:15] [Server thread/INFO] [AE2:S/]: Assigning ME player id 1 to Minecraft profile 9e63790c-cb4b-3b65-8593-065bd478e753 ([UNKNOWN])
+[19:58:15] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The material container chunk is not loaded
+[19:58:15] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The material container is in another dimension
+[19:58:15] [Server thread/INFO] [AE2:S/]: Assigning ME player id 2 to Minecraft profile b44adc8a-0b1a-33bb-8962-12032cef6a89 ([UNKNOWN])
+[19:58:15] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND SOPHISTICATED STORAGE VERIFIED
+[19:58:15] [Server thread/INFO] [AE2:S/]: Assigning ME player id 3 to Minecraft profile bafbacab-8a45-334b-8171-343da46f6d91 ([UNKNOWN])
+[19:58:16] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: FTB Chunks: no edit permission at -5591698, -59, -12036010
+[19:58:16] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND FOREIGN CLAIM PERMISSION VERIFIED
+[19:58:16] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The bound material source is inside the construction area
+[19:58:16] [Server thread/ERROR] [io.gi.pr.PrefabDeploy/]: Prefab task 307301bf-9d7b-410e-ba75-d45e6e8debd9 failed in RESERVE
+java.lang.IllegalStateException: Injected fault at after_payment
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager$Job.fault(DeploymentManager.java:1093) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager$Job.step(DeploymentManager.java:571) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.server.DeploymentManager.tick(DeploymentManager.java:187) ~[%23135!/:?] {re:classloading}
+	at TRANSFORMER/prefabdeploy@0.1.3/io.github.prefabdeploy.PrefabDeploy.lambda$new$14(PrefabDeploy.java:111) ~[%23135!/:?] {re:classloading}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.ConsumerEventHandler.invoke(ConsumerEventHandler.java:27) ~[bus-8.0.5.jar%23106!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23106!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:328) ~[bus-8.0.5.jar%23106!/:?] {}
+	at TRANSFORMER/neoforge@21.1.248/net.neoforged.neoforge.event.EventHooks.fireServerTickPost(EventHooks.java:1020) ~[neoforge-21.1.248.jar%23130!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:958) ~[neoforge-21.1.248.jar%23129!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:spatial.MinecraftServerMixin from mod ae2,pl:mixin:APP:kubejs.mixins.json:MinecraftServerMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.gametest.framework.GameTestServer.tickServer(GameTestServer.java:171) ~[neoforge-21.1.248.jar%23129!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:713) ~[neoforge-21.1.248.jar%23129!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:spatial.MinecraftServerMixin from mod ae2,pl:mixin:APP:kubejs.mixins.json:MinecraftServerMixin from mod kubejs,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.1.248.jar%23129!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:ae2.mixins.json:spatial.MinecraftServerMixin from mod ae2,pl:mixin:APP:kubejs.mixins.json:MinecraftServerMixin from mod kubejs,pl:mixin:A}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+[19:58:16] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: Construction area is locked
+[19:58:16] [Server thread/INFO] [minecraft/GameTestServer]: [+++___++_++++++++_++++++++++_++++++++_++++   ]
+[19:58:16] [Server thread/INFO] [minecraft/GameTestServer]: [+++++_++_++++++++_++++++++++_++++++++++++++++]
+[19:58:16] [Server thread/INFO] [minecraft/GameTestServer]: [+++++_++_++++++++_++++++++++_++++++++++++++++]
+[19:58:16] [Server thread/INFO] [minecraft/GameTestServer]: [+++++_++_++++++++_++++++++++_++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND AE2 INTERFACE NETWORK VERIFIED
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND AE2 TERMINAL AND ENERGY VERIFIED
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_++++++++++_++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_++++++++++_++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_++++++++++_++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND CONTAINER FALLBACK: Bound container unavailable; using other material sources: The bound AE2 endpoint is unavailable, unpowered, or missing channels
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_+++++++++++++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_+++++++++++++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++_+++++++++++++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:18] [Server thread/INFO] [io.gi.pr.PrefabDeploy/]: BOUND AE2 ORIGINAL NETWORK RECOVERY VERIFIED
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: [+++++++++++++++++++++++++++++++++++++++++++++]
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: ========= 45 GAME TESTS COMPLETE IN 10.62 s ======================
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: All 45 required tests passed :)
+[19:58:18] [Server thread/INFO] [minecraft/GameTestServer]: ====================================================
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[19:58:18] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[19:58:19] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:overworld
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_end
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/minecraft:the_nether
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Test Level]'/ae2:spatial_storage
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (spatial_storage): All chunks are saved
+[19:58:30] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[19:58:30] [Server thread/INFO] [KubeJS/]: Closed KubeJS Virtual Resource Pack [Before Mods, data]
+[19:58:30] [Server thread/INFO] [KubeJS/]: Closed KubeJS Virtual Resource Pack [Internal, data]
+[19:58:30] [Server thread/INFO] [KubeJS/]: Closed KubeJS Virtual Resource Pack [Registries, data]
+[19:58:30] [Server thread/INFO] [KubeJS/]: Closed KubeJS Virtual Resource Pack [After Mods, data]
+[19:58:30] [Server thread/INFO] [KubeJS/]: Closed KubeJS Virtual Resource Pack [Last, data]
+[19:58:30] [Server thread/INFO] [minecraft/GameTestServer]: Game test server shutting down
+
+[Incubating] Problems report is available at: file:///C:/pdc/build/reports/problems/problems-report.html
+
+BUILD SUCCESSFUL in 1m 2s
+10 actionable tasks: 7 executed, 3 up-to-date
+Configuration cache entry stored.

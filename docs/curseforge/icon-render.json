@@ -1,0 +1,44 @@
+{
+  "source_item": "prefabdeploy:deployment_tool",
+  "elements": 195,
+  "hologram_texture_frame": 0,
+  "settings": {
+    "projection": "orthographic",
+    "azimuth_degrees": 25,
+    "elevation_degrees": 35,
+    "geometry_margin": 0.08,
+    "rendered_faces": 565
+  },
+  "source_sha256": {
+    "src/main/resources/assets/blueprintitem/models/item/blueprint.json": "1981fa6121047cf50938378a10459ed08ee4dd7e7489ee9fda5782c395c0fbed",
+    "src/main/resources/assets/blueprintitem/models/item/blueprint_castle.json": "43d098968278212058bac07ea180305c158c9bf2b89c788a2329084a756f65d9",
+    "src/main/resources/assets/blueprintitem/models/item/blueprint_solid.json": "fb312b4940499c75b371952641dd06443eb3d8e7a1a49df218c27224419d1aea",
+    "src/main/resources/assets/blueprintitem/textures/item/blueprint_solid.png": "ac8ddd4fae54b7a41e569636b336d16d294a38ca5c86b3dcab386b6513e91d9e",
+    "src/main/resources/assets/blueprintitem/textures/item/castle_hologram.png": "e85ef9fa41d9e7ba34c8bfd3c336b67735e1175619bec9bd661c5ef7b97cbe18",
+    "src/main/resources/assets/blueprintitem/textures/item/castle_hologram.png.mcmeta": "66f41aa35e4dad2c40f623ffeb98dd377a639d18513c89261691e8ed82116ec2",
+    "src/main/resources/assets/prefabdeploy/models/item/deployment_tool.json": "0b34901dd56a455221a03ac3e4e5d4df92555b93d5036b0deaf391200b2e3db9"
+  },
+  "outputs": {
+    "prefabdeploy-icon-400.png": {
+      "size": [
+        400,
+        400
+      ],
+      "sha256": "9f027eb9202fce49fb23d5ebd7a5c233c600ec0ab8118be00e6a8476b2db1292"
+    },
+    "prefabdeploy-icon-1024.png": {
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "19e304c3a662d121fa2e16df591103ac400caac1e97bb76f221f6ef1f08a6cd8"
+    },
+    "prefabdeploy-tool-transparent-1024.png": {
+      "size": [
+        1024,
+        1024
+      ],
+      "sha256": "dd91efc2a4be818a0af2948790ca19c4ffb0202dc41cc94083d1053f05db896a"
+    }
+  }
+}

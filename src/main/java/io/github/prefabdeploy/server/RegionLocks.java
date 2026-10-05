@@ -25,6 +25,10 @@ public final class RegionLocks {
     return locked(level, new ChunkPos(pos).toLong());
   }
 
+  public static boolean ownedBy(Level level, BlockPos pos, UUID transaction) {
+    return transaction != null && transaction.equals(OWNERS.get(new Key(level.dimension(), new ChunkPos(pos).toLong())));
+  }
+
   public static boolean locked(Level level, long chunk) {
     return !level.isClientSide() && OWNERS.containsKey(new Key(level.dimension(), chunk));
   }

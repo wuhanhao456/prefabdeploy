@@ -1,0 +1,5 @@
+English
+Preview and build saved structures with a Building Tool. Configure building libraries, unlock requirements and costs through datapacks.
+
+中文
+使用建筑建造工具预览并建造保存的建筑，通过数据包配置建筑库、解锁需求和费用。

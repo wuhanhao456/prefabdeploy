@@ -29,7 +29,7 @@ PrefabEvents.registry(event => {
 ```js
 PrefabEvents.registry(event => {
   event.registerRule('yourpack:not_in_combat', (player, prefab, anchor) => {
-    return player.getLastHurtByMob() == null ? '' : '请在脱离战斗后部署'
+    return player.getLastHurtByMob() == null ? '' : '请在脱离战斗后建造'
   })
   const id = 'yourpack:house'
   if (event.getIds().contains(id)) {
@@ -43,7 +43,9 @@ PrefabEvents.registry(event => {
 
 规则返回空字符串表示通过。其他字符串作为失败原因显示。脚本提供的文本按原文显示。规则不能绕过位置保护。
 
-## 部署事件
+<a id="部署事件"></a>
+
+## 建造事件
 
 ```js
 PrefabEvents.beforeDeploy(event => {
@@ -107,7 +109,7 @@ ViScriptShopEvents.buySuccess(event => {
 })
 ```
 
-ViScriptShop 已处理购买付款。此事件只授予标记，不再扣款。建筑使用 `auto`，因此每次部署仍收取建筑材料。需要许可后的部署免费时，将建筑费用改为 `{"mode":"free"}`。
+ViScriptShop 已处理购买付款。此事件只授予标记，不再扣款。建筑使用 `auto`，因此每次建造仍收取建筑材料。需要许可后的建造免费时，将建筑费用改为 `{"mode":"free"}`。
 
 此事件匹配整个商店。ViScriptShop 1.2.2.4 的 `BuySuccess` 脚本对象只提供玩家和商店信息，没有商品 ID getter。不要在 `housing_permit` 中加入普通商品，否则购买这些商品也会授予许可。接口来源见 [事件注册](https://github.com/zhenshiz/ViScriptShop/blob/master/src/main/java/com/viscriptshop/event/ViScriptShopEventsJS.java)和[事件参数](https://github.com/zhenshiz/ViScriptShop/blob/master/src/main/java/com/viscriptshop/event/kubejs/ShopServerEventJS.java)。
 
@@ -115,7 +117,7 @@ ViScriptShop 已处理购买付款。此事件只授予标记，不再扣款。�
 
 需要团队许可时，将建筑的 `scope` 改为 `team`，并将事件中的 `grantPlayer` 改为 `grantTeam`。此时还需 FTB Teams。许可授予购买者当时所在的团队。
 
-修改脚本后，重载 KubeJS 服务器脚本或重启服务器。随后执行 `/prefab reload`。用生存模式检查以下结果：购买失败不授予标记；购买成功后重新打开建筑库可见解锁；部署时按建筑 `cost` 收费。还需确认其他商店的购买不会解锁该建筑。
+修改脚本后，重载 KubeJS 服务器脚本或重启服务器。随后执行 `/prefab reload`。用生存模式检查以下结果：购买失败不授予标记；购买成功后重新打开建筑库可见解锁；建造时按建筑 `cost` 收费。还需确认其他商店的购买不会解锁该建筑。
 
 FTB 任务直接解锁和任务货币奖励的配置见 [FTB 联动](DATAPACKS.md#ftb-联动)与[组合示例](DATAPACKS.md#ftb-任务与商店货币组合示例)。
 

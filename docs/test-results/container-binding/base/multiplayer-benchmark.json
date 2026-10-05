@@ -1,0 +1,9 @@
+{
+  "samples": 802,
+  "peak_active_jobs": 3,
+  "max_job_operations_per_tick": 512,
+  "p50_ms": 0.4719,
+  "p95_ms": 1.8793,
+  "max_ms": 44.6876,
+  "heap_used_bytes": 703492112
+}

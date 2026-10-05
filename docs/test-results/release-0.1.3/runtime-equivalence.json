@@ -1,0 +1,13 @@
+{
+  "before_version": "0.1.2",
+  "release_version": "0.1.3",
+  "prior_jar_sha256": "94f7189822b4966acdaf176123a8c01effe34f5372fc81f0fcdc7c34922489c7",
+  "release_jar_sha256": "0bd18356b52f9a1f648669c51b5f7c824850e38f9d274c7b2c15e554c26b4d1c",
+  "changed_zip_entries": [
+    "META-INF/neoforge.mods.toml"
+  ],
+  "unchanged_entries": 194,
+  "unchanged_entries_sha256": "032997b50d402851339bebabf79641193ef05c4ff9a94b1318854c68e73e25f6",
+  "shipping_code_and_resources_identical": true,
+  "development_client_smoke_excluded_from_runtime_jar": true
+}

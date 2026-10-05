@@ -2,7 +2,7 @@
 // Replace yourpack:house with your datapack building ID.
 PrefabEvents.registry(event => {
   event.registerRule('example:not_in_combat', (player, prefab, anchor) => {
-    return player.getLastHurtByMob() == null ? '' : '请在脱离战斗后部署';
+    return player.getLastHurtByMob() == null ? '' : '请在脱离战斗后建造';
   });
   if (!event.getIds().contains('yourpack:house')) return;
   event.configure('yourpack:house', JSON.stringify({
@@ -13,7 +13,7 @@ PrefabEvents.registry(event => {
 });
 
 PrefabEvents.beforeDeploy(event => {
-  if (event.getPlayer().getY() < -60) event.deny('此示例禁止在过低位置开始部署');
+  if (event.getPlayer().getY() < -60) event.deny('此示例禁止在过低位置开始建造');
 });
 
 PrefabEvents.completed(event => {
