@@ -6,14 +6,6 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑部署�
 
 本模组由AI生成。使用时默认使用者知晓可能存在的稳定性或兼容性问题。
 
-## 安装
-
-下载 [资源兼容构建](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.2/prefabdeploy-0.1.2-resource-compat.zip)。解压后，将其中的 `prefabdeploy-0.1.2.jar` 放入实例的 `mods/`。同一实例只保留一个 Prefab Deploy JAR。使用建筑功能时，客户端和服务器安装此构建。正式 JAR 不包含测试建筑。
-
-此构建增加精妙背包和超越维度资源兼容，也包含此前的客户端可选安装功能。版本号仍为 0.1.2。发布页中的旧独立 JAR 和旧 ZIP 保留各自的内容。完整源码见仓库；ZIP 内另附源码 JAR、安装说明和 SHA-256 清单。
-
-连接未安装 Prefab Deploy 的服务器时，客户端停用建筑库、预览和定位。创造物品栏隐藏本 Mod 的物品。保存的快捷栏跳过这些物品，原快捷栏文件保持不变。进入单人世界或支持服务器后恢复功能。客户端的其他 Mod 仍须与服务器兼容。此前的连接测试见[客户端可选安装验证](docs/TESTING-CLIENT-OPTIONAL.md)。本次资源构建的验证范围见[资源兼容验证](docs/TESTING-RESOURCES.md)。
-
 ## 合成配方
 
 建筑部署工具：2 个铁锭、1 张纸、1 个指南针、1 个红石粉。产出 1 个工具。
