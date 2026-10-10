@@ -4,11 +4,13 @@
 
 Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑建造工具选择建筑，查看预览后确认建造。服务器管理建筑数据包。单人玩家和局域网主机还可以读取本地蓝图。
 
-当前版本：**0.1.3**。需要 **Java 21** 和 **NeoForge 21.1.248 或更高的 1.21.1 版本**。使用建筑功能时，客户端和服务器安装同一版本。许可：[MPL-2.0](LICENSE)。
+当前版本：**0.1.4**。需要 **Java 21** 和 **NeoForge 21.1.248 或更高的 1.21.1 版本**。使用建筑功能时，客户端和服务器安装同一版本。许可：[MPL-2.0](LICENSE)。
 
 本模组由 AI 生成。使用时默认使用者知晓可能存在的稳定性或兼容性问题。
 
-下载 [0.1.3 安装包](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.3/prefabdeploy-0.1.3.zip)，将包内 `prefabdeploy-0.1.3.jar` 放入客户端和服务器的 `mods/`，同一实例只保留一个 Prefab Deploy JAR。正式 JAR 不包含测试建筑。完整源码、源码 JAR 和校验清单见[发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.3)。
+下载 [0.1.4 安装包](https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/prefabdeploy-0.1.4.zip)，将其中的 `prefabdeploy-0.1.4.jar` 放入客户端和服务器的 `mods/`，同一实例只保留一个 Prefab Deploy JAR。[发布页](https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.4)提供独立 JAR、源码和 SHA-256 清单，历史版本继续保留。源码构建产物位于 `dist/`。
+
+0.1.4 内置普通暗室刷怪塔和僵尸刷怪笼塔，默认开启。在服务端配置 `prefabdeploy-server.toml` 中设置 `buildings.enableDefaultTestBuildings = false`，重启后关闭内置建筑。两座塔直接解锁，仅限主世界。普通塔自动收取建材；僵尸塔按完整材料清单收费，用 50 块腐肉替代一个刷怪笼。外部数据包提供的同 ID 建筑不受此开关影响。
 
 ## 合成配方
 
@@ -60,11 +62,13 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑建造�
 
 本地建筑默认使用文件名作为名称。参考层为最低层。空气会覆盖原方块。生存模式自动计算建筑材料。有地下结构时，可通过数据包或 KubeJS 调整参考层。手动费用和规则也可通过这些接口配置。
 
-本地导入仅向单人玩家或局域网主机开放。局域网加入者看不到主机的本地建筑。连接专用服务器时，文件夹按钮禁用。本地文件不会上传到服务器。服务器建筑通过数据包提供。
+散装蓝图导入仅向单人玩家或局域网主机开放。局域网加入者看不到主机的散装蓝图。连接专用服务器时，文件夹按钮禁用。本地文件不会上传到服务器。
+
+该文件夹还支持建筑数据包：将 ZIP 或解压后的包目录直接放入 `prefabdeploy/blueprints/`，包根必须包含 `pack.mcmeta`。执行 `/prefab reload` 后读取 JSON 定义、规则和费用，包内 NBT 不会重复作为散装蓝图导入。数据包以运行世界的服务端或主机文件夹为准，向该服务器玩家共享；单人世界读取本机。
 
 ## 服务器热加载
 
-将建筑数据包放入世界的 `datapacks/`。管理员在游戏中执行 `/prefab reload`。服务器控制台执行 `prefab reload`。
+将建筑数据包放入世界的 `datapacks/` 或服务端实例的 `prefabdeploy/blueprints/`。管理员在游戏中执行 `/prefab reload`。服务器控制台执行 `prefab reload`。
 
 该命令需要权限等级 2。它发现新增数据包，并重读建筑定义、蓝图、费用和条件。KubeJS 注册事件会重新应用。新目录供后续选择使用。活动定位和建造保留原快照。
 
@@ -81,7 +85,7 @@ Prefab Deploy 是 Minecraft 1.21.1 的预制建筑 Mod。玩家用建筑建造�
 - [Java 扩展接口](docs/API.md)：导入器、规则、费用和 NBT 坐标适配。
 - [AI 制作与魔改指南](AGENTS.md)：指导 AI 创建建筑数据包，配置建筑、解锁需求和费用，并使用 KubeJS 与扩展接口魔改。
 - [管理员说明](docs/ADMIN.md)：配置、恢复和交易核对。
-- [0.1.3 验证记录](docs/TESTING-0.1.3.md)。
+- [0.1.4 验证记录](docs/TESTING-0.1.4.md)。
 - [English quick start](docs/QUICKSTART.en.md)。
 
 `examples/` 包含服务器配置、KubeJS 示例和开发性能数据包。`src/testFixtures/resources/` 仅用于开发测试，不会进入正式 JAR。

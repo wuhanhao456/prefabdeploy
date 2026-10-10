@@ -7,6 +7,7 @@ import io.github.prefabdeploy.network.Network;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.util.*;
 import java.util.concurrent.*;
@@ -63,45 +64,54 @@ public final class LocalBlueprints {
     Path realRoot = root.toRealPath();
     var entries = new LinkedHashMap<ResourceLocation, Prefab>();
     var seen = new HashSet<ResourceLocation>();
-    try (var paths = Files.walk(root)) {
-      for (var file : paths.filter(p -> Files.isRegularFile(p, LinkOption.NOFOLLOW_LINKS)).sorted().toList()) {
-        String filename = file.getFileName().toString();
-        int dot = filename.lastIndexOf('.');
-        if (dot < 0) continue;
-        String extension = filename.substring(dot + 1).toLowerCase(Locale.ROOT);
-        if (!Set.of("nbt", "litematic").contains(extension)) continue;
-        try { if (!file.toRealPath().startsWith(realRoot)) continue; }
-        catch (IOException ex) { PrefabDeploy.LOGGER.warn("Local blueprint disappeared while scanning: {}", file); continue; }
-        var id = id(root.relativize(file));
-        var meta = new JsonObject();
-        meta.addProperty("name", filename.substring(0, dot));
-        meta.addProperty("category", "local");
-        meta.addProperty("source", NAMESPACE + ":blueprints/" + id.getPath() + "." + extension);
-        meta.addProperty("ground_y", 0);
-        meta.addProperty("ignore_air", false);
-        var cost = new JsonObject(); cost.addProperty("mode", "auto"); meta.add("cost", cost);
-        Prefab prefab;
-        try (var input = Files.newInputStream(file)) {
-          byte[] bytes = input.readNBytes(PrefabLibrary.byteLimit() + 1);
-          String hash = digest(bytes);
-          var cached = CACHE.get(id);
-          if (cached != null && cached.digest.equals(hash)) prefab = cached.prefab;
-          else {
-            try { prefab = PrefabLibrary.decode(id, meta, bytes); }
-            catch (Exception ex) {
-              PrefabDeploy.LOGGER.warn("Unable to import local blueprint {}", file, ex);
-              String reason = ex instanceof IOException ? "Unable to read blueprint data" : ex.getMessage();
-              prefab = new Prefab(id, meta.get("name").getAsString(), "local", 0, null, meta, hash,
-                  reason == null ? "Unable to read blueprint data" : reason);
-            }
-            CACHE.put(id, new Cached(hash, prefab));
-          }
-        } catch (IOException ex) {
-          PrefabDeploy.LOGGER.warn("Unable to read local blueprint {}", file, ex);
-          prefab = new Prefab(id, meta.get("name").getAsString(), "local", 0, null, meta, "", "Unable to read blueprint data");
-        }
-        seen.add(id); entries.put(id, prefab);
+    var files = new ArrayList<Path>();
+    Files.walkFileTree(root, new SimpleFileVisitor<>() {
+      @Override public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
+        return Files.exists(dir.resolve("pack.mcmeta"), LinkOption.NOFOLLOW_LINKS)
+            ? FileVisitResult.SKIP_SUBTREE : FileVisitResult.CONTINUE;
       }
+      @Override public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        if (attrs.isRegularFile()) files.add(file);
+        return FileVisitResult.CONTINUE;
+      }
+    });
+    for (var file : files.stream().sorted().toList()) {
+      String filename = file.getFileName().toString();
+      int dot = filename.lastIndexOf('.');
+      if (dot < 0) continue;
+      String extension = filename.substring(dot + 1).toLowerCase(Locale.ROOT);
+      if (!Set.of("nbt", "litematic").contains(extension)) continue;
+      try { if (!file.toRealPath().startsWith(realRoot)) continue; }
+      catch (IOException ex) { PrefabDeploy.LOGGER.warn("Local blueprint disappeared while scanning: {}", file); continue; }
+      var id = id(root.relativize(file));
+      var meta = new JsonObject();
+      meta.addProperty("name", filename.substring(0, dot));
+      meta.addProperty("category", "local");
+      meta.addProperty("source", NAMESPACE + ":blueprints/" + id.getPath() + "." + extension);
+      meta.addProperty("ground_y", 0);
+      meta.addProperty("ignore_air", false);
+      var cost = new JsonObject(); cost.addProperty("mode", "auto"); meta.add("cost", cost);
+      Prefab prefab;
+      try (var input = Files.newInputStream(file)) {
+        byte[] bytes = input.readNBytes(PrefabLibrary.byteLimit() + 1);
+        String hash = digest(bytes);
+        var cached = CACHE.get(id);
+        if (cached != null && cached.digest.equals(hash)) prefab = cached.prefab;
+        else {
+          try { prefab = PrefabLibrary.decode(id, meta, bytes); }
+          catch (Exception ex) {
+            PrefabDeploy.LOGGER.warn("Unable to import local blueprint {}", file, ex);
+            String reason = ex instanceof IOException ? "Unable to read blueprint data" : ex.getMessage();
+            prefab = new Prefab(id, meta.get("name").getAsString(), "local", 0, null, meta, hash,
+                reason == null ? "Unable to read blueprint data" : reason);
+          }
+          CACHE.put(id, new Cached(hash, prefab));
+        }
+      } catch (IOException ex) {
+        PrefabDeploy.LOGGER.warn("Unable to read local blueprint {}", file, ex);
+        prefab = new Prefab(id, meta.get("name").getAsString(), "local", 0, null, meta, "", "Unable to read blueprint data");
+      }
+      seen.add(id); entries.put(id, prefab);
     }
     CACHE.keySet().retainAll(seen);
     String fingerprint = digest(entries.values().stream().map(f -> f.id() + ":" + f.hash() + ":" + f.error()).reduce("", (a,b) -> a + "\n" + b).getBytes(StandardCharsets.UTF_8));

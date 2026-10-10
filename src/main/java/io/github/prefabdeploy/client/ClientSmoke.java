@@ -223,6 +223,11 @@ public final class ClientSmoke {
                 .filter(n -> n.getString("id").startsWith("prefabdeploy_local:")).count() != 2)
               throw new IllegalStateException("Local host catalog not imported");
             REPORT.addProperty("local_host_import_verified", true);
+            for (var id : List.of("sharedqa:house", "mobtowers:dark_tower", "mobtowers:zombie_spawner_tower")) {
+              if (Client.catalog.stream().noneMatch(n -> n.getString("id").equals(id)))
+                throw new IllegalStateException("Integrated catalog is missing " + id);
+            }
+            REPORT.addProperty("builtin_towers_and_folder_pack_in_integrated_catalog_verified", true);
             gallery =
                 Client.catalog.stream()
                     .filter(n -> n.getString("id").equals("prefabdeploy:nbt_gallery"))
@@ -281,6 +286,16 @@ public final class ClientSmoke {
               var select = Network.message("select"); select.putString("id", localId.toString());
               io.github.prefabdeploy.server.Sessions.receive(guest, select);
               if (io.github.prefabdeploy.server.Sessions.active(guest)) throw new IllegalStateException("Guest selected host blueprint");
+              var shared = net.minecraft.resources.ResourceLocation.parse("sharedqa:house");
+              if (!io.github.prefabdeploy.library.LocalBlueprints.accessible(guest, shared)
+                  || !server.getResourceManager().getResource(net.minecraft.resources.ResourceLocation.parse("sharedqa:prefabs/house.json"))
+                      .orElseThrow().sourcePackId().equals(io.github.prefabdeploy.library.BlueprintPacks.FOLDER_PREFIX + "client-smoke-pack"))
+                throw new IllegalStateException("LAN datapack did not use host's folder");
+              select.putString("id", shared.toString());
+              io.github.prefabdeploy.server.Sessions.receive(guest, select);
+              if (!io.github.prefabdeploy.server.Sessions.active(guest)) throw new IllegalStateException("Guest cannot select the shared folder building");
+              io.github.prefabdeploy.server.Sessions.cancel(guest);
+              REPORT.addProperty("lan_guest_shared_folder_building_verified", true);
               REPORT.addProperty("lan_host_and_guest_access_verified", true);
             });
             MC.options.guiScale().set(3);

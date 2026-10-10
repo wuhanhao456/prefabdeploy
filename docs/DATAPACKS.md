@@ -16,7 +16,13 @@ data/yourpack/blueprints/house.nbt
 {"pack":{"pack_format":48,"description":"住宅建筑库"}}
 ```
 
-建筑 ID 为 `yourpack:house`。嵌套定义 `prefabs/town/house.json` 对应 `yourpack:town/house`。将数据包放入世界的 `datapacks/` 后执行 `/prefab reload`。同 ID 定义遵循 Minecraft 数据包优先级。正式版不包含测试建筑。活动任务保留原蓝图和费用。
+建筑 ID 为 `yourpack:house`。嵌套定义 `prefabs/town/house.json` 对应 `yourpack:town/house`。将数据包放入世界的 `datapacks/` 或服务端实例的 `prefabdeploy/blueprints/` 后执行 `/prefab reload`。同 ID 定义遵循 Minecraft 数据包优先级。内置刷怪塔优先级最低，默认启用。活动任务保留原蓝图和费用。
+
+该文件夹还支持建筑数据包：将 ZIP 或解压后的包目录直接放入 `prefabdeploy/blueprints/`，包根必须包含 `pack.mcmeta`。执行 `/prefab reload` 后读取 JSON 定义、规则和费用，包内 NBT 不会重复作为散装蓝图导入。数据包以运行世界的服务端或主机文件夹为准，向该服务器玩家共享；单人世界读取本机。
+
+文件夹数据包使用 `prefabdeploy_blueprints/<文件名>` 作为数据包标识，与世界目录中的 `file/<文件名>` 区分。管理员可通过 `/datapack` 管理启用状态和顺序；`/prefab reload` 尊重世界的禁用记录。
+
+0.1.4 内置 `mobtowers:dark_tower` 和 `mobtowers:zombie_spawner_tower`，可通过服务端配置 `buildings.enableDefaultTestBuildings = false` 关闭。修改配置后重启，外部同 ID 定义不受开关影响。两座塔参考层均为 0，保留空气覆盖，直接解锁且只允许主世界建造。普通塔自动计算建材；僵尸塔使用完整手动清单，将一个刷怪笼替换为 50 块腐肉。
 
 `house.json` 内容：
 

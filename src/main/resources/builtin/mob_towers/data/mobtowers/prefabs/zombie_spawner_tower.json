@@ -1,0 +1,52 @@
+{
+  "name": "僵尸刷怪笼塔",
+  "category": "刷怪塔组合",
+  "source": "mobtowers:blueprints/zombie_spawner_tower.nbt",
+  "ground_y": 0,
+  "ignore_air": false,
+  "visible": true,
+  "unlock": true,
+  "conditions": {
+    "type": "dimension",
+    "id": "minecraft:overworld"
+  },
+  "requirements_text": "直接解锁。仅限主世界；使用原版刷怪规则。建材中的刷怪笼替换为 50 块腐肉。",
+  "cost": {
+    "mode": "manual",
+    "items": [
+      {
+        "id": "minecraft:barrel",
+        "count": 1
+      },
+      {
+        "id": "minecraft:campfire",
+        "count": 1
+      },
+      {
+        "id": "minecraft:cobblestone",
+        "count": 532
+      },
+      {
+        "id": "minecraft:cobblestone_slab",
+        "count": 146
+      },
+      {
+        "id": "minecraft:glass",
+        "count": 31
+      },
+      {
+        "id": "minecraft:hopper",
+        "count": 2
+      },
+      {
+        "id": "minecraft:oak_sign",
+        "count": 1
+      },
+      {
+        "id": "minecraft:rotten_flesh",
+        "count": 50
+      }
+    ],
+    "xp": 0
+  }
+}

@@ -17,6 +17,8 @@ param(
     [string]$ShaderModsDir,
     [string]$ShaderSmoke,
     [switch]$ReloadSmoke,
+    [switch]$BuildingLibrarySmoke,
+    [switch]$DefaultBuildingsOffSmoke,
     [string]$ResourceModsDir,
     [switch]$ResourceSmoke,
     [ValidateSet('', 'write', 'read')][string]$ResourceCrashMode = '',
@@ -55,6 +57,8 @@ if ($ModelReloadSmoke) { $taskArguments += '-PmodelReloadSmoke' }
 if ($ShaderModsDir) { $taskArguments += "-PshaderModsDir=$(([IO.Path]::GetFullPath($ShaderModsDir)).Replace('\','/'))" }
 if ($ShaderSmoke) { $taskArguments += "-PshaderSmoke=$ShaderSmoke" }
 if ($ReloadSmoke) { $taskArguments += '-PreloadSmoke' }
+if ($BuildingLibrarySmoke) { $taskArguments += '-PbuildingLibrarySmoke' }
+if ($DefaultBuildingsOffSmoke) { $taskArguments += '-PdefaultBuildingsExpected=false' }
 if ($ResourceModsDir) { $taskArguments += "-PresourceModsDir=$(([IO.Path]::GetFullPath($ResourceModsDir)).Replace('\','/'))" }
 if ($ResourceSmoke) { $taskArguments += '-PresourceSmoke' }
 if ($ResourceCrashMode) {

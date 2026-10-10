@@ -15,10 +15,12 @@ import net.minecraft.server.packs.resources.*;
 import net.minecraft.util.profiling.ProfilerFiller;
 
 public final class PrefabLibrary
-    extends SimplePreparableReloadListener<Map<ResourceLocation, Prefab>> {
+    extends SimplePreparableReloadListener<PrefabLibrary.Prepared> {
+  public record Prepared(Map<ResourceLocation, Prefab> external, Map<ResourceLocation, Prefab> defaults) {}
   public static final PrefabLibrary INSTANCE = new PrefabLibrary();
   private volatile Map<ResourceLocation, Prefab> entries = Map.of();
   private Map<ResourceLocation, Prefab> baseEntries = Map.of(), localEntries = Map.of();
+  private Map<ResourceLocation, Prefab> defaultEntries = Map.of();
   private volatile long revision;
 
 
@@ -31,13 +33,15 @@ public final class PrefabLibrary
   }
 
   @Override
-  protected Map<ResourceLocation, Prefab> prepare(
+  protected Prepared prepare(
       ResourceManager manager, ProfilerFiller profiler) {
     var result = new LinkedHashMap<ResourceLocation, Prefab>();
+    var defaults = new LinkedHashMap<ResourceLocation, Prefab>();
     manager
         .listResources("prefabs", p -> p.getPath().endsWith(".json"))
         .forEach(
             (path, resource) -> {
+              var target = resource.sourcePackId().equals(BlueprintPacks.BUILTIN_ID) ? defaults : result;
               var id =
                   ResourceLocation.fromNamespaceAndPath(
                       path.getNamespace(),
@@ -47,11 +51,11 @@ public final class PrefabLibrary
                 meta = JsonParser.parseReader(reader).getAsJsonObject();
                 var source = ResourceLocation.parse(meta.get("source").getAsString());
                 try (var stream = manager.getResourceOrThrow(source).open()) {
-                  result.put(id, decode(id, meta, stream.readNBytes(byteLimit() + 1)));
+                  target.put(id, decode(id, meta, stream.readNBytes(byteLimit() + 1)));
                 }
               } catch (Exception ex) {
                 PrefabDeploy.LOGGER.error("Unable to load prefab {}", id, ex);
-                result.put(
+                target.put(
                     id,
                     new Prefab(
                         id,
@@ -64,7 +68,7 @@ public final class PrefabLibrary
                         ex.getMessage() == null ? ex.toString() : ex.getMessage()));
               }
             });
-    return result;
+    return new Prepared(Map.copyOf(result), Map.copyOf(defaults));
   }
 
   static int byteLimit() {
@@ -168,7 +172,10 @@ public final class PrefabLibrary
   }
 
   private void rebuild() {
-    var mutable = new LinkedHashMap<>(baseEntries);
+    var mutable = new LinkedHashMap<ResourceLocation, Prefab>();
+    // Initial world resource loading precedes SERVER config loading. Never publish defaults early.
+    if (Config.SPEC.isLoaded() && Config.ENABLE_DEFAULT_TEST_BUILDINGS.get()) mutable.putAll(defaultEntries);
+    mutable.putAll(baseEntries);
     localEntries.forEach(mutable::putIfAbsent);
     PrefabEvents.registry(mutable);
     entries = Collections.unmodifiableMap(mutable);
@@ -176,12 +183,20 @@ public final class PrefabLibrary
 
   @Override
   protected void apply(
-      Map<ResourceLocation, Prefab> prepared, ResourceManager manager, ProfilerFiller profiler) {
-    baseEntries = Map.copyOf(prepared);
+      Prepared prepared, ResourceManager manager, ProfilerFiller profiler) {
+    baseEntries = prepared.external();
+    defaultEntries = prepared.defaults();
     localEntries = Map.of();
     revision++;
     rebuild();
     PrefabDeploy.LOGGER.info("Loaded {} prefab definitions", entries.size());
+  }
+
+  /** Called on the server thread after the world's SERVER config has loaded, before players join. */
+  public void configurationReady() {
+    revision++;
+    rebuild();
+    PrefabDeploy.LOGGER.info("Loaded {} prefab definitions after server configuration", entries.size());
   }
 
   public static String string(JsonObject o, String key, String fallback) {

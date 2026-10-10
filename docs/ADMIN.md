@@ -2,7 +2,7 @@
 
 本 Mod 的建造由服务器完成。每个任务固定源数据、世界变换、玩家、费用和生成实体 UUID，因此重载建筑库不会改变已启动任务。任务锁定涉及的**完整区块**，避免旁侧容器和 Tick 在恢复过程中改变快照对应的世界状态。
 
-当前版本为 0.1.3，需要 Minecraft 1.21.1、Java 21 和 NeoForge 21.1.248 或更高的 1.21.1 版本。已有验证的范围和限制见[0.1.3 验证记录](TESTING-0.1.3.md)和[资源兼容验证](TESTING-RESOURCES.md)。部分手工交互组合仍待检查，历史记录单独保留。
+当前版本为 0.1.4，需要 Minecraft 1.21.1、Java 21 和 NeoForge 21.1.248 或更高的 1.21.1 版本。本次验证见[0.1.4 验证记录](TESTING-0.1.4.md)，历史记录保留各自版本。
 
 <a id="011-操作与费用"></a>
 
@@ -18,10 +18,11 @@
 
 ## 配置
 
-第一次启动世界生成 `<world>/serverconfig/prefabdeploy-server.toml`。可将 `examples/prefabdeploy-server.toml` 放入实例的 `defaultconfigs/`，作为新世界默认配置。建议停止服务器后修改限制，然后重启。
+服务端配置使用 NeoForge 的 `prefabdeploy-server.toml`。NeoForge 21.1.248 将实例默认值放在 `config/`，世界的 `serverconfig/` 中同名配置优先。可参考 `examples/prefabdeploy-server.toml`。停止服务器后修改配置，再重启以保证生效；`/prefab reload` 不负责重新读取 TOML。
 
 | 字段 | 默认值 | 作用 |
 | --- | --- | --- |
+| `buildings.enableDefaultTestBuildings` | `true` | 启用内置两座刷怪塔；不影响外部同 ID 定义 |
 | `limits.maxPositions` | 100000 | 实际处理的方块位置，空气也计入；最高可设 500 万 |
 | `limits.maxChunks` | 256 | 单任务涉及区块总数，含实体、源 Tick、信标 |
 | `limits.operationsPerTick` | 512 | 全服所有任务共享的操作上限 |

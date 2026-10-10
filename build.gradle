@@ -58,6 +58,8 @@ neoForge {
             type = 'gameTestServer'
             systemProperty 'neoforge.enabledGameTestNamespaces', mod_id
             if (providers.gradleProperty('reloadSmoke').isPresent()) systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabreload'
+            if (providers.gradleProperty('buildingLibrarySmoke').isPresent()) systemProperty 'neoforge.enabledGameTestNamespaces', 'prefabpacks'
+            if (providers.gradleProperty('defaultBuildingsExpected').isPresent()) systemProperty 'prefabdeploy.expectedDefaultBuildings', providers.gradleProperty('defaultBuildingsExpected').get()
             systemProperty 'prefabdeploy.reportDir', file(providers.gradleProperty('prefabReportDir').orElse('docs/test-results').get()).absolutePath
             gameDirectory = layout.buildDirectory.dir('gametest-run').get().asFile
             if (providers.gradleProperty('prefabTestRun').isPresent()) gameDirectory = file(providers.gradleProperty('prefabTestRun').get())
@@ -144,7 +146,13 @@ if (providers.gradleProperty('clientSmoke').isPresent()) {
             .orElse(layout.buildDirectory.dir('client-run').map { it.asFile })
             .map { new File(it, 'saves/prefab-smoke/datapacks/prefabdeploy-test-fixtures') }
     }
-    tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'preparePrefabClientSmoke' }
+    tasks.register('preparePrefabClientFolderPack', Copy) {
+        from 'src/testFixtures/folder-pack'
+        into providers.gradleProperty('prefabTestRun').map { file(it) }
+            .orElse(layout.buildDirectory.dir('client-run').map { it.asFile })
+            .map { new File(it, 'prefabdeploy/blueprints/client-smoke-pack') }
+    }
+    tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'preparePrefabClientSmoke', 'preparePrefabClientFolderPack' }
 }
 // Keep nested mod JAR discovery identical to an installed instance.
 if (providers.gradleProperty('shaderModsDir').isPresent()) {

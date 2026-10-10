@@ -1,0 +1,93 @@
+{
+  "version": "0.1.4",
+  "date": "2026-10-10",
+  "minecraft": "1.21.1",
+  "neoforge": "21.1.248",
+  "result": "PASS",
+  "unit_tests_passed": 10,
+  "base_gametest_entries_passed": 35,
+  "base_optional_entries_skipped": 4,
+  "library_cold_start_profiles": [
+    "enabled",
+    "disabled"
+  ],
+  "world_reload_snapshot_regression": true,
+  "builtin_tower_gametest_entries_passed": 3,
+  "survival_tower_builds": 8,
+  "missing_material_quote_cases": 17,
+  "rotations": [
+    {
+      "id": "mobtowers:dark_tower",
+      "degrees": 0,
+      "evidence": "survival real construction/one settlement; rotated states; zero skylight/block light; vanilla natural spawning produced 75 monsters; four channel directions to campfires; all test loot reached barrels in 181 ticks"
+    },
+    {
+      "id": "mobtowers:zombie_spawner_tower",
+      "degrees": 0,
+      "evidence": "survival real construction/one settlement; rotated states; original zombie spawner spawned 6 zombies; three room water paths to campfire; rotten flesh in barrel; all test loot reached barrels in 438 ticks"
+    },
+    {
+      "id": "mobtowers:dark_tower",
+      "degrees": 90,
+      "evidence": "survival real construction/one settlement; rotated states; zero skylight/block light; vanilla natural spawning produced 67 monsters; four channel directions to campfires; all test loot reached barrels in 173 ticks"
+    },
+    {
+      "id": "mobtowers:zombie_spawner_tower",
+      "degrees": 90,
+      "evidence": "survival real construction/one settlement; rotated states; original zombie spawner spawned 7 zombies; three room water paths to campfire; rotten flesh in barrel; all test loot reached barrels in 454 ticks"
+    },
+    {
+      "id": "mobtowers:dark_tower",
+      "degrees": 180,
+      "evidence": "survival real construction/one settlement; rotated states; zero skylight/block light; vanilla natural spawning produced 74 monsters; four channel directions to campfires; all test loot reached barrels in 197 ticks"
+    },
+    {
+      "id": "mobtowers:zombie_spawner_tower",
+      "degrees": 180,
+      "evidence": "survival real construction/one settlement; rotated states; original zombie spawner spawned 1 zombies; three room water paths to campfire; rotten flesh in barrel; all test loot reached barrels in 446 ticks"
+    },
+    {
+      "id": "mobtowers:dark_tower",
+      "degrees": 270,
+      "evidence": "survival real construction/one settlement; rotated states; zero skylight/block light; vanilla natural spawning produced 66 monsters; four channel directions to campfires; all test loot reached barrels in 205 ticks"
+    },
+    {
+      "id": "mobtowers:zombie_spawner_tower",
+      "degrees": 270,
+      "evidence": "survival real construction/one settlement; rotated states; original zombie spawner spawned 5 zombies; three room water paths to campfire; rotten flesh in barrel; all test loot reached barrels in 454 ticks"
+    }
+  ],
+  "integrated_client_and_lan_folder_pack_checks": true,
+  "builtin_blueprints": [
+    {
+      "id": "mobtowers:dark_tower",
+      "size_xyz": [
+        22,
+        31,
+        22
+      ],
+      "DataVersion": 3955,
+      "sha256": "5b20281bafde762f52edc04f2b792068fcd09ef2555a6df2d648561876055483"
+    },
+    {
+      "id": "mobtowers:zombie_spawner_tower",
+      "size_xyz": [
+        13,
+        16,
+        14
+      ],
+      "DataVersion": 3955,
+      "sha256": "fda9725e27cdd4028dadaa8e4fdb2c29c87f7eb9ee46c6619c6c44e979a23b49"
+    }
+  ],
+  "artifacts": {
+    "prefabdeploy-0.1.4.jar": "60a4e5525166d7501e0ec64cac0d83e7babdfa72836f2970db8408c8d901992a",
+    "prefabdeploy-0.1.4-sources.jar": "63abf8f1db11c4c23e9acf85a6bd5851b397eb55c12c357d5352193d57fa6500"
+  },
+  "limitations": [
+    "No remote second-client LAN connection test; guest selection uses a server-side FakePlayer on the published integrated server.",
+    "No full modpack, shader, optional resource integration or crash-recovery rerun for this release.",
+    "Mob spawning and transport checks do not measure hourly production."
+  ],
+  "published": false
+}

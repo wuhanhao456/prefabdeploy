@@ -82,6 +82,7 @@ public final class PrefabDeploy {
     BE_TYPES.register(modBus);
     container.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
     modBus.addListener(Network::register);
+    modBus.addListener(io.github.prefabdeploy.library.BlueprintPacks::register);
     modBus.addListener(
         (BuildCreativeModeTabContentsEvent e) -> {
           if (FMLEnvironment.dist == Dist.CLIENT && !Network.serverSupported()) return;
@@ -94,6 +95,8 @@ public final class PrefabDeploy {
     PrefabApi.IMPORTERS.add(new LitematicImporter());
     NeoForge.EVENT_BUS.addListener(
         (AddReloadListenerEvent e) -> e.addListener(PrefabLibrary.INSTANCE));
+    NeoForge.EVENT_BUS.addListener(
+        (ServerAboutToStartEvent e) -> PrefabLibrary.INSTANCE.configurationReady());
     NeoForge.EVENT_BUS.addListener(
         (ServerStartedEvent e) -> DeploymentManager.start(e.getServer()));
     NeoForge.EVENT_BUS.addListener(

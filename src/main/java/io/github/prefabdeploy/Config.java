@@ -11,11 +11,16 @@ public final class Config {
       RAY_DISTANCE,
       MAX_BYTES;
   public static final ModConfigSpec.DoubleValue TICK_BUDGET_MS;
+  public static final ModConfigSpec.BooleanValue ENABLE_DEFAULT_TEST_BUILDINGS;
   public static final ModConfigSpec.ConfigValue<List<? extends String>> PROTECTED_BLOCKS,
       FORBIDDEN_CONTENT;
 
   static {
     var b = new ModConfigSpec.Builder();
+    b.push("buildings");
+    ENABLE_DEFAULT_TEST_BUILDINGS = b.comment("Include the built-in mob towers in the building library. External datapacks are unaffected.")
+        .define("enableDefaultTestBuildings", true);
+    b.pop();
     b.push("limits");
     MAX_POSITIONS = b.defineInRange("maxPositions", 100_000, 1, 5_000_000);
     MAX_CHUNKS = b.defineInRange("maxChunks", 256, 1, 4096);

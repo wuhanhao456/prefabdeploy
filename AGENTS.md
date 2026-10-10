@@ -2,7 +2,7 @@
 
 本文件供 AI agent 使用。按用户需求创建 Prefab Deploy 建筑数据包，配置建筑、解锁条件和费用。修改整合包规则时，优先使用数据包和 KubeJS 接口。
 
-目标环境为 Minecraft 1.21.1 和 Prefab Deploy 0.1.3。蓝图必须使用 DataVersion 3955。开始任务前读取 [README](README.md) 和下列相关文档。不要猜测字段、事件或接口名称。
+目标环境为 Minecraft 1.21.1 和 Prefab Deploy 0.1.4。蓝图必须使用 DataVersion 3955。开始任务前读取 [README](README.md) 和下列相关文档。不要猜测字段、事件或接口名称。
 
 玩家文本使用“建筑建造工具”和“建造”，英文对应 `Building Tool`、`build` 和 `construction`。物品和流体使用“返还 / return”，货币使用“退款 / refund”。保留产品名称 Prefab Deploy，以及代码中的资源 ID、事件、接口和字段名称。
 
@@ -164,4 +164,4 @@ PrefabEvents.registry(event => {
 
 通过 `PrefabApi.IMPORTERS`、`RULES`、`COSTS` 和 `NBT_ADAPTERS` 扩展对应功能。先阅读 [Java API](docs/API.md)。保留本地建筑权限、蓝图版本限制和活动任务快照。不要让脚本或扩展绕过位置保护。
 
-文件解析在后台线程执行。世界修改和目录发布在服务器线程执行。涉及费用的扩展必须遵守事务要求。修改源码后，按[验证记录](docs/TESTING-0.1.3.md#复现)执行相关构建和回归。
+文件解析在后台线程执行。世界修改和目录发布在服务器线程执行。涉及费用的扩展必须遵守事务要求。修改源码后，按[验证记录](docs/TESTING-0.1.4.md#复现)执行相关构建和回归。
