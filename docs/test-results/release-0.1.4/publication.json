@@ -1,0 +1,59 @@
+{
+  "version": "0.1.4",
+  "repository": "https://github.com/wuhanhao456/prefabdeploy",
+  "release": "https://github.com/wuhanhao456/prefabdeploy/releases/tag/v0.1.4",
+  "tag": "v0.1.4",
+  "source_commit": "fc1ca9c310bfce54a81914a27618cd69aa822041",
+  "published_at": "2026-10-10T07:37:29Z",
+  "verified_at": "2026-10-10T07:37:44.750281+00:00",
+  "published": true,
+  "assets": {
+    "prefabdeploy-0.1.4-source.zip": {
+      "bytes": 86777512,
+      "sha256": "14f2b3701e9030340737dcf7fcf3bbc792b05f9a34e75dedca3554e9f2715493",
+      "github_asset_id": 627328282,
+      "github_digest_verified": true,
+      "redownload_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/prefabdeploy-0.1.4-source.zip"
+    },
+    "prefabdeploy-0.1.4-sources.jar": {
+      "bytes": 250226,
+      "sha256": "63abf8f1db11c4c23e9acf85a6bd5851b397eb55c12c357d5352193d57fa6500",
+      "github_asset_id": 627328281,
+      "github_digest_verified": true,
+      "redownload_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/prefabdeploy-0.1.4-sources.jar"
+    },
+    "prefabdeploy-0.1.4.jar": {
+      "bytes": 396731,
+      "sha256": "60a4e5525166d7501e0ec64cac0d83e7babdfa72836f2970db8408c8d901992a",
+      "github_asset_id": 627328288,
+      "github_digest_verified": true,
+      "redownload_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/prefabdeploy-0.1.4.jar"
+    },
+    "prefabdeploy-0.1.4.zip": {
+      "bytes": 617268,
+      "sha256": "62d17b0bc4b311051a203b78099930c222ab730b7019ab118f8fa913b523e22e",
+      "github_asset_id": 627328280,
+      "github_digest_verified": true,
+      "redownload_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/prefabdeploy-0.1.4.zip"
+    },
+    "SHA256SUMS-0.1.4.txt": {
+      "bytes": 375,
+      "sha256": "04ef28c0232f2b07ce2d2f7220c4efcc8f8b97b2c4b5a2a1b5072c1906b6846e",
+      "github_asset_id": 627328283,
+      "github_digest_verified": true,
+      "redownload_sha256_verified": true,
+      "download_url": "https://github.com/wuhanhao456/prefabdeploy/releases/download/v0.1.4/SHA256SUMS-0.1.4.txt"
+    }
+  },
+  "github_digests_verified": true,
+  "all_assets_redownloaded_and_verified": true,
+  "install_bundle_content_verified": true,
+  "source_archive_commit_verified": true,
+  "source_archive_files_verified": 627,
+  "previous_0_1_3_release_and_assets_preserved": true,
+  "acceptance_snapshot": "verification.json records the pre-publication build; this file records publication"
+}
